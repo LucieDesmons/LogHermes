@@ -17,7 +17,7 @@ namespace GestionStock
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.Form_Connexion());
+            Application.Run(new Forms.Form_Menu());
         }
     }
 }
