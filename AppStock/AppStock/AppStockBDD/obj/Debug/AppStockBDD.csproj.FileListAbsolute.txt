@@ -1,0 +1,2 @@
+C:\Users\n.becker\Desktop\Projet\AppStock\AppStock\AppStockBDD\obj\Debug\AppStockBDD.csproj.AssemblyReference.cache
+C:\Users\n.becker\Desktop\Projet\AppStock\AppStock\AppStockBDD\obj\Debug\AppStockBDD.csproj.CoreCompileInputs.cache
