@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "46ea0532-befd-40b2-bbe2-9e0c6a7c90a5": {
+      "ProjectGuid": "46ea0532-befd-40b2-bbe2-9e0c6a7c90a5",
+      "DisplayName": "LogHermes.API",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
