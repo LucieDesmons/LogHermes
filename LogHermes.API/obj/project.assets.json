@@ -2,13 +2,16 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Humanizer.Core/2.8.26": {
+      "Humanizer.Core/2.2.0": {
         "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
         "compile": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard1.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Humanizer.dll": {}
+          "lib/netstandard1.0/Humanizer.dll": {}
         }
       },
       "MessagePack/2.1.152": {
@@ -935,34 +938,6 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Design/6.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Humanizer.Core": "2.8.26",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.1"
-        },
-        "compile": {
-          "lib/net6.0/_._": {}
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {}
-        },
-        "build": {
-          "build/net6.0/Microsoft.EntityFrameworkCore.Design.props": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.InMemory/6.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.1"
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
-        }
-      },
       "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -987,18 +962,6 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools/6.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "6.0.1"
-        },
-        "compile": {
-          "lib/net6.0/_._": {}
-        },
-        "runtime": {
-          "lib/net6.0/_._": {}
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -3103,9 +3066,27 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "Stock.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Stock.DAL": "1.0.0",
+          "Stock.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Stock.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Stock.BL.dll": {}
+        }
+      },
       "Stock.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.1"
+        },
         "compile": {
           "bin/placeholder/Stock.DAL.dll": {}
         },
@@ -3126,20 +3107,16 @@
     }
   },
   "libraries": {
-    "Humanizer.Core/2.8.26": {
-      "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+    "Humanizer.Core/2.2.0": {
+      "sha512": "rsYXB7+iUPP8AHgQ8JP2UZI2xK2KhjcdGr9E6zX3CsZaTLCaw8M35vaAJRo1rfxeaZEVMuXeaquLVCkZ7JcZ5Q==",
       "type": "package",
-      "path": "humanizer.core/2.8.26",
+      "path": "humanizer.core/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "humanizer.core.2.8.26.nupkg.sha512",
+        "humanizer.core.2.2.0.nupkg.sha512",
         "humanizer.core.nuspec",
-        "lib/netstandard1.0/Humanizer.dll",
-        "lib/netstandard1.0/Humanizer.xml",
-        "lib/netstandard2.0/Humanizer.dll",
-        "lib/netstandard2.0/Humanizer.xml",
-        "logo.png"
+        "lib/netstandard1.0/Humanizer.dll"
       ]
     },
     "MessagePack/2.1.152": {
@@ -4192,35 +4169,6 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Design/6.0.1": {
-      "sha512": "odZLopaluipZXgJxue4VbBXe9YoTOOmg324rkyr0XqXWR7DSdWy5Mi0+99OvsOmvl6LxEqK4IOgNnycB+oF3pQ==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.design/6.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/net6.0/Microsoft.EntityFrameworkCore.Design.props",
-        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll",
-        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.xml",
-        "microsoft.entityframeworkcore.design.6.0.1.nupkg.sha512",
-        "microsoft.entityframeworkcore.design.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.InMemory/6.0.1": {
-      "sha512": "ORvH+p+Qu8Lr08gRidXy3BxGXVFEccKi+JTkEtLuKvDJbQ4KICW1YMjI47A/vWnJIB915zz2zDN8YeJfiEkVxg==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.inmemory/6.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll",
-        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.xml",
-        "microsoft.entityframeworkcore.inmemory.6.0.1.nupkg.sha512",
-        "microsoft.entityframeworkcore.inmemory.nuspec"
-      ]
-    },
     "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
       "sha512": "abaCEEeeB0xlMYDD+m9kmhQh5aipJ5s3UbyQVBfMaZeCiZHXST0eWuJRX63E3e7K/mju5WEHiybV/hizng7q/w==",
       "type": "package",
@@ -4247,30 +4195,6 @@
         "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "microsoft.entityframeworkcore.sqlserver.6.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.Tools/6.0.1": {
-      "sha512": "jXhlTOcFct3U9YiH9KNfjIHzEPxjXgH7hiriWoZJ0PtT9/GGeWHu9Dblb5D441X+91EMqx7jbpKHNMIu6mvz5w==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/6.0.1",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "lib/net6.0/_._",
-        "microsoft.entityframeworkcore.tools.6.0.1.nupkg.sha512",
-        "microsoft.entityframeworkcore.tools.nuspec",
-        "tools/EntityFrameworkCore.PS2.psd1",
-        "tools/EntityFrameworkCore.PS2.psm1",
-        "tools/EntityFrameworkCore.psd1",
-        "tools/EntityFrameworkCore.psm1",
-        "tools/about_EntityFrameworkCore.help.txt",
-        "tools/init.ps1",
-        "tools/net461/any/ef.exe",
-        "tools/net461/win-x86/ef.exe",
-        "tools/netcoreapp2.0/any/ef.dll",
-        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -9654,6 +9578,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "Stock.BL/1.0.0": {
+      "type": "project",
+      "path": "../Stock.BL/Stock.BL.csproj",
+      "msbuildProject": "../Stock.BL/Stock.BL.csproj"
+    },
     "Stock.DAL/1.0.0": {
       "type": "project",
       "path": "../Stock.DAL/Stock.DAL.csproj",
@@ -9667,13 +9596,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.EntityFrameworkCore >= 6.0.1",
-      "Microsoft.EntityFrameworkCore.InMemory >= 6.0.1",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.1",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.1",
-      "Stock.DAL >= 1.0.0",
-      "Stock.Models >= 1.0.0",
+      "Stock.BL >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -9704,11 +9628,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj": {
-              "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj"
-            },
-            "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj": {
-              "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj"
+            "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\Stock.BL.csproj": {
+              "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\Stock.BL.csproj"
             }
           }
         }
@@ -9723,24 +9644,6 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[6.0.1, )"
-          },
-          "Microsoft.EntityFrameworkCore.InMemory": {
-            "target": "Package",
-            "version": "[6.0.1, )"
-          },
-          "Microsoft.EntityFrameworkCore.SqlServer": {
-            "target": "Package",
-            "version": "[6.0.1, )"
-          },
-          "Microsoft.EntityFrameworkCore.Tools": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[6.0.1, )"
-          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.1, )"

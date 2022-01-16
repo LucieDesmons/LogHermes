@@ -1,17 +1,18 @@
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Models;
+using Stock.DAL;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+//builder.Services.AddDbContext<DBLogHermesContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Lucie")));
 builder.Services.AddControllers();
-builder.Services.AddDbContext<TodoContext>(opt =>
-    opt.UseInMemoryDatabase("TodoList"));
+builder.Services.AddDbContext<DBLogHermesContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DBLogHermesContext")));
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "TodoApi", Version = "v1" });
+    c.SwaggerDoc("v1", new() { Title = "LogHermes", Version = "v1.0" });
 });
 
 var app = builder.Build();
@@ -21,7 +22,7 @@ if (builder.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApi v1"));
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LogHermes API v1.0"));
 }
 
 app.UseHttpsRedirection();

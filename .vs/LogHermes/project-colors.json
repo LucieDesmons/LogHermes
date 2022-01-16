@@ -5,7 +5,27 @@
       "ProjectGuid": "46ea0532-befd-40b2-bbe2-9e0c6a7c90a5",
       "DisplayName": "LogHermes.API",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Fichiers divers",
+      "ColorIndex": -1
+    },
+    "8019cdeb-89a6-476a-90fa-6e8ec78f995f": {
+      "ProjectGuid": "8019cdeb-89a6-476a-90fa-6e8ec78f995f",
+      "DisplayName": "Stock.Models",
+      "ColorIndex": 1
+    },
+    "11dfac0a-9015-4770-985f-cb0ae18d7813": {
+      "ProjectGuid": "11dfac0a-9015-4770-985f-cb0ae18d7813",
+      "DisplayName": "Stock.BL",
+      "ColorIndex": 2
+    },
+    "3a22538e-db55-456a-88fb-b28f4533e3ec": {
+      "ProjectGuid": "3a22538e-db55-456a-88fb-b28f4533e3ec",
+      "DisplayName": "Stock.DAL",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 4
 }
