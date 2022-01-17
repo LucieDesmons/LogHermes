@@ -97,10 +97,10 @@ namespace GestionStock.Forms
         {
             if(testobligatoire() == null)
             {
-                MessageBox.Show("Valide");
+                MessageBox.Show("Code correct");
             }else
             {
-                MessageBox.Show(testobligatoire(), "obligatoire", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(testobligatoire(), "Code obligatoire", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
