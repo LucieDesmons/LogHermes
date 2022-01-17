@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Stock.BL;
 using Stock.DAL;
 
 
@@ -8,8 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddDbContext<DBLogHermesContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Lucie")));
 builder.Services.AddControllers();
-builder.Services.AddDbContext<DBLogHermesContext>(options => 
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DBLogHermesContext")));
+builder.Services.AddDbContext<DBLogHermesContext>();
+builder.Services.AddTransient<UtilisateurService>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new() { Title = "LogHermes", Version = "v1.0" });

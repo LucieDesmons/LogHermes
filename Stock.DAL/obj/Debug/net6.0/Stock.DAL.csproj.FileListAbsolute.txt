@@ -24,3 +24,5 @@ C:\Users\Proto\Downloads\AppStock\Stock.DAL\obj\Debug\net6.0\Stock.DAL.dll
 C:\Users\Proto\Downloads\AppStock\Stock.DAL\obj\Debug\net6.0\ref\Stock.DAL.dll
 C:\Users\Proto\Downloads\AppStock\Stock.DAL\obj\Debug\net6.0\Stock.DAL.pdb
 C:\Users\Proto\Downloads\AppStock\Stock.DAL\obj\Debug\net6.0\Stock.DAL.genruntimeconfig.cache
+C:\Users\Lucie\source\repos\AppStock\Stock.DAL\bin\Debug\net6.0\Stock.DAL.runtimeconfig.json
+C:\Users\Lucie\source\repos\AppStock\Stock.DAL\obj\Debug\net6.0\Stock.DAL.genruntimeconfig.cache
