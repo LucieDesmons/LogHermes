@@ -1,6 +1,12 @@
-# AppStock
-Projet d'école CESI bac+2 : créer une application de gestion de stock en .NET
-![10972056](https://user-images.githubusercontent.com/77100708/138067754-7b990a6b-067e-4bb6-b8e1-543a7f9576da.jpg)
+# LogHermes
 
-# Vins gascons
-![selec-gascogne16](https://user-images.githubusercontent.com/77100708/138042638-d46783f8-ff58-48be-91e4-b50266d13f0b.jpg)
+Société LogHermes situé à Lyon, start-up experte dans le développement d'applications dont la gestion de stock.
+
+Nous développons majoritairement nos applications en C# sous license Visual Studio 2022. nos technonologies sont récentes et compatibles sous Windows, Linux et MacOS.
+
+Nous garantissons de maintenair vos applications (inclus de base) ainsi qu'un service support disponible 24/7 sous réserve d'option payante (voir nos offres pour plus de renseignements).
+
+Contact :
+04 12 15 05 01 
+contact@loghermes.com
+1 BD MARIUS VIVIER MERLE à LYON 3EME (69003)
