@@ -18,6 +18,7 @@ builder.Services.AddTransient<CmdFournisseurService>();
 builder.Services.AddTransient<CmdClientService>();
 builder.Services.AddTransient<ClientService>();
 builder.Services.AddTransient<CategorieService>();
+builder.Services.AddTransient<ArticleService>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new() { Title = "LogHermes", Version = "v1.0" });
