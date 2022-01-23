@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Stock.BL;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,11 +9,17 @@ namespace LogHermes.API.Controllers
     [ApiController]
     public class ClientsController : ControllerBase
     {
+        private ClientService _cs;
+        public ClientsController(ClientService cs)
+        {
+            _cs = cs; //ClientService
+        }
+
         // GET: api/<ClientsController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Stock.Models.Client> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _cs.GetClients();
         }
 
         // GET api/<ClientsController>/5

@@ -12,10 +12,10 @@ namespace LogHermes.API.Controllers
         private CmdClientService _cs;
         public CmdClientsController(CmdClientService cs)
         {
-            _cs = cs; //UtilisateurService
+            _cs = cs; //CmdClientService
         }
 
-        // GET: api/<UtilisateursController>
+        // GET: api/<CmdClientsController>
         [HttpGet]
         public List<Stock.Models.CmdClient> Get()
         {
