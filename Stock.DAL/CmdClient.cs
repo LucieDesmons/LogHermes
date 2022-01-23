@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Stock.DAL
+﻿namespace Stock.DAL
 {
     public partial class CmdClient
     {
