@@ -14,6 +14,7 @@ builder.Services.AddTransient<UtilisateurService>();
 builder.Services.AddTransient<StockService>();
 builder.Services.AddTransient<FournisseurService>();
 builder.Services.AddTransient<EmployeService>();
+builder.Services.AddTransient<CmdFournisseurService>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new() { Title = "LogHermes", Version = "v1.0" });
