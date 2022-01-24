@@ -30,14 +30,46 @@ namespace LogHermes.API.Controllers
 
         // PUT api/<CategoriesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> PutCategorie(int Id, Categorie categorie)
         {
+            if (Id != categorie.Id)
+            {
+                return BadRequest();
+            }
+            _cs.Entry(categorie).State = EntityState.Modified;
+            try
+            {
+                await _cs.SaveChangesAsync();
+
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CategorieExists(Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return NoContent();
         }
 
-        // DELETE api/<CategoriesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+            // DELETE api/<CategoriesController>/5
+            [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategorie(int id)
         {
+            var categorie = await _cs.Categories.FindAsync(id);
+            if (categorie == null)
+            {
+                return NotFound();
+            }
+            _cs.Categories.Remove(categorie);
+            await _cs.SaveChangesAsync();
+
+            return NoContent();
         }
     }
+}
 }

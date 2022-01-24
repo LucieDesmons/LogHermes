@@ -36,10 +36,10 @@ namespace LogHermes.API.Controllers
             {
                 return BadRequest();
             }
-            _context.Entry(article).State = EntityState.Modified;
+            _fs.Entry(article).State = EntityState.Modified;
             try
             {
-                await _context.SaveChangesAsync();
+                await _fs.SaveChangesAsync();
 
             }
             catch (DbUpdateConcurrencyException)
@@ -60,13 +60,13 @@ namespace LogHermes.API.Controllers
             [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCmdFournisseur(int id)
         {
-            var cmdFournisseur = await _context.CmdFournisseurs.FindAsync(id);
+            var cmdFournisseur = await _fs.CmdFournisseurs.FindAsync(id);
             if (cmdFournisseur == null)
             {
                 return NotFound();
             }
-            _context.CmdFournisseurs.Remove(cmdFournisseur);
-            await _context.SaveChangesAsync();
+            _fs.CmdFournisseurs.Remove(cmdFournisseur);
+            await _fs.SaveChangesAsync();
 
             return NoContent();
         }

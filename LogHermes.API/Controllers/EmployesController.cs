@@ -30,14 +30,45 @@ namespace LogHermes.API.Controllers
 
         // PUT api/<EmployesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
 
-        // DELETE api/<EmployesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> PutEmploye(int Id, Employe employe)
         {
+            if (Id != employe.Id)
+            {
+                return BadRequest();
+            }
+            _es.Entry(employe).State = EntityState.Modified;
+            try
+            {
+                await _es.SaveChangesAsync();
+
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EmployeExists(Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return NoContent();
+        }
+            // DELETE api/<EmployesController>/5
+            [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteEmploye(int id)
+        {
+            var employe = await _es.Eployes.FindAsync(id);
+            if (employe == null)
+            {
+                return NotFound();
+            }
+            _es.Employes.Remove(employe);
+            await _es.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }

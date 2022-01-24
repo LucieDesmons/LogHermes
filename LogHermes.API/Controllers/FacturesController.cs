@@ -8,6 +8,11 @@ namespace LogHermes.API.Controllers
     [ApiController]
     public class FacturesController : ControllerBase
     {
+        private FactureService _fs;
+        public FacturesController(FactureService fs)
+        {
+            _fs = fs;  
+        }
         // GET: api/<FacturesController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -30,14 +35,44 @@ namespace LogHermes.API.Controllers
 
         // PUT api/<FacturesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> PutFacture(int Id, Facture facture)
         {
-        }
+            if (Id != facture.Id)
+            {
+                return BadRequest();
+            }
+            _fs.Entry(facture).State = EntityState.Modified;
+            try
+            {
+                await _fs.SaveChangesAsync();
 
-        // DELETE api/<FacturesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!FactureExists(Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return NoContent();
+        }
+            // DELETE api/<FacturesController>/5
+            [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteFacture(int id)
         {
+            var facture = await _fs.Factures.FindAsync(id);
+            if (facture == null)
+            {
+                return NotFound();
+            }
+            _fs.Factures.Remove(facture);
+            await _fs.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }

@@ -31,14 +31,46 @@ namespace LogHermes.API.Controllers
 
         // PUT api/<ArticlesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> PutArticle(int Id, Article article)
         {
+            if(Id != article.Id) 
+            {
+                return BadRequest();
+            }
+            _as.Entry(article).State = EntityState.Modified;
+            try
+            {
+                await _as.SaveChangesAsync();
+
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ArticleExists(Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return NoContent();
         }
 
         // DELETE api/<ArticlesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> DeleteArticle(int id)
         {
+            var article = await _as.Articles.FindAsync(id);
+            if (article == null)
+            {
+                return NotFound();
+            }
+            _as.Articles.Remove(article);
+            await _as.SaveChangesAsync();
+
+            return NoContent();
         }
     }
+}
 }

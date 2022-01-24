@@ -30,14 +30,44 @@ namespace LogHermes.API.Controllers
 
         // PUT api/<FournisseursController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> PutFournisseur(int Id, Fournisseur fournisseur)
         {
-        }
+            if (Id != fournisseur.Id)
+            {
+                return BadRequest();
+            }
+            _fs.Entry(fournisseur).State = EntityState.Modified;
+            try
+            {
+                await _fs.SaveChangesAsync();
 
-        // DELETE api/<FournisseursController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!FournisseurExists(Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return NoContent();
+        }
+            // DELETE api/<FournisseursController>/5
+            [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteFournisseur(int id)
         {
+            var fournisseur = await _fs.Fournisseurs.FindAsync(id);
+            if (fournisseur == null)
+            {
+                return NotFound();
+            }
+            _fs.Fournisseurs.Remove(fournisseur);
+            await _fs.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }

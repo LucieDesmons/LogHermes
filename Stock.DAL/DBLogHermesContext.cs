@@ -7,9 +7,9 @@ namespace Stock.DAL
 {
     public partial class DBLogHermesContext : DbContext
     {
-        public DBLogHermesContext()
-        {
-        }
+        //public DBLogHermesContext()
+        //{
+        //}
 
         public DBLogHermesContext(DbContextOptions<DBLogHermesContext> options)
             : base(options)
