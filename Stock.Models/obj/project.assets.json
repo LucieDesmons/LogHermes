@@ -8,20 +8,28 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Lucie\\.nuget\\packages\\": {}
+    "C:\\Users\\n.becker\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj",
+      "projectUniqueName": "C:\\Users\\n.becker\\Desktop\\RepoStock\\LogHermes\\Stock.Models\\Stock.Models.csproj",
       "projectName": "Stock.Models",
-      "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj",
-      "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\obj\\",
+      "projectPath": "C:\\Users\\n.becker\\Desktop\\RepoStock\\LogHermes\\Stock.Models\\Stock.Models.csproj",
+      "packagesPath": "C:\\Users\\n.becker\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\n.becker\\Desktop\\RepoStock\\LogHermes\\Stock.Models\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\n.becker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -55,12 +63,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

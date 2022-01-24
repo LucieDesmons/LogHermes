@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj": {}
+    "C:\\Users\\n.becker\\Desktop\\RepoStock\\LogHermes\\Stock.DAL\\Stock.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj": {
+    "C:\\Users\\n.becker\\Desktop\\RepoStock\\LogHermes\\Stock.DAL\\Stock.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\n.becker\\Desktop\\RepoStock\\LogHermes\\Stock.DAL\\Stock.DAL.csproj",
         "projectName": "Stock.DAL",
-        "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj",
-        "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\obj\\",
+        "projectPath": "C:\\Users\\n.becker\\Desktop\\RepoStock\\LogHermes\\Stock.DAL\\Stock.DAL.csproj",
+        "packagesPath": "C:\\Users\\n.becker\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\n.becker\\Desktop\\RepoStock\\LogHermes\\Stock.DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\n.becker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -39,22 +45,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -65,12 +55,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

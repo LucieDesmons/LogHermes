@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Stock.BL;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace LogHermes.API.Controllers
 {
@@ -37,14 +34,44 @@ namespace LogHermes.API.Controllers
 
         // PUT api/<UtilisateursController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> PutUtilisateur(int Id, Utilisateur utilisateur)
         {
-        }
+            if (Id != utilisateur.Id)
+            {
+                return BadRequest();
+            }
+            _us.Entry(utilisateur).State = EntityState.Modified;
+            try
+            {
+                await _us.SaveChangesAsync();
 
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UtilisateurExists(Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return NoContent();
+        }
         // DELETE api/<UtilisateursController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> DeleteUtilisateur(int id)
         {
+            var utilisateur = await _context.Utilisateurs.FindAsync(id);
+            if (utilisateur == null)
+            {
+                return NotFound();
+            }
+            _us.Utilisateurs.Remove(utilisateur);
+            await _us.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }
