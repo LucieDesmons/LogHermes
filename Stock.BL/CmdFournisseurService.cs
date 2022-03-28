@@ -4,7 +4,9 @@ namespace Stock.BL
 {
     public class CmdFournisseurService
     {
+        
         private readonly DBLogHermesContext _context;
+        private CmdFournisseur CmdFournisseur;
 
         public CmdFournisseurService(DBLogHermesContext context)
         {
@@ -28,5 +30,25 @@ namespace Stock.BL
                 })
                 .ToList(); //List<CmdFournisseur>
         }
+
+        public void CreateCmdFournisseurs(Models.CmdFournisseur cmdFournisseur)
+        {
+           
+            _context // DBLogHermesContext
+                .CmdFournisseurs// DbSet<CmdFournisseur>
+                .Add(new CmdFournisseur
+                { 
+                    Id = cmdFournisseur.Id,
+                    Libelle = cmdFournisseur.Libelle,
+                    DateCmd = cmdFournisseur.DateCmd,
+                    DateLivraison = cmdFournisseur.DateLivraison,
+                    MontantCmd = cmdFournisseur.MontantCmd,
+                    ModePaiement = cmdFournisseur.ModePaiement,
+                    PrixAchatHt = cmdFournisseur.PrixAchatHt,
+                    Taxe = cmdFournisseur.Taxe
+                })
+                .Context
+                .SaveChanges();
+        }         
     }
 }

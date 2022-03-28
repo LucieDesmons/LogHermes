@@ -33,7 +33,7 @@ if (builder.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LogHermes API v1.0"));
 }
-
+https://localhost:7100/swagger/index.html
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
