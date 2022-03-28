@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Stock.BL;
+using Stock.DAL;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -30,9 +31,11 @@ namespace LogHermes.API.Controllers
         }
 
         // POST api/<CmdFournisseursController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("{post}")]
+        public void Post(Stock.Models.CmdFournisseur cmdFournisseur)
         {
+            _fs.CreateCmdFournisseurs(cmdFournisseur);
+
         }
 
         // PUT api/<CmdFournisseursController>/5
