@@ -1,25 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Stock.BL;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace LogHermes.API.Controllers
 {
-    [Route("api/cmd_clients")]
-    [ApiController]
-    public class CmdClientsController : ControllerBase
+    public class DetailsCommandesController : Controller
     {
-        private CmdClientService _cs;
-        public CmdClientsController(CmdClientService cs)
+        private DetailsCommandeService _cs;
+        public DetailsCommandesController(DetailsCommandeService cs)
         {
-            _cs = cs; //CmdClientService
+            _cs = cs; 
         }
 
-        // GET: api/<CmdClientsController>
+        // GET: api/<details_commandes>
         [HttpGet]
-        public List<Stock.Models.CmdClient> Get()
+        public List<Stock.Models.DetailsCommande> Get()
         {
-            return _cs.GetCmdClients();
+            return _cs.GetDetailsCmd();
         }
 
         // GET api/<CmdClientsController>/5

@@ -20,17 +20,35 @@ namespace Stock.BL
                     Id = c.Id,
                     Nom = c.Nom,
                     Prenom = c.Prenom,
-                    Rue = c.Rue,
-                    CodePostal = c.CodePostal,
                     Ville = c.Ville,
                     Pays = c.Pays,
                     Email = c.Email,
                     Telephone = c.Telephone,
-                    NumSiret = c.NumSiret,
-                    NumTva = c.NumTva,
-                    Id1 = c.Id1
+                    Adresse = c.Adresse
                 })
                 .ToList(); //List<Client>
+        }
+    
+
+
+        public void CreateClient(Models.Client client)
+        {
+
+            _context
+                .Clients
+                .Add(new Client
+                {
+                    Id = client.Id,
+                    Nom = client.Nom,
+                    Prenom= client.Prenom,
+                    Ville= client.Ville,
+                    Pays= client.Pays,
+                    Email= client.Email,
+                    Telephone = client.Telephone,
+                    Adresse= client.Adresse
+                })
+                .Context
+                .SaveChanges();
         }
     }
 }

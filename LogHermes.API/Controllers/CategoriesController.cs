@@ -23,10 +23,22 @@ namespace LogHermes.API.Controllers
         }
 
         // POST api/<CategoriesController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("{post}")]
+        public string Post(Stock.Models.Categorie categorie)
         {
+            try
+            {
+                _cs.CreateCategorie(categorie);
+                return "Votre catégorie a bien été créée.";
+            }
+            catch (Exception ex)
+            {
+                return "La création a échoué.";
+            }
+            
+
         }
+    
 
         // PUT api/<CategoriesController>/5
         [HttpPut("{id}")]

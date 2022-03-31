@@ -11,14 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<DBLogHermesContext>();
 builder.Services.AddTransient<UtilisateurService>();
-builder.Services.AddTransient<StockService>();
-builder.Services.AddTransient<FournisseurService>();
-builder.Services.AddTransient<EmployeService>();
-builder.Services.AddTransient<CmdFournisseurService>();
-builder.Services.AddTransient<CmdClientService>();
+builder.Services.AddTransient<CommandeService>();
 builder.Services.AddTransient<ClientService>();
 builder.Services.AddTransient<CategorieService>();
-builder.Services.AddTransient<ArticleService>();
+builder.Services.AddTransient<DetailsCommandeService>();
+builder.Services.AddTransient<ProduitService>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new() { Title = "LogHermes", Version = "v1.0" });
@@ -33,7 +30,7 @@ if (builder.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LogHermes API v1.0"));
 }
-https://localhost:7100/swagger/index.html
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

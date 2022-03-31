@@ -30,9 +30,18 @@ namespace LogHermes.API.Controllers
         }
 
         // POST api/<ClientsController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("{post}")]
+        public string Post(Stock.Models.Client client)
         {
+            try
+            {
+                _cs.CreateClient(client);
+                return "Votre client a bien été créé.";
+            }
+            catch (Exception ex)
+            {
+                return "La création a échoué.";
+            }
         }
 
         // PUT api/<ClientsController>/5
