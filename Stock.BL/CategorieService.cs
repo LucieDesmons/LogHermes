@@ -19,9 +19,22 @@ namespace Stock.BL
                 {
                     Id = c.Id,
                     Nom = c.Nom,
-                    Nature = c.Nature
                 })
                 .ToList(); //List<Categorie>
+        }
+
+        public void CreateCategorie(Models.Categorie categorie)
+        {
+
+            _context 
+                .Categories
+                .Add(new Categorie
+                {
+                    Id = categorie.Id,
+                    Nom = categorie.Nom,
+                })
+                .Context
+                .SaveChanges();
         }
     }
 }

@@ -5,43 +5,43 @@ using Stock.BL;
 
 namespace LogHermes.API.Controllers
 {
-    [Route("api/articles")]
+    [Route("api/cmd_clients")]
     [ApiController]
-    public class ArticlesController : ControllerBase
+    public class ProduitsController : ControllerBase
     {
-        private ArticleService _as;
-        public ArticlesController(ArticleService articleservice) //l'IDE n'accepte pas "as"
+        private ProduitService _ps;
+        public ProduitsController(ProduitService ps)
         {
-            _as = articleservice; //ArticleService
+            _ps = ps; //CmdClientService
         }
 
-        // GET: api/<ArticlesController>
+        // GET: api/<produits>
         [HttpGet]
-        public List<Stock.Models.Article> Get()
+        public List<Stock.Models.Produit> Get()
         {
-            return _as.GetArticles();
+            return _ps.GetProduits();
         }
 
-        // GET api/<ArticlesController>/5
+        // GET api/<produits>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<ArticlesController>
+        // POST api/<produits>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<ArticlesController>/5
+        // PUT api/<produits>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<ArticlesController>/5
+        // DELETE api/<produits>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
