@@ -30,5 +30,28 @@ namespace Stock.BL
                 })
                 .ToList(); 
         }
+
+        public void CreateProduit(Models.Produit produit)
+        {
+
+            _context
+                .Produits
+                .Add(new Produit
+                {
+
+                    Id = produit.Id,
+                    Nom = produit.Nom,
+                    Quantite = produit.Quantite,
+                    Prix = produit.Prix,
+                    Image = produit.Image,
+                    Categorie = new Categorie
+                    {
+                        Id = produit.Categorie.Id,
+                        Nom = produit.Categorie.Nom
+                    }
+                })
+                .Context
+                .SaveChanges();
+        }
     }
 }

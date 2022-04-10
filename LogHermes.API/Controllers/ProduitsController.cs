@@ -29,10 +29,20 @@ namespace LogHermes.API.Controllers
             return "value";
         }
 
-        // POST api/<produits>
-        [HttpPost]
-        public void Post([FromBody] string value)
+
+        // POST api/<ProduitsController>
+        [HttpPost("{post}")]
+        public string Post(Stock.Models.Produit produit)
         {
+            try
+            {
+                _ps.CreateProduit(produit);
+                return "Votre produit a bien été créé.";
+            }
+            catch (Exception ex)
+            {
+                return "La création a échoué.";
+            }
         }
 
         // PUT api/<produits>/5
