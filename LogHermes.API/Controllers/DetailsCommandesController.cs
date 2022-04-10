@@ -3,6 +3,8 @@ using Stock.BL;
 
 namespace LogHermes.API.Controllers
 {
+    [Route("api/details_commande")]
+    [ApiController]
     public class DetailsCommandesController : Controller
     {
         private DetailsCommandeService _cs;
@@ -25,19 +27,30 @@ namespace LogHermes.API.Controllers
             return "value";
         }
 
-        // POST api/<CmdClientsController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        // POST api/<DetailsCommandeController>
+        [HttpPost("{post}")]
+        public string Post(Stock.Models.DetailsCommande details)
         {
+            try
+            {
+                _cs.CreateDetailsCommande(details);
+                return "Vos détails de commande ont bien été créés.";
+            }
+            catch (Exception ex)
+            {
+                return "La création a échoué.";
+            }
+
+
         }
 
-        // PUT api/<CmdClientsController>/5
+        // PUT api/<DetailsCommandeController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<CmdClientsController>/5
+        // DELETE api/<DetailsCommandeController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

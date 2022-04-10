@@ -30,9 +30,18 @@ namespace LogHermes.API.Controllers
         }
 
         // POST api/<UtilisateursController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("{post}")]
+        public string Post(Stock.Models.Utilisateur utilisateur)
         {
+            try
+            {
+                _us.CreateUtilisateur(utilisateur);
+                return "Votre utilisateur a bien été créé.";
+            }
+            catch (Exception ex)
+            {
+                return "La création a échoué.";
+            }
         }
 
         // PUT api/<UtilisateursController>/5

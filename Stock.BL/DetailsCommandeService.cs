@@ -36,5 +36,33 @@ namespace Stock.BL
                 })
                 .ToList(); 
         }
+
+        public void CreateDetailsCommande(Models.DetailsCommande details)
+        {
+
+            _context
+                .DetailsCommandes
+                .Add(new DetailsCommande
+                {
+                    Id = details.Id,
+                    Quantite = details.Quantite,
+                    Produit = new Produit
+                    {
+                        Id = details.Produit.Id,
+                        Nom = details.Produit.Nom,
+                        Quantite = details.Produit.Quantite,
+                        Prix = details.Produit.Prix,
+                        Image = details.Produit.Image,
+                        Categorie = new Categorie
+                        {
+                            Id = details.Produit.Categorie.Id,
+                            Nom = details.Produit.Categorie.Nom
+                        }
+                    }
+                })
+                .Context
+                .SaveChanges();
+        }
+
     }
 }

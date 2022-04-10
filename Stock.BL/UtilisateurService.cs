@@ -23,5 +23,20 @@ namespace Stock.BL
                 })
                 .ToList(); //List<Utilisateur>
         }
+
+        public void CreateUtilisateur(Models.Utilisateur utilisateur)
+        {
+
+            _context
+                .Utilisateurs
+                .Add(new Utilisateur
+                {
+                    Id = utilisateur.Id,
+                    MotDePasse = utilisateur.MotDePasse,
+                    NomUtilisateur = utilisateur.NomUtilisateur
+                })
+                .Context
+                .SaveChanges();
+        }
     }
 }
