@@ -133,6 +133,7 @@
     <Compile Include="Stock.BL\CLS_Article.cs" />
     <Compile Include="Stock.BL\CLS_categorie.cs" />
     <Compile Include="Stock.BL\CLS_Client.cs" />
+    <Compile Include="Stock.BL\CLS_Commande_DetailCommande.cs" />
     <Compile Include="Stock.BL\Connexion.cs" />
     <Compile Include="Stock.BL\DetailCmde.cs" />
     <Compile Include="Stock.PL\FRM_Accueil.cs">
@@ -326,6 +327,8 @@
       <LastGenOutput>dbStock.cs</LastGenOutput>
     </Content>
     <None Include="Resources\add1.png" />
+    <None Include="Resources\refresh1.png" />
+    <None Include="Resources\Recycle1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -74,12 +74,16 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnClt = new System.Windows.Forms.Button();
+            this.modifierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommande)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsCommandeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).BeginInit();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAnnuler
@@ -336,13 +340,14 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvCommande.Enabled = false;
+            this.dgvCommande.ContextMenuStrip = this.contextMenuStrip;
             this.dgvCommande.Location = new System.Drawing.Point(52, 314);
             this.dgvCommande.Name = "dgvCommande";
             this.dgvCommande.ReadOnly = true;
             this.dgvCommande.RowHeadersVisible = false;
             this.dgvCommande.RowHeadersWidth = 51;
             this.dgvCommande.RowTemplate.Height = 24;
+            this.dgvCommande.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCommande.Size = new System.Drawing.Size(778, 165);
             this.dgvCommande.TabIndex = 69;
             // 
@@ -448,6 +453,7 @@
             this.txtTVA.Name = "txtTVA";
             this.txtTVA.Size = new System.Drawing.Size(60, 28);
             this.txtTVA.TabIndex = 74;
+            this.txtTVA.TextChanged += new System.EventHandler(this.txtTVA_TextChanged);
             // 
             // txtTTTC
             // 
@@ -539,6 +545,16 @@
             this.panel3.Size = new System.Drawing.Size(10, 494);
             this.panel3.TabIndex = 68;
             // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modifierToolStripMenuItem1,
+            this.supprimerToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip2";
+            this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.contextMenuStrip.Size = new System.Drawing.Size(152, 56);
+            // 
             // btnClt
             // 
             this.btnClt.BackColor = System.Drawing.Color.Transparent;
@@ -554,6 +570,22 @@
             this.btnClt.TabIndex = 79;
             this.btnClt.UseVisualStyleBackColor = false;
             this.btnClt.Click += new System.EventHandler(this.btnClt_Click);
+            // 
+            // modifierToolStripMenuItem1
+            // 
+            this.modifierToolStripMenuItem1.Image = global::GestionStock.Properties.Resources.refresh1;
+            this.modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
+            this.modifierToolStripMenuItem1.Size = new System.Drawing.Size(214, 26);
+            this.modifierToolStripMenuItem1.Text = "Modifier";
+            this.modifierToolStripMenuItem1.Click += new System.EventHandler(this.modifierToolStripMenuItem1_Click);
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            this.supprimerToolStripMenuItem.Image = global::GestionStock.Properties.Resources.Recycle1;
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // FRM_Commande
             // 
@@ -604,6 +636,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsCommandeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).EndInit();
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -631,7 +664,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvCommande;
         private GESTION_STOCKDataSet1 gESTION_STOCKDataSet1;
         private System.Windows.Forms.BindingSource detailsCommandeBindingSource;
         private GESTION_STOCKDataSet1TableAdapters.Details_CommandeTableAdapter details_CommandeTableAdapter;
@@ -657,5 +689,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnClt;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
+        public System.Windows.Forms.DataGridView dgvCommande;
+        public System.Windows.Forms.ContextMenuStrip contextMenuStrip;
     }
 }

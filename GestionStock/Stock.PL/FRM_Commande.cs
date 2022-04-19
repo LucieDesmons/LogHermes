@@ -21,11 +21,22 @@ namespace GestionStock.Stock.PL
         //Remplir le datagrid produit
         public void Actualise_DetailCommande()
         {
+            //Calcul de la facturation HT, TVA, TTC
+            float totalHT = 0, TVA = 20, totalTTC = 0;
+            if(txtTVA.Text !="")
+            {
+                TVA= float.Parse(txtTVA.Text);
+            }
             dgvCommande.Rows.Clear();
             foreach(var L in BL.DetailCmde.listeDetail)
             {
                 dgvCommande.Rows.Add(L.Id, L.Nom, L.quantite, L.prix, L.remise, L.total);
+                totalHT = totalHT+float.Parse(L.total);
             }
+            txtTHT.Text = totalHT.ToString();
+            totalTTC = (totalHT + (totalHT * TVA / 100));
+            txtTTTC.Text = totalTTC.ToString();
+            txtTVA.Text = TVA.ToString();
         }
 
         //Fonction remplir data produit
@@ -53,8 +64,7 @@ namespace GestionStock.Stock.PL
 
         private void FRM_Commande_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'gESTION_STOCKDataSet1.Details_Commande'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.details_CommandeTableAdapter.Fill(this.gESTION_STOCKDataSet1.Details_Commande);
+
             remplirdgvProduit();
 
         }
@@ -110,6 +120,51 @@ namespace GestionStock.Stock.PL
                 fRM_Produit_Commande.textTotal.Text = dgvProduit.CurrentRow.Cells[3].Value.ToString();
                 fRM_Produit_Commande.ShowDialog();
             }
+        }
+
+        private void modifierToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FRM_Produit_Commande fRM_Produit_Commande = new FRM_Produit_Commande(this);
+            PRODUIT PR = new PRODUIT();
+            if(dgvCommande.CurrentRow!= null)
+            {
+                fRM_Produit_Commande.gbArticle.Text = "Article à modifier";
+                fRM_Produit_Commande.lblId.Text = dgvCommande.CurrentRow.Cells[0].Value.ToString();
+                fRM_Produit_Commande.lblNom.Text = dgvCommande.CurrentRow.Cells[1].Value.ToString();
+                int IDP = int.Parse(dgvCommande.CurrentRow.Cells[0].Value.ToString());
+               
+                PR = db.PRODUIT.Single(s=>s.Id_Produit == IDP);
+                fRM_Produit_Commande.lblStock.Text = PR.Quantite_Produit.ToString();
+                fRM_Produit_Commande.lblPrix.Text = dgvCommande.CurrentRow.Cells[3].Value.ToString();
+                fRM_Produit_Commande.textQte.Text = dgvCommande.CurrentRow.Cells[2].Value.ToString();
+                fRM_Produit_Commande.textRemise.Text = dgvCommande.CurrentRow.Cells[4].Value.ToString();
+                fRM_Produit_Commande.textTotal.Text = dgvCommande.CurrentRow.Cells[5].Value.ToString();
+                fRM_Produit_Commande.ShowDialog();
+            }
+        }
+
+        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvCommande.CurrentRow != null)
+            {
+                DialogResult PR = MessageBox.Show("Supprimer votre commande ?", "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (PR == DialogResult.Yes)
+                {
+                    int index = BL.DetailCmde.listeDetail.FindIndex(s => s.Id == int.Parse(dgvCommande.CurrentRow.Cells[0].Value.ToString()));
+                    BL.DetailCmde.listeDetail.RemoveAt(index);
+
+                    Actualise_DetailCommande();
+                    MessageBox.Show("Commande supprimée", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }else
+                {
+                    MessageBox.Show("Suppression annulée", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void txtTVA_TextChanged(object sender, EventArgs e)
+        {
+            Actualise_DetailCommande();
         }
     }
 }

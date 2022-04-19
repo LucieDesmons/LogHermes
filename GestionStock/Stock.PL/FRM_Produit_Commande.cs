@@ -57,7 +57,7 @@ namespace GestionStock.Stock.PL
             {
                 
                 int quantite = int.Parse(textQte.Text);
-                int prix = int.Parse(lblPrix.Text);
+                float prix = float.Parse(lblPrix.Text);
                 if (int.Parse(textQte.Text)>int.Parse(lblStock.Text))
                 {
                     MessageBox.Show(int.Parse(lblStock.Text) + "produit(s) restant(s) dans le stock", "StockProduit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -91,8 +91,8 @@ namespace GestionStock.Stock.PL
                     quantite = 1;
                 }
 
-                int prix = int.Parse(lblPrix.Text);
-                int total = quantite * prix;
+                float prix = float.Parse(lblPrix.Text);
+                float total = quantite * prix;
                 int remise = int.Parse(textRemise.Text);
                 textTotal.Text = (total - (total * remise/100)).ToString();
             }
@@ -107,7 +107,7 @@ namespace GestionStock.Stock.PL
                 {
                     quantite = 1;
                 }
-                int prix = int.Parse(lblPrix.Text);
+                float prix = float.Parse(lblPrix.Text);
                 textTotal.Text = (quantite * prix).ToString();
             }
         }
@@ -116,13 +116,13 @@ namespace GestionStock.Stock.PL
         {
             //si txtbox qté et remise vide
             int Quant, Rem;
-            if (textQte.Text!="")
+            if (textQte.Text != "")
             {
-                Quant=int.Parse(textQte.Text);
+                Quant = int.Parse(textQte.Text);
             }
             else
             {
-                Quant=1;
+                Quant = 1;
             }
             if (textRemise.Text != "")
             {
@@ -143,12 +143,36 @@ namespace GestionStock.Stock.PL
                 total = textTotal.Text,
             };
             //Ajout dans la liste
-            if (BL.DetailCmde.listeDetail.SingleOrDefault(s => s.Id == detailCmde.Id) != null)
+            if (gbArticle.Text == "Article(s) vendu(s)")
             {
-                MessageBox.Show("Produit déjà commandé","Commande", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (BL.DetailCmde.listeDetail.SingleOrDefault(s => s.Id == detailCmde.Id) != null)
+                {
+                    MessageBox.Show("Produit déjà commandé", "Commande", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    BL.DetailCmde.listeDetail.Add(detailCmde);
+                }
+
             }
             else
-            { BL.DetailCmde.listeDetail.Add(detailCmde); }
+            {
+                //modifier la commande
+                DialogResult PR = MessageBox.Show("Modifier votre commande ?", "Modification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(PR == DialogResult.Yes)
+                {
+                    //trouver index de porduit
+                    int index = BL.DetailCmde.listeDetail.FindIndex(s=>s.Id == int.Parse(lblId.Text));
+                    BL.DetailCmde.listeDetail[index] = detailCmde;
+                    MessageBox.Show("Modification validée", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Modification annulée", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
             //Actualise datagrid
             (frmdetail as FRM_Commande).Actualise_DetailCommande();
 

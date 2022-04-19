@@ -36,19 +36,14 @@
           <Property Name="TVA" Type="nvarchar" MaxLength="20" />
           <Property Name="Total_TTC" Type="nvarchar" MaxLength="250" />
         </EntityType>
-        <!--Erreurs détectées durant la génération :
-avertissement 6002: La table/vue 'GESTION_STOCK.dbo.Details_Commande' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="Details_Commande">
           <Key>
-            <PropertyRef Name="Id_Commande" />
-            <PropertyRef Name="Id_Produit" />
-            <PropertyRef Name="Quantite" />
-            <PropertyRef Name="Prix" />
-            <PropertyRef Name="Remise" />
-            <PropertyRef Name="Total" />
+            <PropertyRef Name="IdDetail" />
           </Key>
+          <Property Name="IdDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Id_Commande" Type="int" Nullable="false" />
           <Property Name="Id_Produit" Type="int" Nullable="false" />
+          <Property Name="NomProduit" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Quantite" Type="int" Nullable="false" />
           <Property Name="Prix" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Remise" Type="nvarchar" MaxLength="250" Nullable="false" />
@@ -132,18 +127,9 @@ avertissement 6002: La table/vue 'GESTION_STOCK.dbo.Details_Commande' n'a pas de
           <EntitySet Name="CATEGORIE" EntityType="Self.CATEGORIE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Details_Commande" EntityType="Self.Details_Commande" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRODUIT" EntityType="Self.PRODUIT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Details_Commande" EntityType="Self.Details_Commande" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Details_Commande].[Id_Commande] AS [Id_Commande], 
-    [Details_Commande].[Id_Produit] AS [Id_Produit], 
-    [Details_Commande].[Quantite] AS [Quantite], 
-    [Details_Commande].[Prix] AS [Prix], 
-    [Details_Commande].[Remise] AS [Remise], 
-    [Details_Commande].[Total] AS [Total]
-    FROM [dbo].[Details_Commande] AS [Details_Commande]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_COMMANDE_CLIENT" Association="Self.FK_COMMANDE_CLIENT">
             <End Role="CLIENT" EntitySet="CLIENT" />
             <End Role="COMMANDE" EntitySet="COMMANDE" />
@@ -169,9 +155,9 @@ avertissement 6002: La table/vue 'GESTION_STOCK.dbo.Details_Commande' n'a pas de
           <EntitySet Name="CATEGORIE" EntityType="GESTION_STOCKModel.CATEGORIE" />
           <EntitySet Name="CLIENT" EntityType="GESTION_STOCKModel.CLIENT" />
           <EntitySet Name="COMMANDE" EntityType="GESTION_STOCKModel.COMMANDE" />
+          <EntitySet Name="Details_Commande" EntityType="GESTION_STOCKModel.Details_Commande" />
           <EntitySet Name="PRODUIT" EntityType="GESTION_STOCKModel.PRODUIT" />
           <EntitySet Name="UTILISATEUR" EntityType="GESTION_STOCKModel.UTILISATEUR" />
-          <EntitySet Name="Details_Commande" EntityType="GESTION_STOCKModel.Details_Commande" />
           <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE">
             <End Role="CATEGORIE" EntitySet="CATEGORIE" />
             <End Role="PRODUIT" EntitySet="PRODUIT" />
@@ -224,6 +210,21 @@ avertissement 6002: La table/vue 'GESTION_STOCK.dbo.Details_Commande' n'a pas de
           <NavigationProperty Name="CLIENT" Relationship="GESTION_STOCKModel.FK_COMMANDE_CLIENT" FromRole="COMMANDE" ToRole="CLIENT" />
           <NavigationProperty Name="Details_Commande" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="COMMANDE" ToRole="Details_Commande" />
         </EntityType>
+        <EntityType Name="Details_Commande">
+          <Key>
+            <PropertyRef Name="IdDetail" />
+          </Key>
+          <Property Name="IdDetail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Commande" Type="Int32" Nullable="false" />
+          <Property Name="Id_Produit" Type="Int32" Nullable="false" />
+          <Property Name="NomProduit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Quantite" Type="Int32" Nullable="false" />
+          <Property Name="Prix" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Remise" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Total" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="COMMANDE" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="Details_Commande" ToRole="COMMANDE" />
+          <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="Details_Commande" ToRole="PRODUIT" />
+        </EntityType>
         <EntityType Name="PRODUIT">
           <Key>
             <PropertyRef Name="Id_Produit" />
@@ -243,24 +244,6 @@ avertissement 6002: La table/vue 'GESTION_STOCK.dbo.Details_Commande' n'a pas de
           </Key>
           <Property Name="Nom_Utilisateur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Mot_de_passe" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Details_Commande">
-          <Key>
-            <PropertyRef Name="Id_Commande" />
-            <PropertyRef Name="Id_Produit" />
-            <PropertyRef Name="Quantite" />
-            <PropertyRef Name="Prix" />
-            <PropertyRef Name="Remise" />
-            <PropertyRef Name="Total" />
-          </Key>
-          <Property Name="Id_Commande" Type="Int32" Nullable="false" />
-          <Property Name="Id_Produit" Type="Int32" Nullable="false" />
-          <Property Name="Quantite" Type="Int32" Nullable="false" />
-          <Property Name="Prix" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Remise" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Total" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="COMMANDE" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="Details_Commande" ToRole="COMMANDE" />
-          <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="Details_Commande" ToRole="PRODUIT" />
         </EntityType>
         <Association Name="FK_PRODUIT_CATEGORIE">
           <End Type="GESTION_STOCKModel.CATEGORIE" Role="CATEGORIE" Multiplicity="1">
@@ -358,6 +341,20 @@ avertissement 6002: La table/vue 'GESTION_STOCK.dbo.Details_Commande' n'a pas de
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Details_Commande">
+            <EntityTypeMapping TypeName="GESTION_STOCKModel.Details_Commande">
+              <MappingFragment StoreEntitySet="Details_Commande">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Remise" ColumnName="Remise" />
+                <ScalarProperty Name="Prix" ColumnName="Prix" />
+                <ScalarProperty Name="Quantite" ColumnName="Quantite" />
+                <ScalarProperty Name="NomProduit" ColumnName="NomProduit" />
+                <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
+                <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
+                <ScalarProperty Name="IdDetail" ColumnName="IdDetail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="PRODUIT">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.PRODUIT">
               <MappingFragment StoreEntitySet="PRODUIT">
@@ -375,18 +372,6 @@ avertissement 6002: La table/vue 'GESTION_STOCK.dbo.Details_Commande' n'a pas de
               <MappingFragment StoreEntitySet="UTILISATEUR">
                 <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
                 <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Details_Commande">
-            <EntityTypeMapping TypeName="GESTION_STOCKModel.Details_Commande">
-              <MappingFragment StoreEntitySet="Details_Commande">
-                <ScalarProperty Name="Total" ColumnName="Total" />
-                <ScalarProperty Name="Remise" ColumnName="Remise" />
-                <ScalarProperty Name="Prix" ColumnName="Prix" />
-                <ScalarProperty Name="Quantite" ColumnName="Quantite" />
-                <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
-                <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
