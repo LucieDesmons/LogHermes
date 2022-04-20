@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YHyiVHCFr+iVlk1hDolwcimQIr2zV+iCqfKZCaIxKFhE1fUACUBUixS7INCWb22MJsAhRapaMlTb49zRnw4Y4g==",
+  "dgSpecHash": "booa5/F5coef84R22ZcKpd4yTE+e1Hpfp61a6N4xPLF5L6CsruA9HRgcO3mK/K2i4dedaLRN2SYon6a00Dmb6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\Stock.BL.csproj",
+  "projectFilePath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.BL\\Stock.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucie\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Lucie\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

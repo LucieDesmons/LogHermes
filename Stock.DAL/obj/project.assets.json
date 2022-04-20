@@ -1865,11 +1865,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\Stock.DAL.csproj",
       "projectName": "Stock.DAL",
-      "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj",
+      "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\Stock.DAL.csproj",
       "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\obj\\",
+      "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",

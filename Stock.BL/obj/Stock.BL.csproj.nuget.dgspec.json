@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\Stock.BL.csproj": {}
+    "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.BL\\Stock.BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\Stock.BL.csproj": {
+    "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.BL\\Stock.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\Stock.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.BL\\Stock.BL.csproj",
         "projectName": "Stock.BL",
-        "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\Stock.BL.csproj",
+        "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.BL\\Stock.BL.csproj",
         "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\obj\\",
+        "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj": {
-                "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj"
+              "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\Stock.DAL.csproj": {
+                "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\Stock.DAL.csproj"
               },
-              "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj": {
-                "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj"
+              "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.Models\\Stock.Models.csproj": {
+                "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.Models\\Stock.Models.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj": {
+    "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\Stock.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\Stock.DAL.csproj",
         "projectName": "Stock.DAL",
-        "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj",
+        "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\Stock.DAL.csproj",
         "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -135,14 +135,14 @@
         }
       }
     },
-    "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj": {
+    "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.Models\\Stock.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.Models\\Stock.Models.csproj",
         "projectName": "Stock.Models",
-        "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj",
+        "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.Models\\Stock.Models.csproj",
         "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\obj\\",
+        "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",

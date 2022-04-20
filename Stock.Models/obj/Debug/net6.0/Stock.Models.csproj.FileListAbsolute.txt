@@ -22,3 +22,15 @@ C:\Users\Lucie\source\repos\AppStock\Stock.Models\obj\Debug\net6.0\Stock.Models.
 C:\Users\Lucie\source\repos\AppStock\Stock.Models\obj\Debug\net6.0\Stock.Models.dll
 C:\Users\Lucie\source\repos\AppStock\Stock.Models\obj\Debug\net6.0\ref\Stock.Models.dll
 C:\Users\Lucie\source\repos\AppStock\Stock.Models\obj\Debug\net6.0\Stock.Models.pdb
+C:\Users\Lucie\Source\Repos\LogHermesV2\Stock.Models\bin\Debug\net6.0\Stock.Models.deps.json
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\bin\Debug\net6.0\Stock.Models.dll
+C:\Users\Lucie\Source\Repos\LogHermesV2\Stock.Models\bin\Debug\net6.0\ref\Stock.Models.dll
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\bin\Debug\net6.0\Stock.Models.pdb
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\obj\Debug\net6.0\Stock.Models.csproj.AssemblyReference.cache
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\obj\Debug\net6.0\Stock.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\obj\Debug\net6.0\Stock.Models.AssemblyInfoInputs.cache
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\obj\Debug\net6.0\Stock.Models.AssemblyInfo.cs
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\obj\Debug\net6.0\Stock.Models.csproj.CoreCompileInputs.cache
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\obj\Debug\net6.0\Stock.Models.dll
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\obj\Debug\net6.0\ref\Stock.Models.dll
+C:\Users\Lucie\source\repos\LogHermesV2\Stock.Models\obj\Debug\net6.0\Stock.Models.pdb

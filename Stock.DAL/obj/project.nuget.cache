@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cKL+4dhi3/suDyRc+AGhsVzxY9b7suOO6WVKU3YCuk/mmKlje9DjdLuvS6USV9fZL+rW1vqOR9dPCRCkKzMGiA==",
+  "dgSpecHash": "E35USGzldZNPe7PTge1HkyloWmuV3BXuJqotpIp+v9j5Y7pvJMJgSIOUJRVBSOYOwFdkFDLE8xXF/5qzBGubmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.DAL\\Stock.DAL.csproj",
+  "projectFilePath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.DAL\\Stock.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucie\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lucie\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -368,11 +368,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\AppStock\\WebSite\\WebSite.csproj",
+      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\WebSite\\WebSite.csproj",
       "projectName": "WebSite",
-      "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\WebSite\\WebSite.csproj",
+      "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\WebSite\\WebSite.csproj",
       "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\WebSite\\obj\\",
+      "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\WebSite\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",
