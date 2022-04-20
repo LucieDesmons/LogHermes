@@ -230,6 +230,7 @@
     <EmbeddedResource Include="Report\FRM_Report.resx">
       <DependentUpon>FRM_Report.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rpt_Cmde.rdlc" />
     <EmbeddedResource Include="Report\Rpt_listeProduit.rdlc" />
     <EmbeddedResource Include="Report\Rpt_Produit.rdlc" />
     <EmbeddedResource Include="Stock.PL\FRM_Accueil.resx">
@@ -301,6 +302,7 @@
       <DependentUpon>GESTION_STOCKDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Details_Commande.datasource" />
     <None Include="Properties\DataSources\PRODUIT.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -329,6 +331,7 @@
     <None Include="Resources\add1.png" />
     <None Include="Resources\refresh1.png" />
     <None Include="Resources\Recycle1.png" />
+    <None Include="Resources\search_32.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

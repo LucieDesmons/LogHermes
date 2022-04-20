@@ -29,12 +29,52 @@ namespace GestionStock.Stock.PL
         public USR_Commande()
         {
             InitializeComponent();
+            db = new dbStockContext();
+        }
+
+        //Remplir datagrid
+        public void remplirdata()
+        {
+            dgvCmde.Rows.Clear();
+            CLIENT c = new CLIENT();
+            string NomPrenom;
+            foreach(var LC in db.COMMANDE)
+            {
+                //Afficher Nom+Prenom client 
+                c = db.CLIENT.Single(s => s.Id_Client == LC.Id_Client);
+                NomPrenom = c.Nom_Client + " " + c.Prenom_Client;
+                dgvCmde.Rows.Add(LC.Id_Commande, LC.Date_Commande, NomPrenom, LC.Total_HT, LC.TVA, LC.Total_TTC);
+
+            }
+        }
+        private void USR_Commande_Load(object sender, EventArgs e)
+        {
+            remplirdata();
         }
 
         private void btnAddCmde_Click(object sender, EventArgs e)
         {
-            PL.FRM_Commande fRM_Commande = new PL.FRM_Commande();
+            PL.FRM_Commande fRM_Commande = new FRM_Commande(this);
             fRM_Commande.ShowDialog();
+        }
+
+        private void btnRechCmde_Click(object sender, EventArgs e)
+        {
+            var listecommande = db.COMMANDE.ToList();// Liste des commandes
+            if (dgvCmde.Rows.Count != 0)
+            {
+                listecommande = listecommande.Where(s=>s.Date_Commande.Date >= dateDebut.Value.Date && s.Date_Commande.Date <= dateFin.Value.Date).ToList();
+                dgvCmde.Rows.Clear();
+                CLIENT c = new CLIENT();
+                string NomPrenom;
+                foreach(var LC in listecommande)
+                {
+                    c = db.CLIENT.Single(s => s.Id_Client == LC.Id_Client);
+                    NomPrenom = c.Nom_Client + " " + c.Prenom_Client;
+                    dgvCmde.Rows.Add(LC.Id_Commande, LC.Date_Commande, NomPrenom, LC.Total_HT, LC.TVA, LC.Total_TTC);
+
+                }
+            }
         }
     }
 }

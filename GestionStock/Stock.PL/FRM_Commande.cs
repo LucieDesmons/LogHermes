@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace GestionStock.Stock.PL
 {
+
     public partial class FRM_Commande : Form
     {
+        private UserControl userCommande;
         private dbStockContext db;
-        public FRM_Commande()
+        public FRM_Commande(UserControl user)
         {
             InitializeComponent();
             db = new dbStockContext();
+            userCommande = user;
         }
         //Remplir le datagrid produit
         public void Actualise_DetailCommande()
@@ -193,6 +196,9 @@ namespace GestionStock.Stock.PL
                     {
                         clsCommande.Ajouter_Detail(LD.Id, LD.Nom, LD.quantite, LD.prix, LD.remise, LD.total);
                     }
+                    (userCommande as USR_Commande).remplirdata();
+                    BL.DetailCmde.listeDetail.Clear();
+                    Close();
                     MessageBox.Show("Commande ajouter avec succès", "Commande", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
