@@ -35,6 +35,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Details_Commande">
+      <EntityTypeMapping TypeName="GESTION_STOCKModel.Details_Commande">
+        <MappingFragment StoreEntitySet="Details_Commande">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Remise" ColumnName="Remise" />
+          <ScalarProperty Name="Prix" ColumnName="Prix" />
+          <ScalarProperty Name="Quantite" ColumnName="Quantite" />
+          <ScalarProperty Name="NomProduit" ColumnName="NomProduit" />
+          <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
+          <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
+          <ScalarProperty Name="IdDetail" ColumnName="IdDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="PRODUIT">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.PRODUIT">
         <MappingFragment StoreEntitySet="PRODUIT">
@@ -52,18 +66,6 @@
         <MappingFragment StoreEntitySet="UTILISATEUR">
           <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
           <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Details_Commande">
-      <EntityTypeMapping TypeName="GESTION_STOCKModel.Details_Commande">
-        <MappingFragment StoreEntitySet="Details_Commande">
-          <ScalarProperty Name="Total" ColumnName="Total" />
-          <ScalarProperty Name="Remise" ColumnName="Remise" />
-          <ScalarProperty Name="Prix" ColumnName="Prix" />
-          <ScalarProperty Name="Quantite" ColumnName="Quantite" />
-          <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
-          <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

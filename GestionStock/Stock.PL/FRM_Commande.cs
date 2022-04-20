@@ -72,6 +72,8 @@ namespace GestionStock.Stock.PL
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();
+            //Vider le datagrid après validation commande
+            BL.DetailCmde.listeDetail.Clear();
         }
 
         private void txtBoxR_Enter(object sender, EventArgs e)
@@ -95,6 +97,7 @@ namespace GestionStock.Stock.PL
         {
             PL.FRM_Client_Commande fRM_Client_Commande = new PL.FRM_Client_Commande();
             fRM_Client_Commande.ShowDialog();
+            IDClient = (int)fRM_Client_Commande.dgvClient.CurrentRow.Cells[0].Value;
             textNom.Text = fRM_Client_Commande.dgvClient.CurrentRow.Cells[1].Value.ToString();
             textPrenom.Text = fRM_Client_Commande.dgvClient.CurrentRow.Cells[2].Value.ToString();
             textAdresse.Text = fRM_Client_Commande.dgvClient.CurrentRow.Cells[3].Value.ToString();
@@ -165,6 +168,34 @@ namespace GestionStock.Stock.PL
         private void txtTVA_TextChanged(object sender, EventArgs e)
         {
             Actualise_DetailCommande();
+        }
+        public int IDClient;
+
+        private void btnValidClt_Click(object sender, EventArgs e)
+        {
+            BL.CLS_Commande_DetailCommande clsCommande = new BL.CLS_Commande_DetailCommande();
+            if (dgvCommande.Rows.Count == 0)
+            {
+                MessageBox.Show("Ajouter un/des produit(s)","Enregistrer", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (textNom.Text == "")
+                {
+                    MessageBox.Show("Ajouter un client", "client", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    //Enregistrer la commande
+                    clsCommande.Ajouter_Commande(dateCommande.Value,IDClient,txtTHT.Text,txtTVA.Text,txtTTTC.Text);
+                    //Sauvegarder dans la base de données
+                    foreach(var LD in BL.DetailCmde.listeDetail)
+                    {
+                        clsCommande.Ajouter_Detail(LD.Id, LD.Nom, LD.quantite, LD.prix, LD.remise, LD.total);
+                    }
+                    MessageBox.Show("Commande ajouter avec succès", "Commande", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+            }
         }
     }
 }

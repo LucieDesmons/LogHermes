@@ -4,9 +4,9 @@
     <EntitySet Name="CATEGORIE" EntityType="GESTION_STOCKModel.CATEGORIE" />
     <EntitySet Name="CLIENT" EntityType="GESTION_STOCKModel.CLIENT" />
     <EntitySet Name="COMMANDE" EntityType="GESTION_STOCKModel.COMMANDE" />
+    <EntitySet Name="Details_Commande" EntityType="GESTION_STOCKModel.Details_Commande" />
     <EntitySet Name="PRODUIT" EntityType="GESTION_STOCKModel.PRODUIT" />
     <EntitySet Name="UTILISATEUR" EntityType="GESTION_STOCKModel.UTILISATEUR" />
-    <EntitySet Name="Details_Commande" EntityType="GESTION_STOCKModel.Details_Commande" />
     <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE">
       <End Role="CATEGORIE" EntitySet="CATEGORIE" />
       <End Role="PRODUIT" EntitySet="PRODUIT" />
@@ -59,6 +59,21 @@
     <NavigationProperty Name="CLIENT" Relationship="GESTION_STOCKModel.FK_COMMANDE_CLIENT" FromRole="COMMANDE" ToRole="CLIENT" />
     <NavigationProperty Name="Details_Commande" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="COMMANDE" ToRole="Details_Commande" />
   </EntityType>
+  <EntityType Name="Details_Commande">
+    <Key>
+      <PropertyRef Name="IdDetail" />
+    </Key>
+    <Property Name="IdDetail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Commande" Type="Int32" Nullable="false" />
+    <Property Name="Id_Produit" Type="Int32" Nullable="false" />
+    <Property Name="NomProduit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Quantite" Type="Int32" Nullable="false" />
+    <Property Name="Prix" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Remise" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Total" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="COMMANDE" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="Details_Commande" ToRole="COMMANDE" />
+    <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="Details_Commande" ToRole="PRODUIT" />
+  </EntityType>
   <EntityType Name="PRODUIT">
     <Key>
       <PropertyRef Name="Id_Produit" />
@@ -78,24 +93,6 @@
     </Key>
     <Property Name="Nom_Utilisateur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Mot_de_passe" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="Details_Commande">
-    <Key>
-      <PropertyRef Name="Id_Commande" />
-      <PropertyRef Name="Id_Produit" />
-      <PropertyRef Name="Quantite" />
-      <PropertyRef Name="Prix" />
-      <PropertyRef Name="Remise" />
-      <PropertyRef Name="Total" />
-    </Key>
-    <Property Name="Id_Commande" Type="Int32" Nullable="false" />
-    <Property Name="Id_Produit" Type="Int32" Nullable="false" />
-    <Property Name="Quantite" Type="Int32" Nullable="false" />
-    <Property Name="Prix" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Name="Remise" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Name="Total" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="COMMANDE" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="Details_Commande" ToRole="COMMANDE" />
-    <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="Details_Commande" ToRole="PRODUIT" />
   </EntityType>
   <Association Name="FK_PRODUIT_CATEGORIE">
     <End Type="GESTION_STOCKModel.CATEGORIE" Role="CATEGORIE" Multiplicity="1">

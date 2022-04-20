@@ -34,7 +34,7 @@
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnValidClt = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateCommande = new System.Windows.Forms.DateTimePicker();
             this.lblFicheCmde = new System.Windows.Forms.Label();
             this.textTel = new System.Windows.Forms.TextBox();
             this.textMail = new System.Windows.Forms.TextBox();
@@ -57,6 +57,9 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.modifierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gESTION_STOCKDataSet1 = new GestionStock.GESTION_STOCKDataSet1();
             this.detailsCommandeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.details_CommandeTableAdapter = new GestionStock.GESTION_STOCKDataSet1TableAdapters.Details_CommandeTableAdapter();
@@ -74,16 +77,13 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnClt = new System.Windows.Forms.Button();
-            this.modifierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommande)).BeginInit();
+            this.contextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsCommandeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).BeginInit();
-            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAnnuler
@@ -142,23 +142,24 @@
             this.btnValidClt.TabIndex = 65;
             this.btnValidClt.Text = "Valider";
             this.btnValidClt.UseVisualStyleBackColor = false;
+            this.btnValidClt.Click += new System.EventHandler(this.btnValidClt_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dateCommande);
             this.panel1.Controls.Add(this.lblFicheCmde);
             this.panel1.Location = new System.Drawing.Point(39, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1354, 66);
             this.panel1.TabIndex = 64;
             // 
-            // dateTimePicker1
+            // dateCommande
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(531, 17);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(304, 32);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dateCommande.Location = new System.Drawing.Point(531, 17);
+            this.dateCommande.Name = "dateCommande";
+            this.dateCommande.Size = new System.Drawing.Size(304, 32);
+            this.dateCommande.TabIndex = 1;
             // 
             // lblFicheCmde
             // 
@@ -393,6 +394,32 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modifierToolStripMenuItem1,
+            this.supprimerToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip2";
+            this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.contextMenuStrip.Size = new System.Drawing.Size(152, 56);
+            // 
+            // modifierToolStripMenuItem1
+            // 
+            this.modifierToolStripMenuItem1.Image = global::GestionStock.Properties.Resources.refresh1;
+            this.modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
+            this.modifierToolStripMenuItem1.Size = new System.Drawing.Size(151, 26);
+            this.modifierToolStripMenuItem1.Text = "Modifier";
+            this.modifierToolStripMenuItem1.Click += new System.EventHandler(this.modifierToolStripMenuItem1_Click);
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            this.supprimerToolStripMenuItem.Image = global::GestionStock.Properties.Resources.Recycle1;
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
+            // 
             // gESTION_STOCKDataSet1
             // 
             this.gESTION_STOCKDataSet1.DataSetName = "GESTION_STOCKDataSet1";
@@ -545,16 +572,6 @@
             this.panel3.Size = new System.Drawing.Size(10, 494);
             this.panel3.TabIndex = 68;
             // 
-            // contextMenuStrip
-            // 
-            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modifierToolStripMenuItem1,
-            this.supprimerToolStripMenuItem});
-            this.contextMenuStrip.Name = "contextMenuStrip2";
-            this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip.Size = new System.Drawing.Size(152, 56);
-            // 
             // btnClt
             // 
             this.btnClt.BackColor = System.Drawing.Color.Transparent;
@@ -570,22 +587,6 @@
             this.btnClt.TabIndex = 79;
             this.btnClt.UseVisualStyleBackColor = false;
             this.btnClt.Click += new System.EventHandler(this.btnClt_Click);
-            // 
-            // modifierToolStripMenuItem1
-            // 
-            this.modifierToolStripMenuItem1.Image = global::GestionStock.Properties.Resources.refresh1;
-            this.modifierToolStripMenuItem1.Name = "modifierToolStripMenuItem1";
-            this.modifierToolStripMenuItem1.Size = new System.Drawing.Size(214, 26);
-            this.modifierToolStripMenuItem1.Text = "Modifier";
-            this.modifierToolStripMenuItem1.Click += new System.EventHandler(this.modifierToolStripMenuItem1_Click);
-            // 
-            // supprimerToolStripMenuItem
-            // 
-            this.supprimerToolStripMenuItem.Image = global::GestionStock.Properties.Resources.Recycle1;
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
-            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // FRM_Commande
             // 
@@ -633,10 +634,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommande)).EndInit();
+            this.contextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsCommandeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).EndInit();
-            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -688,7 +689,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnClt;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateCommande;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         public System.Windows.Forms.DataGridView dgvCommande;
