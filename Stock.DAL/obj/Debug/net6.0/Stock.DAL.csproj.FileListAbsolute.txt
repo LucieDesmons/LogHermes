@@ -31,7 +31,6 @@ C:\Users\Lucie\source\repos\LogHermesV2\Stock.DAL\bin\Debug\net6.0\Stock.DAL.run
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.DAL\bin\Debug\net6.0\Stock.DAL.dll
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.DAL\bin\Debug\net6.0\ref\Stock.DAL.dll
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.DAL\bin\Debug\net6.0\Stock.DAL.pdb
-C:\Users\Lucie\source\repos\LogHermesV2\Stock.DAL\obj\Debug\net6.0\Stock.DAL.csproj.AssemblyReference.cache
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.DAL\obj\Debug\net6.0\Stock.DAL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.DAL\obj\Debug\net6.0\Stock.DAL.AssemblyInfoInputs.cache
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.DAL\obj\Debug\net6.0\Stock.DAL.AssemblyInfo.cs
