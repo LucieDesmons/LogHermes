@@ -40,7 +40,6 @@ C:\Users\Lucie\source\repos\LogHermesV2\Stock.BL\bin\Debug\net6.0\Stock.DAL.dll
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.BL\bin\Debug\net6.0\Stock.Models.dll
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.BL\bin\Debug\net6.0\Stock.DAL.pdb
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.BL\bin\Debug\net6.0\Stock.Models.pdb
-C:\Users\Lucie\source\repos\LogHermesV2\Stock.BL\obj\Debug\net6.0\Stock.BL.csproj.AssemblyReference.cache
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.BL\obj\Debug\net6.0\Stock.BL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.BL\obj\Debug\net6.0\Stock.BL.AssemblyInfoInputs.cache
 C:\Users\Lucie\source\repos\LogHermesV2\Stock.BL\obj\Debug\net6.0\Stock.BL.AssemblyInfo.cs
