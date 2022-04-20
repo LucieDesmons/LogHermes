@@ -9607,11 +9607,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\AppStock\\LogHermes.API\\LogHermes.API.csproj",
+      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\LogHermes.API\\LogHermes.API.csproj",
       "projectName": "LogHermes.API",
-      "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\LogHermes.API\\LogHermes.API.csproj",
+      "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\LogHermes.API\\LogHermes.API.csproj",
       "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\LogHermes.API\\obj\\",
+      "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\LogHermes.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9628,8 +9628,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\Stock.BL.csproj": {
-              "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.BL\\Stock.BL.csproj"
+            "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.BL\\Stock.BL.csproj": {
+              "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.BL\\Stock.BL.csproj"
             }
           }
         }

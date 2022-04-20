@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.Models\\Stock.Models.csproj",
       "projectName": "Stock.Models",
-      "projectPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\Stock.Models.csproj",
+      "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.Models\\Stock.Models.csproj",
       "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\Stock.Models\\obj\\",
+      "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\Stock.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",

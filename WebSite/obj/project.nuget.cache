@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1cNk1yrvFLqzdwdb4OphasGOcHQtu4vK7kUx0R2ij+bUg0zTvdr7GyxlPRHRW3nldSN3uU+mF2oDvsXd5DDqYQ==",
+  "dgSpecHash": "7y37vRyAJhwf8VzXQuTXNKU3NF75LijvND8lkkZ3UpwCgQvgAcQXW4XdCBLyZRtEuDcyxpJRzQqHvlwVbpEnDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\WebSite\\WebSite.csproj",
+  "projectFilePath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\WebSite\\WebSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucie\\.nuget\\packages\\bootstrap\\5.1.3\\bootstrap.5.1.3.nupkg.sha512",
     "C:\\Users\\Lucie\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512"

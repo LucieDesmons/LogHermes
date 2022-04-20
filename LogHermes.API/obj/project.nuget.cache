@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ptjif3dUFWEIKI6wll6lMC+iucvN1Qs0UruuG7N+gdA1g4EpUDbJA17zrUxzh1xIk3hKhddoWiFldHYa7BhPaQ==",
+  "dgSpecHash": "IG3n9HfN/QwP1hZz4+GNuiF0Q/S+uZJ8YSgymntY9VDr5Gl7c7BM1CcQJ6HvJdCJyIMw8Y/0TJz6z1MUZ4YSIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucie\\source\\repos\\AppStock\\LogHermes.API\\LogHermes.API.csproj",
+  "projectFilePath": "C:\\Users\\Lucie\\source\\repos\\LogHermesV2\\LogHermes.API\\LogHermes.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucie\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Lucie\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
