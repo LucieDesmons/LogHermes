@@ -35,7 +35,12 @@
       "ProjectGuid": "116513ba-be9d-4e09-a48f-393194857ad9",
       "DisplayName": "LogHermesV3.API",
       "ColorIndex": 5
+    },
+    "02b51aa1-24f1-40a1-844f-8e7a42712b2d": {
+      "ProjectGuid": "02b51aa1-24f1-40a1-844f-8e7a42712b2d",
+      "DisplayName": "SiteWeb",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

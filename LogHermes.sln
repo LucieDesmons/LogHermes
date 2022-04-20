@@ -5,11 +5,13 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogHermes.API", "LogHermes.API\LogHermes.API.csproj", "{46EA0532-BEFD-40B2-BBE2-9E0C6A7C90A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.Models", "Stock.Models\Stock.Models.csproj", "{8019CDEB-89A6-476A-90FA-6E8EC78F995F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.Models", "Stock.Models\Stock.Models.csproj", "{8019CDEB-89A6-476A-90FA-6E8EC78F995F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.BL", "Stock.BL\Stock.BL.csproj", "{11DFAC0A-9015-4770-985F-CB0AE18D7813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.BL", "Stock.BL\Stock.BL.csproj", "{11DFAC0A-9015-4770-985F-CB0AE18D7813}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.DAL", "Stock.DAL\Stock.DAL.csproj", "{3A22538E-DB55-456A-88FB-B28F4533E3EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.DAL", "Stock.DAL\Stock.DAL.csproj", "{3A22538E-DB55-456A-88FB-B28F4533E3EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{D21D0EB3-3623-4BC3-AE61-3C450B22586D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3A22538E-DB55-456A-88FB-B28F4533E3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A22538E-DB55-456A-88FB-B28F4533E3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A22538E-DB55-456A-88FB-B28F4533E3EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21D0EB3-3623-4BC3-AE61-3C450B22586D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21D0EB3-3623-4BC3-AE61-3C450B22586D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21D0EB3-3623-4BC3-AE61-3C450B22586D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21D0EB3-3623-4BC3-AE61-3C450B22586D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
