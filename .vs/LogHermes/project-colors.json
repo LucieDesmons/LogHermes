@@ -40,7 +40,12 @@
       "ProjectGuid": "02b51aa1-24f1-40a1-844f-8e7a42712b2d",
       "DisplayName": "SiteWeb",
       "ColorIndex": 6
+    },
+    "d21d0eb3-3623-4bc3-ae61-3c450b22586d": {
+      "ProjectGuid": "d21d0eb3-3623-4bc3-ae61-3c450b22586d",
+      "DisplayName": "WebSite",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }
