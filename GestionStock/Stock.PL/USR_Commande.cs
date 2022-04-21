@@ -76,5 +76,25 @@ namespace GestionStock.Stock.PL
                 }
             }
         }
+
+        private void btnImpr_Click(object sender, EventArgs e)
+        {
+            Report.FRM_Report fRM_Report = new Report.FRM_Report();
+            db = new dbStockContext();
+            try
+            {
+                //commande selectionnée
+                int IdCommande = (int)dgvCmde.CurrentRow.Cells[0].Value;
+                var Commande=db.COMMANDE.Single(s=> s.Id_Commande == IdCommande);
+                var ClientCommande = db.CLIENT.Single(s=> s.Id_Client == Commande.Id_Client);
+                var listedetail = db.Details_Commande.Where(s=>s.Id_Commande==IdCommande).ToList();
+
+
+
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.dgvCmde = new System.Windows.Forms.DataGridView();
-            this.btnAddCmde = new System.Windows.Forms.Button();
-            this.dateDebut = new System.Windows.Forms.DateTimePicker();
-            this.dateFin = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnImpr = new System.Windows.Forms.Button();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddCmde = new System.Windows.Forms.Button();
+            this.dateDebut = new System.Windows.Forms.DateTimePicker();
+            this.dateFin = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnImpr = new System.Windows.Forms.Button();
             this.btnRechCmde = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCmde)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,47 @@
             this.dgvCmde.RowTemplate.Height = 24;
             this.dgvCmde.Size = new System.Drawing.Size(1006, 395);
             this.dgvCmde.TabIndex = 13;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Id";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Date";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Client";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Total HT";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "TVA";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "TOTAL TTC";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // btnAddCmde
             // 
@@ -120,47 +161,7 @@
             this.btnImpr.TabIndex = 18;
             this.btnImpr.Text = "Imprimer";
             this.btnImpr.UseVisualStyleBackColor = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Id";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Date";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Client";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Total HT";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "TVA";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "TOTAL TTC";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.btnImpr.Click += new System.EventHandler(this.btnImpr_Click);
             // 
             // btnRechCmde
             // 
