@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rDGC8nZIdEG6n3deCFFu0ADgDg9ruWsy8yAPZUpnm2WH6cQnrhdMvIX/WQYwVYTedxZQ4AqF3OxQTKyUMW/U2w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\SiteWeb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucie\\.nuget\\packages\\bootstrap\\5.1.3\\bootstrap.5.1.3.nupkg.sha512",
+    "C:\\Users\\Lucie\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
