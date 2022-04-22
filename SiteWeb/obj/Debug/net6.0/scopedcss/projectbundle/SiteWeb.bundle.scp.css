@@ -16,6 +16,37 @@ a[b-89zfdai4uj] {
     color: #950808;
 }
 
+.accordion-button:not(.collapsed)[b-89zfdai4uj] {
+    color: #dd3737;
+    background-color: #fff;
+}
+
+.accordion-button:focus[b-89zfdai4uj] {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)[b-89zfdai4uj]::after {
+    background-image: url(https://icones.pro/wp-content/uploads/2021/02/icone-de-fleche-vers-le-bas-rouge.png);
+}
+
+.form-check-input:checked[b-89zfdai4uj] {
+    background-color: #dd3737;
+    border-color: #dd3737;
+}
+
+.form-check-input:focus[b-89zfdai4uj] {
+    box-shadow: none;
+}
+
+.form-control:focus[b-89zfdai4uj] {
+    border-color: #dd3737;
+    box-shadow: 0 0 0 0.25rem rgb(235 115 115 / 25%);
+}
+
+.accordion-button[b-89zfdai4uj]::after {
+    background-image: url(https://icones.pro/wp-content/uploads/2021/02/icone-de-fleche-vers-le-bas-noire.png);
+}
+
 .btn-primary[b-89zfdai4uj] {
     color: #fff;
     background-color: #1b6ec2;

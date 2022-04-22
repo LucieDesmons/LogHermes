@@ -15,6 +15,37 @@ a {
     color: #950808;
 }
 
+.accordion-button:not(.collapsed) {
+    color: #dd3737;
+    background-color: #fff;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(https://icones.pro/wp-content/uploads/2021/02/icone-de-fleche-vers-le-bas-rouge.png);
+}
+
+.form-check-input:checked {
+    background-color: #dd3737;
+    border-color: #dd3737;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #dd3737;
+    box-shadow: 0 0 0 0.25rem rgb(235 115 115 / 25%);
+}
+
+.accordion-button::after {
+    background-image: url(https://icones.pro/wp-content/uploads/2021/02/icone-de-fleche-vers-le-bas-noire.png);
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
