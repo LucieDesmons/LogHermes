@@ -11,4 +11,12 @@
     <PackageReference Include="FontAwesome" Version="4.7.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\contents\negosud_logo.png" />
+  </ItemGroup>
+
 </Project>
