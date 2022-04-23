@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BUWIGaaiU++G+tW1K4fge7or5kekVvX7oXob8ycI6bU=",
+  "Hash": "W8B0cc9NcXeSxUzNu9XVXUMQAhrQXwAIi76d5WYao5U=",
   "Source": "SiteWeb",
   "BasePath": "_content/SiteWeb",
   "Mode": "Default",
@@ -799,12 +799,12 @@
       "OriginalItemSpec": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SiteWeb.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\wwwroot\\contents\\negosud_logo.png",
+      "Identity": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\wwwroot\\contents\\logo-negosud.svg",
       "SourceId": "SiteWeb",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\wwwroot\\",
       "BasePath": "_content/SiteWeb",
-      "RelativePath": "contents/negosud_logo.png",
+      "RelativePath": "contents/logo-negosud.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -813,7 +813,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contents\\negosud_logo.png"
+      "OriginalItemSpec": "wwwroot\\contents\\logo-negosud.svg"
     },
     {
       "Identity": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\wwwroot\\css\\site.css",
