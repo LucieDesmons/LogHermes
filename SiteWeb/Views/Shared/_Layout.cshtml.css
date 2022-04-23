@@ -5,6 +5,30 @@ html, body {
     min-height: 100vh!important;
 }
 
+/* mobiles */
+@media only screen
+and (min-width: 320px)
+and (max-width: 767px ) {
+    .accordion-item {
+        border-bottom: 1px solid rgba(0,0,0,.125)!important;
+
+    }
+
+    .flex-grow-mobile {
+        flex-grow: 0!important;
+    }
+}
+
+/* tablets */
+@media only screen
+and (min-width: 768px) {
+
+}
+
+.flex-grow-mobile {
+    flex-grow: 1;
+}
+
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -30,6 +54,15 @@ a {
 
 .accordion-button:not(.collapsed)::after {
     background-image: url(https://icones.pro/wp-content/uploads/2021/02/icone-de-fleche-vers-le-bas-rouge.png);
+}
+
+.accordion-item {
+    border: none;
+    border-right: 1px solid rgba(0,0,0,.125);
+}
+
+.accordion-border-color {
+    border-color: rgba(0,0,0,.125);
 }
 
 .form-check-input:checked {

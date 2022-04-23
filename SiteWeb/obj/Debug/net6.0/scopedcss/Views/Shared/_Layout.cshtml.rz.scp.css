@@ -5,6 +5,30 @@ html[b-89zfdai4uj], body[b-89zfdai4uj] {
     min-height: 100vh!important;
 }
 
+/* mobiles */
+@media only screen
+and (min-width: 320px)
+and (max-width: 767px ) {
+    .accordion-item[b-89zfdai4uj] {
+        border-bottom: 1px solid rgba(0,0,0,.125)!important;
+
+    }
+
+    .flex-grow-mobile[b-89zfdai4uj] {
+        flex-grow: 0!important;
+    }
+}
+
+/* tablets */
+@media only screen
+and (min-width: 768px) {
+
+}
+
+.flex-grow-mobile[b-89zfdai4uj] {
+    flex-grow: 1;
+}
+
 a.navbar-brand[b-89zfdai4uj] {
     white-space: normal;
     text-align: center;
@@ -30,6 +54,15 @@ a[b-89zfdai4uj] {
 
 .accordion-button:not(.collapsed)[b-89zfdai4uj]::after {
     background-image: url(https://icones.pro/wp-content/uploads/2021/02/icone-de-fleche-vers-le-bas-rouge.png);
+}
+
+.accordion-item[b-89zfdai4uj] {
+    border: none;
+    border-right: 1px solid rgba(0,0,0,.125);
+}
+
+.accordion-border-color[b-89zfdai4uj] {
+    border-color: rgba(0,0,0,.125);
 }
 
 .form-check-input:checked[b-89zfdai4uj] {
