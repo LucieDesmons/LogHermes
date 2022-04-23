@@ -87,8 +87,7 @@ namespace GestionStock.Stock.PL
                 int IdCommande = (int)dgvCmde.CurrentRow.Cells[0].Value;
                 var Commande=db.COMMANDE.Single(s=> s.Id_Commande == IdCommande);
                 var ClientCommande = db.CLIENT.Single(s=> s.Id_Client == Commande.Id_Client);
-                var listedetail = db.Details_Commande.Where(s=>s.Id_Commande==IdCommande).ToList();
-
+                var listedetail = db.Details_Commande.Where(s => s.Id_Commande == IdCommande).ToList();
 
 
             }catch (Exception ex)
