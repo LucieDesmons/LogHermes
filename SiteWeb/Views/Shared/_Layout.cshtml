@@ -44,9 +44,9 @@
         <main role="main" class="pb-3">
             <div class="col-12 d-flex justify-content-center h-100 w-100">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-12">
+                    <div class="col-lg-3 col-md-3 col-sm-12">
 
-                                <div class="accordion" id="accordionPanelsStayOpen">
+                                <div class="accordion  w-100 h-100" id="accordionPanelsStayOpen">
                                   <div class="accordion-item">
                                     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                                       <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
@@ -197,11 +197,11 @@
                                                     </div>
 
                                                     @**RHÔNE*@
-                                                     <div class="row ps-3 mb-1 ms-1 mb-2">
+                                                     <div class="row ps-3 mb-1 ms-1">
                                                         <label class="p-0 fw-bold"> Rhône : </label>
                                                     </div>
 
-                                                    <div class="row ps-5">
+                                                    <div class="row ps-5 mb-2">
                                                         <div class="form-check">
                                                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                                           <label class="form-check-label" for="flexCheckDefault">
@@ -221,17 +221,17 @@
                                                         <label class="p-0 fw-bold"> Prix : </label>
                                                     </div>
 
-                                                    <div class="row d-flex justify-content-center pe-4">
-                                                        <div class="col-md-5 mt-3 text-center">
+                                                    <div class="row d-flex justify-content-center p-0 pe-4">
+                                                        <div class="col-md-5 mt-3 text-center p-0 pe-1">
                                                           <div class="form-outline">
                                                             <input type="number" id="typeNumber" class="form-control active" value="0">
                                                             <label class="form-label" for="typeNumber" style="margin-left: 0px;">Minimum</label>
                                                           <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 61.6px;"></div><div class="form-notch-trailing"></div></div></div>
                                                         </div>
 
-                                                        <div class="col-md-5 mt-3 text-center">
+                                                        <div class="col-md-5 mt-3 text-center p-0 ps-1">
                                                           <div class="form-outline">
-                                                            <input type="number" id="typeNumber2" class="form-control active" value="600000">
+                                                            <input type="number" id="typeNumber2" class="form-control active" value="8000">
                                                             <label class="form-label" for="typeNumber2" style="margin-left: 0px;">Maximum</label>
                                                           <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
                                                         </div>
@@ -246,7 +246,7 @@
 
 
                     @*CONTENT*@
-                    <div class="col-lg-9 col-sm-12">
+                    <div class="col-lg-9 col-md-9 col-sm-12">
                     @RenderBody()
                     </div>
 
