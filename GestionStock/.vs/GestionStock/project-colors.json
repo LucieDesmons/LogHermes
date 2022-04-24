@@ -20,7 +20,62 @@
       "ProjectGuid": "c37e91de-e185-4b13-a26c-ca1fd5307d4e",
       "DisplayName": "SiteWeb",
       "ColorIndex": 2
+    },
+    "0bbee762-93f6-4a87-a060-0db5a07e71ba": {
+      "ProjectGuid": "0bbee762-93f6-4a87-a060-0db5a07e71ba",
+      "DisplayName": "Stock.BL_old",
+      "ColorIndex": 3
+    },
+    "4846b195-fdcb-4082-9897-71517e78577e": {
+      "ProjectGuid": "4846b195-fdcb-4082-9897-71517e78577e",
+      "DisplayName": "LogHermes.API_old",
+      "ColorIndex": 4
+    },
+    "dcbeb0a5-91e8-417b-9d70-15c1d3480f6c": {
+      "ProjectGuid": "dcbeb0a5-91e8-417b-9d70-15c1d3480f6c",
+      "DisplayName": "Stock.DAL",
+      "ColorIndex": 5
+    },
+    "f2367719-6273-4689-9959-fa4acff621d4": {
+      "ProjectGuid": "f2367719-6273-4689-9959-fa4acff621d4",
+      "DisplayName": "DAL",
+      "ColorIndex": 6
+    },
+    "45182918-94f5-4d2f-bc00-e5b1dbbccc17": {
+      "ProjectGuid": "45182918-94f5-4d2f-bc00-e5b1dbbccc17",
+      "DisplayName": "Stock.DAL",
+      "ColorIndex": 7
+    },
+    "a3691ae6-d1e6-4d73-9db5-1d7b31cc5992": {
+      "ProjectGuid": "a3691ae6-d1e6-4d73-9db5-1d7b31cc5992",
+      "DisplayName": "GestionStock.BL",
+      "ColorIndex": 8
+    },
+    "1aa184b2-ef6a-4607-a19a-36158bf12829": {
+      "ProjectGuid": "1aa184b2-ef6a-4607-a19a-36158bf12829",
+      "DisplayName": "GestionStock.API",
+      "ColorIndex": 9
+    },
+    "c1c08525-4983-4cea-b6d3-37300a89f818": {
+      "ProjectGuid": "c1c08525-4983-4cea-b6d3-37300a89f818",
+      "DisplayName": "GestionStock.DAL",
+      "ColorIndex": 10
+    },
+    "4f364bba-f0d3-4a46-8060-2006a8577bc2": {
+      "ProjectGuid": "4f364bba-f0d3-4a46-8060-2006a8577bc2",
+      "DisplayName": "DAL",
+      "ColorIndex": 11
+    },
+    "5142ac5c-9d3b-490c-a052-82e7f020952c": {
+      "ProjectGuid": "5142ac5c-9d3b-490c-a052-82e7f020952c",
+      "DisplayName": "DAL",
+      "ColorIndex": 12
+    },
+    "81edd682-cf10-47b3-8c83-f5de1a3353f2": {
+      "ProjectGuid": "81edd682-cf10-47b3-8c83-f5de1a3353f2",
+      "DisplayName": "GestionStock.DAL",
+      "ColorIndex": 13
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 14
 }

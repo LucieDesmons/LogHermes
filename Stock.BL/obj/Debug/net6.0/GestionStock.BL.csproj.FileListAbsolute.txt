@@ -1,0 +1,15 @@
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\bin\Debug\net6.0\GestionStock.BL.deps.json
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\bin\Debug\net6.0\GestionStock.BL.dll
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\bin\Debug\net6.0\ref\GestionStock.BL.dll
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\bin\Debug\net6.0\GestionStock.BL.pdb
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\bin\Debug\net6.0\GestionStock.DAL.dll
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\bin\Debug\net6.0\GestionStock.DAL.pdb
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\GestionStock.BL.csproj.AssemblyReference.cache
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\GestionStock.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\GestionStock.BL.AssemblyInfoInputs.cache
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\GestionStock.BL.AssemblyInfo.cs
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\GestionStock.BL.csproj.CoreCompileInputs.cache
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\GestionStock.BL.csproj.CopyComplete
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\GestionStock.BL.dll
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\ref\GestionStock.BL.dll
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\GestionStock.BL.pdb

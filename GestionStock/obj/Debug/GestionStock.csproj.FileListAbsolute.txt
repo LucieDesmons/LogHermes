@@ -142,7 +142,6 @@ C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\bin\Debug\pt\Microsoft.Re
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\obj\Debug\GestionStock.csproj.AssemblyReference.cache
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\obj\Debug\GestionStock.csproj.SuggestedBindingRedirects.cache
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\obj\Debug\GestionStock.Properties.Resources.resources
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\obj\Debug\GestionStock.Report.FRM_Report.resources
