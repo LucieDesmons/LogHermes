@@ -62,10 +62,11 @@
         </EntityType>
         <EntityType Name="UTILISATEUR">
           <Key>
-            <PropertyRef Name="Nom_Utilisateur" />
+            <PropertyRef Name="ID_Utilisateur" />
           </Key>
           <Property Name="Nom_Utilisateur" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Mot_de_passe" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="ID_Utilisateur" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_COMMANDE_CLIENT">
           <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1">
@@ -240,10 +241,11 @@
         </EntityType>
         <EntityType Name="UTILISATEUR">
           <Key>
-            <PropertyRef Name="Nom_Utilisateur" />
+            <PropertyRef Name="ID_Utilisateur" />
           </Key>
           <Property Name="Nom_Utilisateur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Mot_de_passe" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Utilisateur" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK_PRODUIT_CATEGORIE">
           <End Type="GESTION_STOCKModel.CATEGORIE" Role="CATEGORIE" Multiplicity="1">
@@ -370,6 +372,7 @@
           <EntitySetMapping Name="UTILISATEUR">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.UTILISATEUR">
               <MappingFragment StoreEntitySet="UTILISATEUR">
+                <ScalarProperty Name="ID_Utilisateur" ColumnName="ID_Utilisateur" />
                 <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
                 <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
               </MappingFragment>

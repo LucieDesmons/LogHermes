@@ -332,6 +332,10 @@
     <None Include="Resources\refresh1.png" />
     <None Include="Resources\Recycle1.png" />
     <None Include="Resources\search_32.png" />
+    <None Include="Resources\unlock.png" />
+    <None Include="Resources\checkmark32.png" />
+    <None Include="Resources\wine.png" />
+    <None Include="Resources\wine32.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

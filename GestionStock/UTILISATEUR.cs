@@ -16,5 +16,6 @@ namespace GestionStock
     {
         public string Nom_Utilisateur { get; set; }
         public string Mot_de_passe { get; set; }
+        public int ID_Utilisateur { get; set; }
     }
 }

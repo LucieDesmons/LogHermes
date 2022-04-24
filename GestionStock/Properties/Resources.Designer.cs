@@ -73,6 +73,16 @@ namespace GestionStock.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkmark32 {
+            get {
+                object obj = ResourceManager.GetObject("checkmark32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_32 {
             get {
                 object obj = ResourceManager.GetObject("close_32", resourceCulture);
@@ -106,6 +116,36 @@ namespace GestionStock.Properties {
         internal static System.Drawing.Bitmap search_32 {
             get {
                 object obj = ResourceManager.GetObject("search_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unlock {
+            get {
+                object obj = ResourceManager.GetObject("unlock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wine {
+            get {
+                object obj = ResourceManager.GetObject("wine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wine32 {
+            get {
+                object obj = ResourceManager.GetObject("wine32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

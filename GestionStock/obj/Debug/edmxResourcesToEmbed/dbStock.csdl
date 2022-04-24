@@ -89,10 +89,11 @@
   </EntityType>
   <EntityType Name="UTILISATEUR">
     <Key>
-      <PropertyRef Name="Nom_Utilisateur" />
+      <PropertyRef Name="ID_Utilisateur" />
     </Key>
     <Property Name="Nom_Utilisateur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Mot_de_passe" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ID_Utilisateur" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="FK_PRODUIT_CATEGORIE">
     <End Type="GESTION_STOCKModel.CATEGORIE" Role="CATEGORIE" Multiplicity="1">

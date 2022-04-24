@@ -48,7 +48,7 @@ namespace GestionStock.Stock.PL
             {
                 if (C.ConnexionValide(db, textIdentifiant.Text, textMotPasse.Text) == true)
                 {
-                    MessageBox.Show("Bienvenu", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Bienvenue", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     FRM_Accueil f = new FRM_Accueil();
                     f.Show();
                     Hide();
@@ -60,6 +60,16 @@ namespace GestionStock.Stock.PL
                 }
             }
 
+
+        }
+
+        private void btnQuitter_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void lblTitre_Click(object sender, EventArgs e)
+        {
 
         }
     }

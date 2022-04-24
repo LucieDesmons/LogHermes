@@ -64,6 +64,7 @@
     <EntitySetMapping Name="UTILISATEUR">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.UTILISATEUR">
         <MappingFragment StoreEntitySet="UTILISATEUR">
+          <ScalarProperty Name="ID_Utilisateur" ColumnName="ID_Utilisateur" />
           <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
           <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
         </MappingFragment>

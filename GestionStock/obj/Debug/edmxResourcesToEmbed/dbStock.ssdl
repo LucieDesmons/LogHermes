@@ -57,10 +57,11 @@
   </EntityType>
   <EntityType Name="UTILISATEUR">
     <Key>
-      <PropertyRef Name="Nom_Utilisateur" />
+      <PropertyRef Name="ID_Utilisateur" />
     </Key>
     <Property Name="Nom_Utilisateur" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Mot_de_passe" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ID_Utilisateur" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_COMMANDE_CLIENT">
     <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1">
