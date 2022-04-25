@@ -14,8 +14,8 @@ namespace GestionStock
     
     public partial class UTILISATEUR
     {
+        public int ID_Utilisateur { get; set; }
         public string Nom_Utilisateur { get; set; }
         public string Mot_de_passe { get; set; }
-        public int ID_Utilisateur { get; set; }
     }
 }

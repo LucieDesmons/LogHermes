@@ -31,10 +31,10 @@
           </Key>
           <Property Name="Id_Commande" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Date_Commande" Type="datetime" Nullable="false" />
-          <Property Name="Id_Client" Type="int" Nullable="false" />
           <Property Name="Total_HT" Type="nvarchar" MaxLength="250" />
-          <Property Name="TVA" Type="nvarchar" MaxLength="20" />
+          <Property Name="TVA" Type="nvarchar" MaxLength="250" />
           <Property Name="Total_TTC" Type="nvarchar" MaxLength="250" />
+          <Property Name="Id_Client" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Details_Commande">
           <Key>
@@ -56,17 +56,20 @@
           <Property Name="Id_Produit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nom_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Quantite_Produit" Type="int" Nullable="false" />
-          <Property Name="Prix_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Prix_Unitaire" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Prix_Carton" Type="decimal" Precision="10" Scale="2" />
           <Property Name="Image_Produit" Type="image" Nullable="false" />
+          <Property Name="Description_Produit" Type="nchar" MaxLength="500" />
+          <Property Name="Année" Type="decimal" Precision="4" Scale="0" />
           <Property Name="Id_Categorie" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="UTILISATEUR">
           <Key>
             <PropertyRef Name="ID_Utilisateur" />
           </Key>
+          <Property Name="ID_Utilisateur" Type="int" Nullable="false" />
           <Property Name="Nom_Utilisateur" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Mot_de_passe" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="ID_Utilisateur" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_COMMANDE_CLIENT">
           <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1">
@@ -204,10 +207,10 @@
           </Key>
           <Property Name="Id_Commande" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Date_Commande" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Id_Client" Type="Int32" Nullable="false" />
           <Property Name="Total_HT" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="TVA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TVA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Total_TTC" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Id_Client" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CLIENT" Relationship="GESTION_STOCKModel.FK_COMMANDE_CLIENT" FromRole="COMMANDE" ToRole="CLIENT" />
           <NavigationProperty Name="Details_Commande" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="COMMANDE" ToRole="Details_Commande" />
         </EntityType>
@@ -233,8 +236,11 @@
           <Property Name="Id_Produit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nom_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Quantite_Produit" Type="Int32" Nullable="false" />
-          <Property Name="Prix_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Prix_Unitaire" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Prix_Carton" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="Image_Produit" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="Description_Produit" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+          <Property Name="Année" Type="Decimal" Precision="4" Scale="0" />
           <Property Name="Id_Categorie" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CATEGORIE" Relationship="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE" FromRole="PRODUIT" ToRole="CATEGORIE" />
           <NavigationProperty Name="Details_Commande" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="PRODUIT" ToRole="Details_Commande" />
@@ -243,9 +249,9 @@
           <Key>
             <PropertyRef Name="ID_Utilisateur" />
           </Key>
+          <Property Name="ID_Utilisateur" Type="Int32" Nullable="false" />
           <Property Name="Nom_Utilisateur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Mot_de_passe" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="ID_Utilisateur" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK_PRODUIT_CATEGORIE">
           <End Type="GESTION_STOCKModel.CATEGORIE" Role="CATEGORIE" Multiplicity="1">
@@ -334,10 +340,10 @@
           <EntitySetMapping Name="COMMANDE">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.COMMANDE">
               <MappingFragment StoreEntitySet="COMMANDE">
+                <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
                 <ScalarProperty Name="Total_TTC" ColumnName="Total_TTC" />
                 <ScalarProperty Name="TVA" ColumnName="TVA" />
                 <ScalarProperty Name="Total_HT" ColumnName="Total_HT" />
-                <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
                 <ScalarProperty Name="Date_Commande" ColumnName="Date_Commande" />
                 <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
               </MappingFragment>
@@ -361,8 +367,11 @@
             <EntityTypeMapping TypeName="GESTION_STOCKModel.PRODUIT">
               <MappingFragment StoreEntitySet="PRODUIT">
                 <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
+                <ScalarProperty Name="Année" ColumnName="Année" />
+                <ScalarProperty Name="Description_Produit" ColumnName="Description_Produit" />
                 <ScalarProperty Name="Image_Produit" ColumnName="Image_Produit" />
-                <ScalarProperty Name="Prix_Produit" ColumnName="Prix_Produit" />
+                <ScalarProperty Name="Prix_Carton" ColumnName="Prix_Carton" />
+                <ScalarProperty Name="Prix_Unitaire" ColumnName="Prix_Unitaire" />
                 <ScalarProperty Name="Quantite_Produit" ColumnName="Quantite_Produit" />
                 <ScalarProperty Name="Nom_Produit" ColumnName="Nom_Produit" />
                 <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
@@ -372,9 +381,9 @@
           <EntitySetMapping Name="UTILISATEUR">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.UTILISATEUR">
               <MappingFragment StoreEntitySet="UTILISATEUR">
-                <ScalarProperty Name="ID_Utilisateur" ColumnName="ID_Utilisateur" />
                 <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
                 <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
+                <ScalarProperty Name="ID_Utilisateur" ColumnName="ID_Utilisateur" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

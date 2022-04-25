@@ -337,6 +337,16 @@
     <None Include="Resources\wine.png" />
     <None Include="Resources\wine32.png" />
     <None Include="Resources\OIP.jpg" />
+    <None Include="Resources\Client48.png" />
+    <None Include="Resources\wine48.png" />
+    <None Include="Resources\package.png" />
+    <None Include="Resources\cat48.png" />
+    <None Include="Resources\receipt48.png" />
+    <None Include="Resources\user_business_add_32.png" />
+    <None Include="Resources\user_business_close_32.png" />
+    <None Include="Resources\user_business_info_32.png" />
+    <None Include="Resources\vigne.jpg" />
+    <None Include="Resources\vigne2.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

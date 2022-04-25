@@ -48,18 +48,18 @@ namespace GestionStock.Stock.PL
             db = new dbStockContext();
             foreach(var l in db.PRODUIT)
             {
-                dgvProduit.Rows.Add(l.Id_Produit,l.Nom_Produit,l.Quantite_Produit,l.Prix_Produit);
+                dgvProduit.Rows.Add(l.Id_Produit,l.Nom_Produit,l.Quantite_Produit,l.Prix_Unitaire, l.Année,l.Description_Produit, l.Prix_Carton);
 
             }
             for (int i = 0; i < dgvProduit.Rows.Count; i++)
             {
-                if ((int)dgvProduit.Rows[i].Cells[2].Value == 0)
+                if ((int)dgvProduit.Rows[i].Cells[4].Value == 0)
                 {
-                    dgvProduit.Rows[i].Cells[2].Style.BackColor = Color.Red;
+                    dgvProduit.Rows[i].Cells[4].Style.BackColor = Color.Red;
                 }
                 else
                 {
-                    dgvProduit.Rows[i].Cells[2].Style.BackColor = Color.LightGreen;
+                    dgvProduit.Rows[i].Cells[4].Style.BackColor = Color.LightGreen;
                 }
             }
             dgvProduit.ClearSelection();
@@ -92,7 +92,7 @@ namespace GestionStock.Stock.PL
             dgvProduit.Rows.Clear();
             foreach (var l in listerecherche)
             {
-                dgvProduit.Rows.Add(l.Id_Produit, l.Nom_Produit, l.Quantite_Produit, l.Prix_Produit);
+                dgvProduit.Rows.Add(l.Id_Produit, l.Nom_Produit, l.Quantite_Produit, l.Prix_Unitaire, l.Année, l.Description_Produit, l.Prix_Carton);
             }
         }
 

@@ -41,20 +41,20 @@ namespace GestionStock.Stock.PL
                 Cat = db.CATEGORIE.SingleOrDefault(s => s.Id_Categorie == Prod.Id_Categorie);
                 if (Cat != null)
                 {
-                    dgvProduit.Rows.Add(false, Prod.Id_Produit, Prod.Nom_Produit, Prod.Quantite_Produit, Prod.Prix_Produit, Cat.Nom_Categorie);
+                    dgvProduit.Rows.Add(false,Prod.Id_Produit, Prod.Nom_Produit, Prod.Année, Prod.Quantite_Produit, Prod.Prix_Unitaire,Prod.Prix_Carton, Cat.Nom_Categorie, Prod.Description_Produit);
 
                 }
             }
             //Colore le stock à 0
             for (int i = 0;i< dgvProduit.Rows.Count;i++)
             {
-                if((int)dgvProduit.Rows[i].Cells[3].Value == 0)
+                if((int)dgvProduit.Rows[i].Cells[4].Value == 0)
                 {
-                    dgvProduit.Rows[i].Cells[3].Style.BackColor = Color.Red;
+                    dgvProduit.Rows[i].Cells[4].Style.BackColor = Color.Red;
                 }
                 else
                 {
-                    dgvProduit.Rows[i].Cells[3].Style.BackColor = Color.LightGreen;
+                    dgvProduit.Rows[i].Cells[4].Style.BackColor = Color.LightGreen;
                 }
             }
         }
@@ -87,11 +87,12 @@ namespace GestionStock.Stock.PL
                     }
                     if (PR != null)//si existe
                     {
-                        frmArticle.comboCatArt.Text = dgvProduit.Rows[i].Cells[5].Value.ToString();
                         frmArticle.textDenomination.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
-                        frmArticle.textPrix.Text = dgvProduit.Rows[i].Cells[4].Value.ToString();
+                        //Rajouter les années, la description, prix carton
                         frmArticle.textQteArt.Text = dgvProduit.Rows[i].Cells[3].Value.ToString();
-                        frmArticle.Id_Produit = (int)dgvProduit.Rows[i].Cells[1].Value;
+                        frmArticle.textPrix.Text = dgvProduit.Rows[i].Cells[4].Value.ToString();
+                        frmArticle.comboCatArt.Text = dgvProduit.Rows[i].Cells[7].Value.ToString();
+                        //frmArticle.Id_Produit = (int)dgvProduit.Rows[i].Cells[1].Value;
                         MemoryStream MS = new MemoryStream(PR.Image_Produit);
                         frmArticle.picArt.Image = Image.FromStream(MS);
                     }
@@ -203,12 +204,12 @@ namespace GestionStock.Stock.PL
                 {
                     case "Nom":
                         listerecherche = listerecherche.Where(s => s.Nom_Produit.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
-                        //StringComparison.CurrentCultureIgnoreCase => soi 1ere lettre en majuscule soi minuscule
+                        //StringComparison.CurrentCultureIgnoreCase => soit 1ere lettre en majuscule soit minuscule
                         //!=-1 existe dans la BDD
                         break;
-                    case "Prix":
-                        listerecherche = listerecherche.Where(s => s.Prix_Produit.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
-                        break;
+                    /*case "Prix":
+                        listerecherche = listerecherche.Where(s => s.Année.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        break;*/
 
 
                 }
@@ -219,7 +220,7 @@ namespace GestionStock.Stock.PL
             foreach (var l in listerecherche)
             {
                 cat = db.CATEGORIE.SingleOrDefault(s => s.Id_Categorie == l.Id_Categorie);
-                dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Quantite_Produit, l.Prix_Produit, cat.Nom_Categorie);
+                dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Année, l.Description_Produit, l.Prix_Carton, l.Quantite_Produit, l.Prix_Unitaire, cat.Nom_Categorie) ;
             }
         }
 
@@ -241,7 +242,7 @@ namespace GestionStock.Stock.PL
                     if ((bool)dgvProduit.Rows[i].Cells[0].Value == true)
                     {
                         idselect = (int)dgvProduit.Rows[i].Cells[1].Value;
-                        Nomcategorie = dgvProduit.Rows[i].Cells[5].Value.ToString();
+                        Nomcategorie = dgvProduit.Rows[i].Cells[7].Value.ToString();
                     }
                 }
                 PR = db.PRODUIT.SingleOrDefault(s => s.Id_Produit == idselect);
@@ -251,7 +252,7 @@ namespace GestionStock.Stock.PL
                     ReportParameter Pcategorie = new ReportParameter("@RPCategorie", Nomcategorie);
                     ReportParameter Pnom = new ReportParameter("@RPNom", PR.Nom_Produit);
                     ReportParameter Pquantite = new ReportParameter("@RPQuantite", PR.Quantite_Produit.ToString());
-                    ReportParameter Pprix = new ReportParameter("@RPPrix", PR.Prix_Produit);
+                    ReportParameter Pprix = new ReportParameter("@RPPrix", PR.Prix_Unitaire.ToString());
                     string ImageString = Convert.ToBase64String(PR.Image_Produit);
                     ReportParameter Pimage = new ReportParameter("@RPImage", ImageString);
                     frmpt.rpAfficher.LocalReport.SetParameters(new ReportParameter[] { Pcategorie, Pnom, Pquantite, Pprix, Pimage });
@@ -300,7 +301,8 @@ namespace GestionStock.Stock.PL
                     ws.Cells[1, 1] = "Id Produit";
                     ws.Cells[1, 2] = "Nom Produit";
                     ws.Cells[1, 3] = "Quantité";
-                    ws.Cells[1, 4] = "Prix";
+                    ws.Cells[1, 4] = "Prix unitaire";
+
                     var ListeProduit = db.PRODUIT.ToList();
                     int i = 2;
                     foreach (var L in ListeProduit)
@@ -309,7 +311,7 @@ namespace GestionStock.Stock.PL
                         ws.Cells[i, 1] = L.Id_Produit;
                         ws.Cells[i, 2] = L.Nom_Produit;
                         ws.Cells[i, 3] = L.Quantite_Produit;
-                        ws.Cells[i, 4] = L.Prix_Produit;
+                        ws.Cells[i, 4] = L.Prix_Unitaire;
                         i++;
                     }
 

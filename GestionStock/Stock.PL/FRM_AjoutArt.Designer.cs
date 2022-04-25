@@ -46,6 +46,12 @@
             this.textQteArt = new System.Windows.Forms.TextBox();
             this.comboCatArt = new System.Windows.Forms.ComboBox();
             this.btnParcourir = new System.Windows.Forms.Button();
+            this.textPxCarton = new System.Windows.Forms.TextBox();
+            this.lblPrixCarton = new System.Windows.Forms.Label();
+            this.textAn = new System.Windows.Forms.TextBox();
+            this.lblAn = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.textDescription = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picArt)).BeginInit();
             this.SuspendLayout();
@@ -59,9 +65,9 @@
             this.btnAnnulerArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnnulerArt.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnulerArt.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnAnnulerArt.Location = new System.Drawing.Point(404, 578);
+            this.btnAnnulerArt.Location = new System.Drawing.Point(373, 579);
             this.btnAnnulerArt.Name = "btnAnnulerArt";
-            this.btnAnnulerArt.Size = new System.Drawing.Size(122, 43);
+            this.btnAnnulerArt.Size = new System.Drawing.Size(201, 54);
             this.btnAnnulerArt.TabIndex = 68;
             this.btnAnnulerArt.Text = "Annuler";
             this.btnAnnulerArt.UseVisualStyleBackColor = false;
@@ -69,10 +75,12 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(78, 539);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Firebrick;
+            this.panel2.Location = new System.Drawing.Point(2, 539);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(778, 10);
+            this.panel2.Size = new System.Drawing.Size(2671, 20);
             this.panel2.TabIndex = 67;
             // 
             // btnQuitArt
@@ -84,9 +92,9 @@
             this.btnQuitArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitArt.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitArt.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnQuitArt.Location = new System.Drawing.Point(602, 579);
+            this.btnQuitArt.Location = new System.Drawing.Point(669, 579);
             this.btnQuitArt.Name = "btnQuitArt";
-            this.btnQuitArt.Size = new System.Drawing.Size(122, 43);
+            this.btnQuitArt.Size = new System.Drawing.Size(180, 54);
             this.btnQuitArt.TabIndex = 66;
             this.btnQuitArt.Text = "Quitter";
             this.btnQuitArt.UseVisualStyleBackColor = false;
@@ -101,9 +109,9 @@
             this.btnValidArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidArt.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidArt.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnValidArt.Location = new System.Drawing.Point(194, 579);
+            this.btnValidArt.Location = new System.Drawing.Point(132, 579);
             this.btnValidArt.Name = "btnValidArt";
-            this.btnValidArt.Size = new System.Drawing.Size(122, 43);
+            this.btnValidArt.Size = new System.Drawing.Size(180, 54);
             this.btnValidArt.TabIndex = 65;
             this.btnValidArt.Text = "Valider";
             this.btnValidArt.UseVisualStyleBackColor = false;
@@ -111,11 +119,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Firebrick;
             this.panel1.Controls.Add(this.lblFicheArt);
-            this.panel1.Location = new System.Drawing.Point(82, 46);
+            this.panel1.Location = new System.Drawing.Point(2, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(778, 66);
+            this.panel1.Size = new System.Drawing.Size(2680, 84);
             this.panel1.TabIndex = 64;
             // 
             // lblFicheArt
@@ -189,7 +199,7 @@
             this.lblCategorieArt.AutoSize = true;
             this.lblCategorieArt.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategorieArt.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblCategorieArt.Location = new System.Drawing.Point(570, 195);
+            this.lblCategorieArt.Location = new System.Drawing.Point(600, 252);
             this.lblCategorieArt.Name = "lblCategorieArt";
             this.lblCategorieArt.Size = new System.Drawing.Size(80, 21);
             this.lblCategorieArt.TabIndex = 73;
@@ -200,7 +210,7 @@
             this.lblPrix.AutoSize = true;
             this.lblPrix.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrix.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblPrix.Location = new System.Drawing.Point(575, 294);
+            this.lblPrix.Location = new System.Drawing.Point(605, 312);
             this.lblPrix.Name = "lblPrix";
             this.lblPrix.Size = new System.Drawing.Size(38, 21);
             this.lblPrix.TabIndex = 75;
@@ -211,7 +221,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Firebrick;
-            this.label4.Location = new System.Drawing.Point(575, 376);
+            this.label4.Location = new System.Drawing.Point(605, 418);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 21);
             this.label4.TabIndex = 76;
@@ -221,7 +231,7 @@
             // 
             this.textPrix.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPrix.ForeColor = System.Drawing.Color.Silver;
-            this.textPrix.Location = new System.Drawing.Point(665, 291);
+            this.textPrix.Location = new System.Drawing.Point(695, 309);
             this.textPrix.Name = "textPrix";
             this.textPrix.Size = new System.Drawing.Size(195, 28);
             this.textPrix.TabIndex = 77;
@@ -232,7 +242,7 @@
             // 
             this.textQteArt.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textQteArt.ForeColor = System.Drawing.Color.Silver;
-            this.textQteArt.Location = new System.Drawing.Point(665, 373);
+            this.textQteArt.Location = new System.Drawing.Point(695, 415);
             this.textQteArt.Name = "textQteArt";
             this.textQteArt.Size = new System.Drawing.Size(195, 28);
             this.textQteArt.TabIndex = 78;
@@ -242,7 +252,7 @@
             // comboCatArt
             // 
             this.comboCatArt.FormattingEnabled = true;
-            this.comboCatArt.Location = new System.Drawing.Point(665, 195);
+            this.comboCatArt.Location = new System.Drawing.Point(695, 252);
             this.comboCatArt.Name = "comboCatArt";
             this.comboCatArt.Size = new System.Drawing.Size(195, 24);
             this.comboCatArt.TabIndex = 79;
@@ -264,11 +274,78 @@
             this.btnParcourir.UseVisualStyleBackColor = false;
             this.btnParcourir.Click += new System.EventHandler(this.btnParcourir_Click);
             // 
+            // textPxCarton
+            // 
+            this.textPxCarton.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPxCarton.ForeColor = System.Drawing.Color.Silver;
+            this.textPxCarton.Location = new System.Drawing.Point(695, 359);
+            this.textPxCarton.Name = "textPxCarton";
+            this.textPxCarton.Size = new System.Drawing.Size(195, 28);
+            this.textPxCarton.TabIndex = 82;
+            this.textPxCarton.Text = "Prix Carton";
+            // 
+            // lblPrixCarton
+            // 
+            this.lblPrixCarton.AutoSize = true;
+            this.lblPrixCarton.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrixCarton.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblPrixCarton.Location = new System.Drawing.Point(605, 362);
+            this.lblPrixCarton.Name = "lblPrixCarton";
+            this.lblPrixCarton.Size = new System.Drawing.Size(90, 21);
+            this.lblPrixCarton.TabIndex = 81;
+            this.lblPrixCarton.Text = "Prix Carton";
+            // 
+            // textAn
+            // 
+            this.textAn.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textAn.ForeColor = System.Drawing.Color.Silver;
+            this.textAn.Location = new System.Drawing.Point(695, 195);
+            this.textAn.Name = "textAn";
+            this.textAn.Size = new System.Drawing.Size(195, 28);
+            this.textAn.TabIndex = 84;
+            this.textAn.Text = "Année";
+            // 
+            // lblAn
+            // 
+            this.lblAn.AutoSize = true;
+            this.lblAn.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAn.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblAn.Location = new System.Drawing.Point(601, 198);
+            this.lblAn.Name = "lblAn";
+            this.lblAn.Size = new System.Drawing.Size(56, 21);
+            this.lblAn.TabIndex = 83;
+            this.lblAn.Text = "Année";
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblDescription.Location = new System.Drawing.Point(940, 195);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(93, 21);
+            this.lblDescription.TabIndex = 85;
+            this.lblDescription.Text = "Description";
+            // 
+            // textDescription
+            // 
+            this.textDescription.Location = new System.Drawing.Point(1047, 198);
+            this.textDescription.Multiline = true;
+            this.textDescription.Name = "textDescription";
+            this.textDescription.Size = new System.Drawing.Size(305, 263);
+            this.textDescription.TabIndex = 86;
+            // 
             // FRM_AjoutArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 715);
+            this.ClientSize = new System.Drawing.Size(1388, 678);
+            this.Controls.Add(this.textDescription);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.textAn);
+            this.Controls.Add(this.lblAn);
+            this.Controls.Add(this.textPxCarton);
+            this.Controls.Add(this.lblPrixCarton);
             this.Controls.Add(this.btnParcourir);
             this.Controls.Add(this.comboCatArt);
             this.Controls.Add(this.textQteArt);
@@ -318,5 +395,11 @@
         public System.Windows.Forms.Button btnParcourir;
         public System.Windows.Forms.PictureBox picArt;
         public System.Windows.Forms.ComboBox comboCatArt;
+        public System.Windows.Forms.TextBox textPxCarton;
+        private System.Windows.Forms.Label lblPrixCarton;
+        public System.Windows.Forms.TextBox textAn;
+        private System.Windows.Forms.Label lblAn;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.TextBox textDescription;
     }
 }

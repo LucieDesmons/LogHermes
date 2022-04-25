@@ -26,10 +26,10 @@
     <EntitySetMapping Name="COMMANDE">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.COMMANDE">
         <MappingFragment StoreEntitySet="COMMANDE">
+          <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
           <ScalarProperty Name="Total_TTC" ColumnName="Total_TTC" />
           <ScalarProperty Name="TVA" ColumnName="TVA" />
           <ScalarProperty Name="Total_HT" ColumnName="Total_HT" />
-          <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
           <ScalarProperty Name="Date_Commande" ColumnName="Date_Commande" />
           <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
         </MappingFragment>
@@ -53,8 +53,11 @@
       <EntityTypeMapping TypeName="GESTION_STOCKModel.PRODUIT">
         <MappingFragment StoreEntitySet="PRODUIT">
           <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
+          <ScalarProperty Name="Année" ColumnName="Année" />
+          <ScalarProperty Name="Description_Produit" ColumnName="Description_Produit" />
           <ScalarProperty Name="Image_Produit" ColumnName="Image_Produit" />
-          <ScalarProperty Name="Prix_Produit" ColumnName="Prix_Produit" />
+          <ScalarProperty Name="Prix_Carton" ColumnName="Prix_Carton" />
+          <ScalarProperty Name="Prix_Unitaire" ColumnName="Prix_Unitaire" />
           <ScalarProperty Name="Quantite_Produit" ColumnName="Quantite_Produit" />
           <ScalarProperty Name="Nom_Produit" ColumnName="Nom_Produit" />
           <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
@@ -64,9 +67,9 @@
     <EntitySetMapping Name="UTILISATEUR">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.UTILISATEUR">
         <MappingFragment StoreEntitySet="UTILISATEUR">
-          <ScalarProperty Name="ID_Utilisateur" ColumnName="ID_Utilisateur" />
           <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
           <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
+          <ScalarProperty Name="ID_Utilisateur" ColumnName="ID_Utilisateur" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

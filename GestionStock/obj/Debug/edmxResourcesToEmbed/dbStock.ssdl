@@ -26,10 +26,10 @@
     </Key>
     <Property Name="Id_Commande" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Date_Commande" Type="datetime" Nullable="false" />
-    <Property Name="Id_Client" Type="int" Nullable="false" />
     <Property Name="Total_HT" Type="nvarchar" MaxLength="250" />
-    <Property Name="TVA" Type="nvarchar" MaxLength="20" />
+    <Property Name="TVA" Type="nvarchar" MaxLength="250" />
     <Property Name="Total_TTC" Type="nvarchar" MaxLength="250" />
+    <Property Name="Id_Client" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Details_Commande">
     <Key>
@@ -51,17 +51,20 @@
     <Property Name="Id_Produit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nom_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Quantite_Produit" Type="int" Nullable="false" />
-    <Property Name="Prix_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Prix_Unitaire" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Prix_Carton" Type="decimal" Precision="10" Scale="2" />
     <Property Name="Image_Produit" Type="image" Nullable="false" />
+    <Property Name="Description_Produit" Type="nchar" MaxLength="500" />
+    <Property Name="Année" Type="decimal" Precision="4" Scale="0" />
     <Property Name="Id_Categorie" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="UTILISATEUR">
     <Key>
       <PropertyRef Name="ID_Utilisateur" />
     </Key>
+    <Property Name="ID_Utilisateur" Type="int" Nullable="false" />
     <Property Name="Nom_Utilisateur" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Mot_de_passe" Type="nvarchar" MaxLength="250" Nullable="false" />
-    <Property Name="ID_Utilisateur" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_COMMANDE_CLIENT">
     <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1">
