@@ -14,7 +14,7 @@ namespace GestionStock.DAL
         public string Remise { get; set; } = null!;
         public string Total { get; set; } = null!;
 
-        public virtual Commande Commande { get; set; } = null!;
-        public virtual Produit Produit { get; set; } = null!;
+        public virtual Commande IdCommandeNavigation { get; set; } = null!;
+        public virtual Produit IdProduitNavigation { get; set; } = null!;
     }
 }

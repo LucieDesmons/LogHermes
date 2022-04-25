@@ -13,6 +13,6 @@ namespace GestionStock.DAL
         public string PrixProduit { get; set; } = null!;
         public byte[] ImageProduit { get; set; } = null!;
 
-        public virtual Categorie Categorie { get; set; } = null!;
+        public virtual Categorie IdCategorieNavigation { get; set; } = null!;
     }
 }

@@ -26,34 +26,34 @@ namespace GestionStock.BL
                     Total = c.Total,
                     Produit = new ProduitModel
                     {
-                        Id = c.Produit.IdProduit,
-                        Nom = c.Produit.NomProduit,
-                        Quantite = c.Produit.QuantiteProduit,
-                        Prix = c.Produit.PrixProduit,
-                        Image = c.Produit.ImageProduit,
+                        Id = c.IdProduitNavigation.IdProduit,
+                        Nom = c.IdProduitNavigation.NomProduit,
+                        Quantite = c.IdProduitNavigation.QuantiteProduit,
+                        Prix = c.IdProduitNavigation.PrixProduit,
+                        Image = c.IdProduitNavigation.ImageProduit,
                         Categorie = new CategorieModel
                         {
-                            Id = c.Produit.Categorie.IdCategorie,
-                            Nom = c.Produit.Categorie.NomCategorie
+                            Id = c.IdProduitNavigation.IdCategorieNavigation.IdCategorie,
+                            Nom = c.IdProduitNavigation.IdCategorieNavigation.NomCategorie
                         }
                     },
                     Commande = new CommandeModel
                     {
-                        Id = c.Commande.IdCommande,
-                        DateCmd = c.Commande.DateCommande,
-                        TotalHT = c.Commande.TotalHt,
-                        TVA = c.Commande.Tva,
-                        TotalTTC = c.Commande.TotalTtc,
+                        Id = c.IdCommandeNavigation.IdCommande,
+                        DateCmd = c.IdCommandeNavigation.DateCommande,
+                        TotalHT = c.IdCommandeNavigation.TotalHt,
+                        TVA = c.IdCommandeNavigation.Tva,
+                        TotalTTC = c.IdCommandeNavigation.TotalTtc,
                         Client = new ClientModel
                         {
-                            Id = c.Commande.Client.IdClient,
-                            Nom = c.Commande.Client.NomClient,
-                            Prenom = c.Commande.Client.PrenomClient,
-                            Adresse = c.Commande.Client.AdresseClient,
-                            Telephone = c.Commande.Client.TelephoneClient,
-                            Pays = c.Commande.Client.PaysClient,
-                            Ville = c.Commande.Client.VilleClient,
-                            Email = c.Commande.Client.EmailClient
+                            Id = c.IdCommandeNavigation.IdClientNavigation.IdClient,
+                            Nom = c.IdCommandeNavigation.IdClientNavigation.NomClient,
+                            Prenom = c.IdCommandeNavigation.IdClientNavigation.PrenomClient,
+                            Adresse = c.IdCommandeNavigation.IdClientNavigation.AdresseClient,
+                            Telephone = c.IdCommandeNavigation.IdClientNavigation.TelephoneClient,
+                            Pays = c.IdCommandeNavigation.IdClientNavigation.PaysClient,
+                            Ville = c.IdCommandeNavigation.IdClientNavigation.VilleClient,
+                            Email = c.IdCommandeNavigation.IdClientNavigation.EmailClient
                         }
                     }
                 })
@@ -72,27 +72,27 @@ namespace GestionStock.BL
                     Prix = details.Prix,
                     Remise = details.Remise,
                     Total = details.Total,
-                    Produit = new Produit
+                    IdProduitNavigation = new Produit
                     {
                         IdProduit = details.Produit.Id,
                         NomProduit = details.Produit.Nom,
                         QuantiteProduit = details.Produit.Quantite,
                         PrixProduit = details.Produit.Prix,
                         ImageProduit = details.Produit.Image,
-                        Categorie = new Categorie
+                        IdCategorieNavigation = new Categorie
                         {
                             IdCategorie = details.Produit.Categorie.Id,
                             NomCategorie = details.Produit.Categorie.Nom
                         }
                     },
-                    Commande = new Commande
+                    IdCommandeNavigation = new Commande
                     {
                         IdCommande = details.Commande.Id,
                         DateCommande = details.Commande.DateCmd,
                         TotalHt = details.Commande.TotalHT,
                         Tva = details.Commande.TVA,
                         TotalTtc = details.Commande.TotalTTC,
-                        Client = new Client
+                        IdClientNavigation = new Client
                         {
                             IdClient = details.Commande.Client.Id,
                             NomClient = details.Commande.Client.Nom,

@@ -110,10 +110,10 @@ namespace GestionStock.DAL
                     .HasMaxLength(20)
                     .HasColumnName("TVA");
 
-/*                entity.HasOne(d => d.IdClientNavigation)
-                    .WithMany(p => p.Commandes)
+                entity.HasOne(d => d.IdClientNavigation)
+                    .WithMany()
                     .HasForeignKey(d => d.IdClient)
-                    .HasConstraintName("FK_COMMANDE_CLIENT");*/
+                    .HasConstraintName("FK_COMMANDE_CLIENT");
             });
 
             modelBuilder.Entity<DetailsCommande>(entity =>
@@ -135,15 +135,15 @@ namespace GestionStock.DAL
 
                 entity.Property(e => e.Total).HasMaxLength(250);
 
-/*                entity.HasOne(d => d.IdCommandeNavigation)
-                    .WithMany(p => p.DetailsCommandes)
+                entity.HasOne(d => d.IdCommandeNavigation)
+                    .WithMany()
                     .HasForeignKey(d => d.IdCommande)
-                    .HasConstraintName("FK_Details_Commande_COMMANDE");*/
+                    .HasConstraintName("FK_Details_Commande_COMMANDE");
 
-/*                entity.HasOne(d => d.IdProduitNavigation)
-                    .WithMany(p => p.DetailsCommandes)
+                entity.HasOne(d => d.IdProduitNavigation)
+                    .WithMany()
                     .HasForeignKey(d => d.IdProduit)
-                    .HasConstraintName("FK_Details_Commande_PRODUIT");*/
+                    .HasConstraintName("FK_Details_Commande_PRODUIT");
             });
 
             modelBuilder.Entity<Produit>(entity =>
@@ -170,10 +170,10 @@ namespace GestionStock.DAL
 
                 entity.Property(e => e.QuantiteProduit).HasColumnName("Quantite_Produit");
 
-/*                entity.HasOne(d => d.IdCategorieNavigation)
-                    .WithMany(p => p.Produits)
+                entity.HasOne(d => d.IdCategorieNavigation)
+                    .WithMany()
                     .HasForeignKey(d => d.IdCategorie)
-                    .HasConstraintName("FK_PRODUIT_CATEGORIE");*/
+                    .HasConstraintName("FK_PRODUIT_CATEGORIE");
             });
 
             modelBuilder.Entity<Utilisateur>(entity =>

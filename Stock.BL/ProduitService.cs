@@ -26,8 +26,8 @@ namespace GestionStock.BL
                     Image = p.ImageProduit,
                     Categorie = new CategorieModel
                     {
-                        Id = p.Categorie.IdCategorie,
-                        Nom = p.Categorie.NomCategorie
+                        Id = p.IdCategorieNavigation.IdCategorie,
+                        Nom = p.IdCategorieNavigation.NomCategorie
                     }
                 })
                 .ToList(); 
@@ -46,7 +46,7 @@ namespace GestionStock.BL
                     QuantiteProduit = produit.Quantite,
                     PrixProduit = produit.Prix,
                     ImageProduit = produit.Image,
-                    Categorie = new Categorie
+                    IdCategorieNavigation = new Categorie
                     {
                         IdCategorie = produit.Categorie.Id,
                         NomCategorie = produit.Categorie.Nom

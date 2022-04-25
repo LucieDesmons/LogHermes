@@ -12,6 +12,6 @@ namespace GestionStock.DAL
         public string? Tva { get; set; }
         public string? TotalTtc { get; set; }
 
-        public virtual Client Client { get; set; } = null!;
+        public virtual Client IdClientNavigation { get; set; } = null!;
     }
 }

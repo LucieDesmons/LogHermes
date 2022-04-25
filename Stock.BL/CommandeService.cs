@@ -23,14 +23,14 @@ namespace GestionStock.BL
                     DateCmd = c.DateCommande,
                     Client = new ClientModel
                     {
-                        Id = c.Client.IdClient,
-                        Nom = c.Client.NomClient,
-                        Prenom = c.Client.PrenomClient,
-                        Adresse = c.Client.AdresseClient,
-                        Ville = c.Client.VilleClient,
-                        Pays = c.Client.PaysClient,
-                        Telephone = c.Client.TelephoneClient,
-                        Email = c.Client.EmailClient
+                        Id = c.IdClientNavigation.IdClient,
+                        Nom = c.IdClientNavigation.NomClient,
+                        Prenom = c.IdClientNavigation.PrenomClient,
+                        Adresse = c.IdClientNavigation.AdresseClient,
+                        Ville = c.IdClientNavigation.VilleClient,
+                        Pays = c.IdClientNavigation.PaysClient,
+                        Telephone = c.IdClientNavigation.TelephoneClient,
+                        Email = c.IdClientNavigation.EmailClient
                     }
                
                 })
@@ -48,7 +48,7 @@ namespace GestionStock.BL
                 {
                     IdCommande = commande.Id,
                     DateCommande = commande.DateCmd,
-                    Client = new Client
+                    IdClientNavigation = new Client
                     {
                         IdClient = commande.Client.Id,
                         NomClient = commande.Client.Nom,
