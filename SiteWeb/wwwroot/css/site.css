@@ -16,3 +16,22 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.btn-primary {
+    color: black;
+    background-color: #f3f3f3;
+    border-color: #e1e1e1;
+}
+
+    .btn-primary:hover {
+        color: white;
+        background-color: #424242;
+        border-color: #424242;
+    }
+
+    .btn-primary:focus {
+        color: white;
+        background-color: #424242;
+        border-color: #424242;
+        box-shadow: 0 0 0 0.25rem rgb(75 77 78 / 50%);
+    }

@@ -1,13 +1,12 @@
 ﻿@model List<GestionStock.BL.Models.ProduitModel>
 
-@foreach (var produit in Model)
-{
-    <div class="col d-flex flex-grow-1">
-        <div class="card h-100">
-            @*<img src="data:image/jpg;base64,@produit.Image">*@
-            <img src="/contents/investir-dans-le-vin.jpg" class="card-img-top">
-            <div class="card-body text-center d-flex flex-column">
-                <h5 class="card-title">@produit.Nom</h5>
+@foreach (var produit in Model) {
+  <div class="col">
+    <div class="card h-100">
+      <img src="@produit.srcImage" class="card-img-top">
+      <div class = "contentImg"></div>
+      <div class="card-body text-center d-flex flex-column justify-content-center justify-content-between">
+        <h5 class="card-title">@produit.Nom</h5>
                 @if (@produit.Quantite >= 1)
                 {
                     <p class="card-text stock" style="color:#35B736">En Stock</p>
@@ -17,30 +16,20 @@
                     <p class="card-text rupture" style="color:#E2202C">Rupture</p>
                 }
                 <p class="card-text">@produit.Categorie.Nom</p>
-                <p class="card-text">@String.Format("{0:0.00}",@produit.Prix)</p>
+                <p class="card-text">@String.Format("{0:0.00}",@produit.Prix)€</p>
                 <p class="card-text">@produit.Description</p>
-                <p class="card-text fw-bold details" onclick=modal(@produit.Id)>Cliquez-ici pour plus de détails</p>
-            </div>
-        </div>
+        <button type="button" class="btn btn-primary" onclick=modal(@produit.Id) data-toggle="modal" data-target="#exampleModalCenter">Détail du produit</button>
+      </div>
     </div>
-}
+  </div>
+ 
+  }
 
-<div class="none-modal" style="display:none">
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-dialog-centered">
+  @*Sur mes cards j'ai un btn avec data-toggle modal, j'y réfère la modal ci-dessous*@
+   <!-- The Modal -->
+      <div class="modal" id="myModal">
+         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
-                </div>
             </div>
-        </div>
-    </div>
-</div>
+         </div>
+      </div>

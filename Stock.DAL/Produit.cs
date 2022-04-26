@@ -15,7 +15,7 @@ namespace GestionStock.DAL
         public int QuantiteProduit { get; set; }
         public decimal PrixProduit { get; set; }         
         public decimal PrixCartonProduit { get; set; } 
-        public string ImageProduit { get; set; } = null!;
+        public byte[] ImageProduit { get; set; } = null!;
 
         public virtual Categorie IdCategorieNavigation { get; set; } = null!;
     }

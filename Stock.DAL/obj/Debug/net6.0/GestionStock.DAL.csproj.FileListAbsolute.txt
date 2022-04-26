@@ -3,7 +3,6 @@ C:\Users\Lucie\source\repos\LogHermesNico\Stock.DAL\bin\Debug\net6.0\GestionStoc
 C:\Users\Lucie\source\repos\LogHermesNico\Stock.DAL\bin\Debug\net6.0\GestionStock.DAL.dll
 C:\Users\Lucie\source\repos\LogHermesNico\Stock.DAL\bin\Debug\net6.0\ref\GestionStock.DAL.dll
 C:\Users\Lucie\source\repos\LogHermesNico\Stock.DAL\bin\Debug\net6.0\GestionStock.DAL.pdb
-C:\Users\Lucie\source\repos\LogHermesNico\Stock.DAL\obj\Debug\net6.0\GestionStock.DAL.csproj.AssemblyReference.cache
 C:\Users\Lucie\source\repos\LogHermesNico\Stock.DAL\obj\Debug\net6.0\GestionStock.DAL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Lucie\source\repos\LogHermesNico\Stock.DAL\obj\Debug\net6.0\GestionStock.DAL.AssemblyInfoInputs.cache
 C:\Users\Lucie\source\repos\LogHermesNico\Stock.DAL\obj\Debug\net6.0\GestionStock.DAL.AssemblyInfo.cs

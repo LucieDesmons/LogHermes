@@ -13,6 +13,28 @@ namespace GestionStock.BL
             _context = context;
         }
 
+        public List<ProduitModel> GetProduit(int id)
+        {
+
+            return _context
+                .Produits
+                .Where(w => w.IdProduit == id)
+                .Select(p => new ProduitModel
+                {
+                    Id = p.IdProduit,
+                    Nom = p.NomProduit,
+                    Quantite = p.QuantiteProduit,
+                    Prix = p.PrixProduit,
+                    Image = p.ImageProduit,
+                    Categorie = new CategorieModel
+                    {
+                        Id = p.IdCategorieNavigation.IdCategorie,
+                        Nom = p.IdCategorieNavigation.NomCategorie
+                    }
+                })
+                .ToList();
+        }
+
         public List<ProduitModel> GetProduits()
         {
             return _context 

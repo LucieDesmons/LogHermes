@@ -22,13 +22,12 @@ namespace GestionStock.API.Controllers
             return _ps.GetProduits();
         }
 
-        // GET api/<produits>/5
+        // GET: api/<produits>
         [HttpGet("{id}")]
-        public string Get(int id)
+        public List<BL.Models.ProduitModel> GetOneProduit(int id)
         {
-            return "value";
+            return _ps.GetProduit(id);
         }
-
 
         // POST api/<ProduitsController>
         [HttpPost("{post}")]

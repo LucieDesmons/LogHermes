@@ -2,28 +2,24 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 html[b-89zfdai4uj], body[b-89zfdai4uj] {
-    min-height: 100vh!important;
+    min-height: 100vh !important;
 }
 
 /* mobiles */
-@media only screen
-and (min-width: 320px)
-and (max-width: 767px ) {
+@media only screen and (min-width: 320px) and (max-width: 767px ) {
     .accordion-item[b-89zfdai4uj] {
-        border-bottom: 1px solid rgba(0,0,0,.125)!important;
-
+        border-bottom: 1px solid rgba(0,0,0,.125) !important;
     }
 
     .flex-grow-mobile[b-89zfdai4uj] {
-        flex-grow: 0!important;
+        flex-grow: 0 !important;
     }
 }
 
 /* tablets */
-@media only screen
-and (min-width: 768px) {
-
+@media only screen and (min-width: 768px) {
 }
+
 
 .flex-grow-mobile[b-89zfdai4uj] {
     flex-grow: 1;
@@ -113,5 +109,5 @@ button.accept-policy[b-89zfdai4uj] {
 }
 
 .footer[b-89zfdai4uj] {
-    bottom: 0!important;
+    bottom: 0 !important;
 }

@@ -50,7 +50,7 @@
         </div>
 
         <div class="row m-0 w-100 flex-grow-mobile">
-            <div class="col-12 col-md-4 col-lg-2 d-flex justify-content-center p-0">
+            <div class="col-12 col-md-3 col-lg-2 d-flex justify-content-center p-0">
 
                 <div class="accordion w-100 h-100" id="accordionPanelsStayOpen">
                     <div class="accordion-item flex-grow-1 h-100">
@@ -226,7 +226,7 @@
 
 
             @*CONTENT*@
-            <div class="col-12 col-md-8 col-lg-10 p-4">
+            <div class="col-12 col-md-9 col-lg-10 p-4">
                 @RenderBody()
             </div>
 
@@ -239,7 +239,7 @@
             &copy; 2022 - SiteWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
