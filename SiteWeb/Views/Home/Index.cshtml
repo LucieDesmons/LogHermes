@@ -3,5 +3,6 @@
 }*@
 
 <section class="row row-cols-1 row-cols-md-3 g-4">
-    <partial name="Products/_Products" />
+@*    @Component.InvokeAsync("ProduitList")*@
+    @await Component.InvokeAsync("ProduitList")
 </section>

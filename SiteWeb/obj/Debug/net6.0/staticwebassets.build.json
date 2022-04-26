@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "W8B0cc9NcXeSxUzNu9XVXUMQAhrQXwAIi76d5WYao5U=",
+  "Hash": "ZaP+tEfkdNzXOfCZFUX6NYK70koDa/s7bZot19uxfJs=",
   "Source": "SiteWeb",
   "BasePath": "_content/SiteWeb",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\GestionStock.API\\GestionStock.API.csproj",
+      "Version": 2,
+      "Source": "GestionStock.API",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "SiteWeb\\wwwroot",
@@ -797,6 +809,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SiteWeb.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\wwwroot\\contents\\investir-dans-le-vin.jpg",
+      "SourceId": "SiteWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\wwwroot\\",
+      "BasePath": "_content/SiteWeb",
+      "RelativePath": "contents/investir-dans-le-vin.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\contents\\investir-dans-le-vin.jpg"
     },
     {
       "Identity": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\wwwroot\\contents\\logo-negosud.svg",

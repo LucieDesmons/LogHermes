@@ -1,0 +1,15 @@
+﻿@model List<GestionStock.BL.Models.ProduitModel>
+
+@foreach (var produit in Model) {
+  <div class="col">
+    <div class="card h-100">
+      @*<img src="data:image/jpg;base64,@produit.Image">*@
+      <img src="/contents/investir-dans-le-vin.jpg" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">@produit.Nom</h5>
+        <p class="card-text">@produit.Categorie.Nom</p>
+        <p class="card-text">@produit.Prix</p>
+      </div>
+    </div>
+  </div>
+}

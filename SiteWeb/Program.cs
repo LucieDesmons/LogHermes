@@ -1,4 +1,9 @@
+using GestionStock.DAL;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<DBGestionStockContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

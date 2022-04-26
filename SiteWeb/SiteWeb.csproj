@@ -15,4 +15,10 @@
     <Folder Include="Resource\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GestionStock.API\GestionStock.API.csproj" />
+    <ProjectReference Include="..\Stock.BL\GestionStock.BL.csproj" />
+    <ProjectReference Include="..\Stock.DAL\GestionStock.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
