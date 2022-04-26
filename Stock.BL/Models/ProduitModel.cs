@@ -4,12 +4,16 @@
     {
         public int Id { get; set; }
         public string Nom { get; set; } = null!;
+        public string Annee { get; set; } = null!;
+        public string Maison { get; set; } = null!;
+        public string Description { get; set; } = null!;
 
         public int Quantite { get; set; }
 
-        public string Prix { get; set; }
+        public decimal Prix { get; set; }
+        public decimal PrixCarton { get; set; }
 
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
 
         public CategorieModel Categorie { get; set; }
     }

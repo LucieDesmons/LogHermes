@@ -8,10 +8,14 @@ namespace GestionStock.DAL
         public int IdProduit { get; set; }
 
         public int IdCategorie { get; set; }
-        public string NomProduit { get; set; } = null!;
+        public string NomProduit { get; set; } = null!;        
+        public string MaisonProduit { get; set; } = null!;
+        public string AnneeProduit { get; set; } = null!;
+        public string DescriptionProduit { get; set; } = null!;
         public int QuantiteProduit { get; set; }
-        public string PrixProduit { get; set; } = null!;
-        public byte[] ImageProduit { get; set; } = null!;
+        public decimal PrixProduit { get; set; }         
+        public decimal PrixCartonProduit { get; set; } 
+        public string ImageProduit { get; set; } = null!;
 
         public virtual Categorie IdCategorieNavigation { get; set; } = null!;
     }

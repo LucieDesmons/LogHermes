@@ -164,9 +164,25 @@ namespace GestionStock.DAL
                     .HasMaxLength(250)
                     .HasColumnName("Nom_Produit");
 
-                entity.Property(e => e.PrixProduit)
+                entity.Property(e => e.MaisonProduit)
                     .HasMaxLength(250)
+                    .HasColumnName("Maison_Produit");
+
+                entity.Property(e => e.AnneeProduit)
+                    .HasMaxLength(250)
+                    .HasColumnName("Annee_Produit");
+
+                entity.Property(e => e.DescriptionProduit)
+                    .HasMaxLength(250)
+                    .HasColumnName("Description_Produit");
+
+                entity.Property(e => e.PrixProduit)
+                    .HasColumnType("money")
                     .HasColumnName("Prix_Produit");
+
+                entity.Property(e => e.PrixCartonProduit)
+                    .HasColumnType("money")
+                    .HasColumnName("Prix_Carton_Produit");
 
                 entity.Property(e => e.QuantiteProduit).HasColumnName("Quantite_Produit");
 

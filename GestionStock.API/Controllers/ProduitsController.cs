@@ -5,7 +5,7 @@ using GestionStock.BL;
 
 namespace GestionStock.API.Controllers
 {
-    [Route("api/cmd_clients")]
+    [Route("api/produits")]
     [ApiController]
     public class ProduitsController : ControllerBase
     {

@@ -21,8 +21,12 @@ namespace GestionStock.BL
                 {
                     Id = p.IdProduit,
                     Nom = p.NomProduit,
+                    Annee = p.AnneeProduit,
+                    Maison = p.MaisonProduit,
+                    Description = p.DescriptionProduit,
                     Quantite = p.QuantiteProduit,
                     Prix = p.PrixProduit,
+                    PrixCarton = p.PrixProduit,
                     Image = p.ImageProduit,
                     Categorie = new CategorieModel
                     {
@@ -43,8 +47,12 @@ namespace GestionStock.BL
 
                     IdProduit = produit.Id,
                     NomProduit = produit.Nom,
+                    AnneeProduit = produit.Annee,
+                    MaisonProduit = produit.Maison,
+                    DescriptionProduit = produit.Description,
                     QuantiteProduit = produit.Quantite,
                     PrixProduit = produit.Prix,
+                    PrixCartonProduit = produit.PrixCarton,
                     ImageProduit = produit.Image,
                     IdCategorieNavigation = new Categorie
                     {
