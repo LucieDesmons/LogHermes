@@ -51,6 +51,8 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.textDescription = new System.Windows.Forms.TextBox();
             this.picArt = new System.Windows.Forms.PictureBox();
+            this.comboMaisArt = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picArt)).BeginInit();
             this.SuspendLayout();
@@ -178,7 +180,7 @@
             this.lblCategorieArt.AutoSize = true;
             this.lblCategorieArt.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategorieArt.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblCategorieArt.Location = new System.Drawing.Point(81, 239);
+            this.lblCategorieArt.Location = new System.Drawing.Point(86, 276);
             this.lblCategorieArt.Name = "lblCategorieArt";
             this.lblCategorieArt.Size = new System.Drawing.Size(80, 21);
             this.lblCategorieArt.TabIndex = 73;
@@ -189,7 +191,7 @@
             this.lblPrix.AutoSize = true;
             this.lblPrix.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrix.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblPrix.Location = new System.Drawing.Point(86, 299);
+            this.lblPrix.Location = new System.Drawing.Point(86, 344);
             this.lblPrix.Name = "lblPrix";
             this.lblPrix.Size = new System.Drawing.Size(38, 21);
             this.lblPrix.TabIndex = 75;
@@ -200,7 +202,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Firebrick;
-            this.label4.Location = new System.Drawing.Point(86, 405);
+            this.label4.Location = new System.Drawing.Point(86, 450);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 21);
             this.label4.TabIndex = 76;
@@ -210,7 +212,7 @@
             // 
             this.textPrix.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPrix.ForeColor = System.Drawing.Color.Silver;
-            this.textPrix.Location = new System.Drawing.Point(176, 296);
+            this.textPrix.Location = new System.Drawing.Point(176, 341);
             this.textPrix.Name = "textPrix";
             this.textPrix.Size = new System.Drawing.Size(195, 28);
             this.textPrix.TabIndex = 77;
@@ -221,7 +223,7 @@
             // 
             this.textQteArt.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textQteArt.ForeColor = System.Drawing.Color.Silver;
-            this.textQteArt.Location = new System.Drawing.Point(176, 402);
+            this.textQteArt.Location = new System.Drawing.Point(176, 447);
             this.textQteArt.Name = "textQteArt";
             this.textQteArt.Size = new System.Drawing.Size(195, 28);
             this.textQteArt.TabIndex = 78;
@@ -231,7 +233,7 @@
             // comboCatArt
             // 
             this.comboCatArt.FormattingEnabled = true;
-            this.comboCatArt.Location = new System.Drawing.Point(176, 239);
+            this.comboCatArt.Location = new System.Drawing.Point(176, 276);
             this.comboCatArt.Name = "comboCatArt";
             this.comboCatArt.Size = new System.Drawing.Size(195, 24);
             this.comboCatArt.TabIndex = 79;
@@ -257,7 +259,7 @@
             // 
             this.textPxCarton.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPxCarton.ForeColor = System.Drawing.Color.Silver;
-            this.textPxCarton.Location = new System.Drawing.Point(176, 346);
+            this.textPxCarton.Location = new System.Drawing.Point(176, 391);
             this.textPxCarton.Name = "textPxCarton";
             this.textPxCarton.Size = new System.Drawing.Size(195, 28);
             this.textPxCarton.TabIndex = 82;
@@ -268,7 +270,7 @@
             this.lblPrixCarton.AutoSize = true;
             this.lblPrixCarton.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrixCarton.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblPrixCarton.Location = new System.Drawing.Point(86, 349);
+            this.lblPrixCarton.Location = new System.Drawing.Point(86, 394);
             this.lblPrixCarton.Name = "lblPrixCarton";
             this.lblPrixCarton.Size = new System.Drawing.Size(90, 21);
             this.lblPrixCarton.TabIndex = 81;
@@ -289,7 +291,7 @@
             this.lblAn.AutoSize = true;
             this.lblAn.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAn.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblAn.Location = new System.Drawing.Point(82, 185);
+            this.lblAn.Location = new System.Drawing.Point(87, 185);
             this.lblAn.Name = "lblAn";
             this.lblAn.Size = new System.Drawing.Size(56, 21);
             this.lblAn.TabIndex = 83;
@@ -327,11 +329,32 @@
             this.picArt.TabIndex = 71;
             this.picArt.TabStop = false;
             // 
+            // comboMaisArt
+            // 
+            this.comboMaisArt.FormattingEnabled = true;
+            this.comboMaisArt.Location = new System.Drawing.Point(176, 228);
+            this.comboMaisArt.Name = "comboMaisArt";
+            this.comboMaisArt.Size = new System.Drawing.Size(195, 24);
+            this.comboMaisArt.TabIndex = 88;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Firebrick;
+            this.label1.Location = new System.Drawing.Point(87, 228);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 21);
+            this.label1.TabIndex = 87;
+            this.label1.Text = "Maison";
+            // 
             // FRM_AjoutArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1388, 678);
+            this.Controls.Add(this.comboMaisArt);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textDescription);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.textAn);
@@ -390,5 +413,7 @@
         private System.Windows.Forms.Label lblAn;
         private System.Windows.Forms.Label lblDescription;
         public System.Windows.Forms.TextBox textDescription;
+        public System.Windows.Forms.ComboBox comboMaisArt;
+        private System.Windows.Forms.Label label1;
     }
 }

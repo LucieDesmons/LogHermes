@@ -36,7 +36,6 @@
             this.comboRech = new System.Windows.Forms.ComboBox();
             this.btnSuppCat = new System.Windows.Forms.Button();
             this.btnAddCat = new System.Windows.Forms.Button();
-            this.btnImprCat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +107,7 @@
             // 
             this.btnSuppCat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSuppCat.Location = new System.Drawing.Point(401, 37);
+            this.btnSuppCat.Location = new System.Drawing.Point(661, 37);
             this.btnSuppCat.Name = "btnSuppCat";
             this.btnSuppCat.Size = new System.Drawing.Size(176, 57);
             this.btnSuppCat.TabIndex = 10;
@@ -126,21 +125,10 @@
             this.btnAddCat.UseVisualStyleBackColor = true;
             this.btnAddCat.Click += new System.EventHandler(this.btnAddCat_Click);
             // 
-            // btnImprCat
-            // 
-            this.btnImprCat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImprCat.Location = new System.Drawing.Point(661, 37);
-            this.btnImprCat.Name = "btnImprCat";
-            this.btnImprCat.Size = new System.Drawing.Size(176, 57);
-            this.btnImprCat.TabIndex = 14;
-            this.btnImprCat.Text = "Imprimer";
-            this.btnImprCat.UseVisualStyleBackColor = true;
-            // 
             // USR_Categorie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnImprCat);
             this.Controls.Add(this.dgvCat);
             this.Controls.Add(this.textBoxR);
             this.Controls.Add(this.comboRech);
@@ -166,6 +154,5 @@
         public System.Windows.Forms.ComboBox comboRech;
         public System.Windows.Forms.Button btnSuppCat;
         public System.Windows.Forms.Button btnAddCat;
-        public System.Windows.Forms.Button btnImprCat;
     }
 }

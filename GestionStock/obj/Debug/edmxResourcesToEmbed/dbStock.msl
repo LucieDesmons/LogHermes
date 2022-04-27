@@ -49,9 +49,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="MAISON">
+      <EntityTypeMapping TypeName="GESTION_STOCKModel.MAISON">
+        <MappingFragment StoreEntitySet="MAISON">
+          <ScalarProperty Name="Nom_Maison" ColumnName="Nom_Maison" />
+          <ScalarProperty Name="ID_MAISON" ColumnName="ID_MAISON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="PRODUIT">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.PRODUIT">
         <MappingFragment StoreEntitySet="PRODUIT">
+          <ScalarProperty Name="ID_MAISON" ColumnName="ID_MAISON" />
           <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
           <ScalarProperty Name="Année" ColumnName="Année" />
           <ScalarProperty Name="Description_Produit" ColumnName="Description_Produit" />

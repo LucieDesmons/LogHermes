@@ -38,6 +38,7 @@
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnMaison = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,7 +116,7 @@
             this.btnCmde.ForeColor = System.Drawing.Color.Transparent;
             this.btnCmde.Image = global::GestionStock.Properties.Resources.receipt48;
             this.btnCmde.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCmde.Location = new System.Drawing.Point(20, 546);
+            this.btnCmde.Location = new System.Drawing.Point(13, 658);
             this.btnCmde.Name = "btnCmde";
             this.btnCmde.Size = new System.Drawing.Size(116, 93);
             this.btnCmde.TabIndex = 5;
@@ -193,6 +194,24 @@
             this.panel3.Size = new System.Drawing.Size(10, 845);
             this.panel3.TabIndex = 7;
             // 
+            // btnMaison
+            // 
+            this.btnMaison.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaison.FlatAppearance.BorderSize = 0;
+            this.btnMaison.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaison.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaison.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMaison.Image = global::GestionStock.Properties.Resources.palac;
+            this.btnMaison.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMaison.Location = new System.Drawing.Point(13, 531);
+            this.btnMaison.Name = "btnMaison";
+            this.btnMaison.Size = new System.Drawing.Size(116, 85);
+            this.btnMaison.TabIndex = 8;
+            this.btnMaison.Text = "Maison";
+            this.btnMaison.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMaison.UseVisualStyleBackColor = false;
+            this.btnMaison.Click += new System.EventHandler(this.btnMaison_Click);
+            // 
             // FRM_Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -201,6 +220,7 @@
             this.BackgroundImage = global::GestionStock.Properties.Resources.maxresdefault;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 787);
+            this.Controls.Add(this.btnMaison);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.panel2);
@@ -233,5 +253,6 @@
         public System.Windows.Forms.Button btnCat;
         public System.Windows.Forms.Button btnCmde;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnMaison;
     }
 }

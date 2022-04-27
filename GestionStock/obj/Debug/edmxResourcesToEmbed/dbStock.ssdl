@@ -44,6 +44,13 @@
     <Property Name="Remise" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Total" Type="nvarchar" MaxLength="250" Nullable="false" />
   </EntityType>
+  <EntityType Name="MAISON">
+    <Key>
+      <PropertyRef Name="ID_MAISON" />
+    </Key>
+    <Property Name="ID_MAISON" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom_Maison" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
   <EntityType Name="PRODUIT">
     <Key>
       <PropertyRef Name="Id_Produit" />
@@ -57,6 +64,7 @@
     <Property Name="Description_Produit" Type="nchar" MaxLength="500" />
     <Property Name="Année" Type="decimal" Precision="4" Scale="0" />
     <Property Name="Id_Categorie" Type="int" Nullable="false" />
+    <Property Name="ID_MAISON" Type="int" />
   </EntityType>
   <EntityType Name="UTILISATEUR">
     <Key>
@@ -122,11 +130,26 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_PRODUIT_MAISON1">
+    <End Role="MAISON" Type="Self.MAISON" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAISON">
+        <PropertyRef Name="ID_MAISON" />
+      </Principal>
+      <Dependent Role="PRODUIT">
+        <PropertyRef Name="ID_MAISON" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="GESTION_STOCKModelStoreContainer">
     <EntitySet Name="CATEGORIE" EntityType="Self.CATEGORIE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Details_Commande" EntityType="Self.Details_Commande" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAISON" EntityType="Self.MAISON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PRODUIT" EntityType="Self.PRODUIT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_COMMANDE_CLIENT" Association="Self.FK_COMMANDE_CLIENT">
@@ -143,6 +166,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="Self.FK_PRODUIT_CATEGORIE">
       <End Role="CATEGORIE" EntitySet="CATEGORIE" />
+      <End Role="PRODUIT" EntitySet="PRODUIT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUIT_MAISON1" Association="Self.FK_PRODUIT_MAISON1">
+      <End Role="MAISON" EntitySet="MAISON" />
       <End Role="PRODUIT" EntitySet="PRODUIT" />
     </AssociationSet>
   </EntityContainer>

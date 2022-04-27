@@ -36,15 +36,18 @@ namespace GestionStock.Stock.PL
             db = new dbStockContext();
             dgvProduit.Rows.Clear();
             CATEGORIE Cat = new CATEGORIE();
+            MAISON Mais = new MAISON();
             foreach (var Prod in db.PRODUIT)
             {
+                Mais = db.MAISON.SingleOrDefault(m => m.ID_MAISON == Prod.ID_MAISON);
                 Cat = db.CATEGORIE.SingleOrDefault(s => s.Id_Categorie == Prod.Id_Categorie);
                 if (Cat != null)
                 {
-                    dgvProduit.Rows.Add(false,Prod.Id_Produit, Prod.Nom_Produit, Prod.Année, Prod.Quantite_Produit, Prod.Prix_Unitaire,Prod.Prix_Carton, Cat.Nom_Categorie, Prod.Description_Produit);
+                    dgvProduit.Rows.Add(false,Prod.Id_Produit, Prod.Nom_Produit, Prod.Année, Prod.Quantite_Produit, Prod.Prix_Unitaire,Prod.Prix_Carton, Mais.Nom_Maison, Cat.Nom_Categorie, Prod.Description_Produit);
 
                 }
             }
+
             //Colore le stock à 0
             for (int i = 0;i< dgvProduit.Rows.Count;i++)
             {
@@ -107,15 +110,16 @@ namespace GestionStock.Stock.PL
                     }
                     if (PR != null)//si existe
                     {
-                        frmArticle.textDenomination.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
-                        //Rajouter les années, la description, prix carton
-                        frmArticle.textQteArt.Text = dgvProduit.Rows[i].Cells[3].Value.ToString();
-                        frmArticle.textPrix.Text = dgvProduit.Rows[i].Cells[4].Value.ToString();
-                        frmArticle.comboCatArt.Text = dgvProduit.Rows[i].Cells[7].Value.ToString();
                         frmArticle.Id_Produit = (int)dgvProduit.Rows[i].Cells[1].Value;
+                        frmArticle.textDenomination.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
                         frmArticle.textAn.Text = dgvProduit.Rows[i].Cells[3].Value.ToString();
-                        frmArticle.textPxCarton.Text = dgvProduit.Rows[i].Cells[5].ToString();
-                        frmArticle.textDescription.Text = dgvProduit.Rows[i].Cells[8].ToString();
+                        frmArticle.textQteArt.Text = dgvProduit.Rows[i].Cells[4].Value.ToString();
+                        frmArticle.textPrix.Text = dgvProduit.Rows[i].Cells[5].Value.ToString();
+                        frmArticle.textPxCarton.Text = dgvProduit.Rows[i].Cells[6].ToString();
+                        frmArticle.comboMaisArt.Text = dgvProduit.Rows[i].Cells[7].ToString();
+                        frmArticle.comboCatArt.Text = dgvProduit.Rows[i].Cells[8].Value.ToString();
+                        frmArticle.textDescription.Text = dgvProduit.Rows[i].Cells[9].ToString();
+
                         MemoryStream MS = new MemoryStream(PR.Image_Produit);
                         frmArticle.picArt.Image = Image.FromStream(MS);
                     }
@@ -220,11 +224,13 @@ namespace GestionStock.Stock.PL
             }
             dgvProduit.Rows.Clear();
             CATEGORIE cat = new CATEGORIE();
+            MAISON mais = new MAISON();
 
             foreach (var l in listerecherche)
             {
+                mais = db.MAISON.SingleOrDefault(m =>m.ID_MAISON == m.ID_MAISON);
                 cat = db.CATEGORIE.SingleOrDefault(s => s.Id_Categorie == l.Id_Categorie);
-                dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Année, l.Description_Produit, l.Prix_Carton, l.Quantite_Produit, l.Prix_Unitaire, cat.Nom_Categorie) ;
+                dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Année, l.Description_Produit, l.Prix_Carton, l.Quantite_Produit, l.Prix_Unitaire, mais.Nom_Maison, cat.Nom_Categorie) ;
             }
         }
         //Vérifier le nombre de lignes sélectionnées
@@ -247,7 +253,7 @@ namespace GestionStock.Stock.PL
                     if ((bool)dgvProduit.Rows[i].Cells[0].Value == true)
                     {
                         idselect = (int)dgvProduit.Rows[i].Cells[1].Value;
-                        Nomcategorie = dgvProduit.Rows[i].Cells[7].Value.ToString();
+                        Nomcategorie = dgvProduit.Rows[i].Cells[8].Value.ToString();
                     }
                 }
                 PR = db.PRODUIT.SingleOrDefault(s => s.Id_Produit == idselect);

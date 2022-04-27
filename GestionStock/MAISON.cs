@@ -12,28 +12,18 @@ namespace GestionStock
     using System;
     using System.Collections.Generic;
     
-    public partial class PRODUIT
+    public partial class MAISON
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PRODUIT()
+        public MAISON()
         {
-            this.Details_Commande = new HashSet<Details_Commande>();
+            this.PRODUIT = new HashSet<PRODUIT>();
         }
     
-        public int Id_Produit { get; set; }
-        public string Nom_Produit { get; set; }
-        public int Quantite_Produit { get; set; }
-        public Nullable<decimal> Prix_Unitaire { get; set; }
-        public Nullable<decimal> Prix_Carton { get; set; }
-        public byte[] Image_Produit { get; set; }
-        public string Description_Produit { get; set; }
-        public Nullable<decimal> Année { get; set; }
-        public int Id_Categorie { get; set; }
-        public Nullable<int> ID_MAISON { get; set; }
+        public int ID_MAISON { get; set; }
+        public string Nom_Maison { get; set; }
     
-        public virtual CATEGORIE CATEGORIE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Details_Commande> Details_Commande { get; set; }
-        public virtual MAISON MAISON { get; set; }
+        public virtual ICollection<PRODUIT> PRODUIT { get; set; }
     }
 }

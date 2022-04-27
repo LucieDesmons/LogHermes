@@ -5,6 +5,7 @@
     <EntitySet Name="CLIENT" EntityType="GESTION_STOCKModel.CLIENT" />
     <EntitySet Name="COMMANDE" EntityType="GESTION_STOCKModel.COMMANDE" />
     <EntitySet Name="Details_Commande" EntityType="GESTION_STOCKModel.Details_Commande" />
+    <EntitySet Name="MAISON" EntityType="GESTION_STOCKModel.MAISON" />
     <EntitySet Name="PRODUIT" EntityType="GESTION_STOCKModel.PRODUIT" />
     <EntitySet Name="UTILISATEUR" EntityType="GESTION_STOCKModel.UTILISATEUR" />
     <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE">
@@ -22,6 +23,10 @@
     <AssociationSet Name="FK_Details_Commande_PRODUIT" Association="GESTION_STOCKModel.FK_Details_Commande_PRODUIT">
       <End Role="PRODUIT" EntitySet="PRODUIT" />
       <End Role="Details_Commande" EntitySet="Details_Commande" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUIT_MAISON1" Association="GESTION_STOCKModel.FK_PRODUIT_MAISON1">
+      <End Role="MAISON" EntitySet="MAISON" />
+      <End Role="PRODUIT" EntitySet="PRODUIT" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="CATEGORIE">
@@ -74,6 +79,14 @@
     <NavigationProperty Name="COMMANDE" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="Details_Commande" ToRole="COMMANDE" />
     <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="Details_Commande" ToRole="PRODUIT" />
   </EntityType>
+  <EntityType Name="MAISON">
+    <Key>
+      <PropertyRef Name="ID_MAISON" />
+    </Key>
+    <Property Name="ID_MAISON" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom_Maison" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_PRODUIT_MAISON1" FromRole="MAISON" ToRole="PRODUIT" />
+  </EntityType>
   <EntityType Name="PRODUIT">
     <Key>
       <PropertyRef Name="Id_Produit" />
@@ -87,8 +100,10 @@
     <Property Name="Description_Produit" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
     <Property Name="Année" Type="Decimal" Precision="4" Scale="0" />
     <Property Name="Id_Categorie" Type="Int32" Nullable="false" />
+    <Property Name="ID_MAISON" Type="Int32" />
     <NavigationProperty Name="CATEGORIE" Relationship="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE" FromRole="PRODUIT" ToRole="CATEGORIE" />
     <NavigationProperty Name="Details_Commande" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="PRODUIT" ToRole="Details_Commande" />
+    <NavigationProperty Name="MAISON" Relationship="GESTION_STOCKModel.FK_PRODUIT_MAISON1" FromRole="PRODUIT" ToRole="MAISON" />
   </EntityType>
   <EntityType Name="UTILISATEUR">
     <Key>
@@ -151,6 +166,20 @@
       </Principal>
       <Dependent Role="Details_Commande">
         <PropertyRef Name="Id_Produit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUIT_MAISON1">
+    <End Type="GESTION_STOCKModel.MAISON" Role="MAISON" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="GESTION_STOCKModel.PRODUIT" Role="PRODUIT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAISON">
+        <PropertyRef Name="ID_MAISON" />
+      </Principal>
+      <Dependent Role="PRODUIT">
+        <PropertyRef Name="ID_MAISON" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

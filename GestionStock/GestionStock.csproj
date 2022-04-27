@@ -118,6 +118,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GESTION_STOCKDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MAISON.cs">
+      <DependentUpon>dbStock.tt</DependentUpon>
+    </Compile>
     <Compile Include="PRODUIT.cs">
       <DependentUpon>dbStock.tt</DependentUpon>
     </Compile>
@@ -134,6 +137,7 @@
     <Compile Include="Stock.BL\CLS_categorie.cs" />
     <Compile Include="Stock.BL\CLS_Client.cs" />
     <Compile Include="Stock.BL\CLS_Commande_DetailCommande.cs" />
+    <Compile Include="Stock.BL\CLS_Maison.cs" />
     <Compile Include="Stock.BL\Connexion.cs" />
     <Compile Include="Stock.BL\DetailCmde.cs" />
     <Compile Include="Stock.PL\FRM_Accueil.cs">
@@ -184,6 +188,12 @@
     <Compile Include="Stock.PL\FRM_Image.Designer.cs">
       <DependentUpon>FRM_Image.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock.PL\FRM_Maison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.PL\FRM_Maison.Designer.cs">
+      <DependentUpon>FRM_Maison.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stock.PL\FRM_Produit_Commande.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +223,12 @@
     </Compile>
     <Compile Include="Stock.PL\USR_Commande.Designer.cs">
       <DependentUpon>USR_Commande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.PL\USR_Maison.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stock.PL\USR_Maison.Designer.cs">
+      <DependentUpon>USR_Maison.cs</DependentUpon>
     </Compile>
     <Compile Include="UTILISATEUR.cs">
       <DependentUpon>dbStock.tt</DependentUpon>
@@ -257,6 +273,9 @@
     <EmbeddedResource Include="Stock.PL\FRM_Image.resx">
       <DependentUpon>FRM_Image.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stock.PL\FRM_Maison.resx">
+      <DependentUpon>FRM_Maison.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stock.PL\FRM_Produit_Commande.resx">
       <DependentUpon>FRM_Produit_Commande.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stock.PL\USR_Commande.resx">
       <DependentUpon>USR_Commande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock.PL\USR_Maison.resx">
+      <DependentUpon>USR_Maison.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="dbStock.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -356,6 +378,8 @@
     <None Include="Resources\maxresdefault.jpg" />
     <None Include="Resources\Vin.jpg" />
     <None Include="Resources\Serv.jpg" />
+    <None Include="Resources\palace.png" />
+    <None Include="Resources\palac.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
