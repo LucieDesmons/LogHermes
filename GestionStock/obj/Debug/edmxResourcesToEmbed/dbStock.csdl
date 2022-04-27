@@ -6,6 +6,7 @@
     <EntitySet Name="COMMANDE" EntityType="GESTION_STOCKModel.COMMANDE" />
     <EntitySet Name="Details_Commande" EntityType="GESTION_STOCKModel.Details_Commande" />
     <EntitySet Name="PRODUIT" EntityType="GESTION_STOCKModel.PRODUIT" />
+    <EntitySet Name="sysdiagrams" EntityType="GESTION_STOCKModel.sysdiagrams" />
     <EntitySet Name="UTILISATEUR" EntityType="GESTION_STOCKModel.UTILISATEUR" />
     <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE">
       <End Role="CATEGORIE" EntitySet="CATEGORIE" />
@@ -81,11 +82,25 @@
     <Property Name="Id_Produit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nom_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Quantite_Produit" Type="Int32" Nullable="false" />
-    <Property Name="Prix_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Prix_Produit" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="Image_Produit" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
     <Property Name="Id_Categorie" Type="Int32" Nullable="false" />
+    <Property Name="Prix_Carton_Produit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Maison_Produit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Annee_Produit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description_Produit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="CATEGORIE" Relationship="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE" FromRole="PRODUIT" ToRole="CATEGORIE" />
     <NavigationProperty Name="Details_Commande" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="PRODUIT" ToRole="Details_Commande" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="UTILISATEUR">
     <Key>

@@ -207,7 +207,7 @@ namespace GestionStock.Stock.PL
                         //!=-1 existe dans la BDD
                         break;
                     case "Prix":
-                        listerecherche = listerecherche.Where(s => s.Prix_Produit.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        listerecherche = listerecherche.Where(s => s.Prix_Produit.ToString().IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
                         break;
 
 
@@ -251,7 +251,7 @@ namespace GestionStock.Stock.PL
                     ReportParameter Pcategorie = new ReportParameter("@RPCategorie", Nomcategorie);
                     ReportParameter Pnom = new ReportParameter("@RPNom", PR.Nom_Produit);
                     ReportParameter Pquantite = new ReportParameter("@RPQuantite", PR.Quantite_Produit.ToString());
-                    ReportParameter Pprix = new ReportParameter("@RPPrix", PR.Prix_Produit);
+                    ReportParameter Pprix = new ReportParameter("@RPPrix", PR.Prix_Produit.ToString());
                     string ImageString = Convert.ToBase64String(PR.Image_Produit);
                     ReportParameter Pimage = new ReportParameter("@RPImage", ImageString);
                     frmpt.rpAfficher.LocalReport.SetParameters(new ReportParameter[] { Pcategorie, Pnom, Pquantite, Pprix, Pimage });

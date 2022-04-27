@@ -51,9 +51,23 @@
     <Property Name="Id_Produit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nom_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Quantite_Produit" Type="int" Nullable="false" />
-    <Property Name="Prix_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Prix_Produit" Type="money" />
     <Property Name="Image_Produit" Type="image" Nullable="false" />
     <Property Name="Id_Categorie" Type="int" Nullable="false" />
+    <Property Name="Prix_Carton_Produit" Type="money" />
+    <Property Name="Maison_Produit" Type="nvarchar" MaxLength="250" />
+    <Property Name="Annee_Produit" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description_Produit" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="UTILISATEUR">
     <Key>
@@ -124,6 +138,7 @@
     <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Details_Commande" EntityType="Self.Details_Commande" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PRODUIT" EntityType="Self.PRODUIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_COMMANDE_CLIENT" Association="Self.FK_COMMANDE_CLIENT">
       <End Role="CLIENT" EntitySet="CLIENT" />

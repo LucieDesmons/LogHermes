@@ -62,7 +62,7 @@ namespace GestionStock.Stock.PL
                     MemoryStream MR = new MemoryStream();
                     picArt.Image.Save(MR, picArt.Image.RawFormat);
                     byte[] byteimageP = MR.ToArray();
-                    if (cLS_Article.Ajouter_Produit(textDenomination.Text, int.Parse(textQteArt.Text), textPrix.Text, byteimageP, Convert.ToInt32(comboCatArt.SelectedValue)) == true)
+                    if (cLS_Article.Ajouter_Produit(textDenomination.Text, int.Parse(textQteArt.Text), Convert.ToDecimal(textPrix.Text), byteimageP, Convert.ToInt32(comboCatArt.SelectedValue)) == true)
                     {
                         MessageBox.Show("Produit ajouté", "Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         (usarticle as USR_Article).Actualiserdgv();
@@ -81,7 +81,7 @@ namespace GestionStock.Stock.PL
                     DialogResult dr = MessageBox.Show("Voulez-vous modifier l'article ?", "modification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dr == DialogResult.Yes)
                     {
-                        cLS_Article.Modify_Produit(Id_Produit, textDenomination.Text, int.Parse(textQteArt.Text), textPrix.Text, byteimageP, Convert.ToInt32(comboCatArt.SelectedValue));
+                        cLS_Article.Modify_Produit(Id_Produit, textDenomination.Text, int.Parse(textQteArt.Text), Convert.ToDecimal(textPrix.Text), byteimageP, Convert.ToInt32(comboCatArt.SelectedValue));
                         MessageBox.Show("Article modifié !","Modification",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         //Actualiser datagrid
                         (usarticle as USR_Article).Actualiserdgv();

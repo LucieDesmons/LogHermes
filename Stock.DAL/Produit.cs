@@ -9,7 +9,6 @@ namespace GestionStock.DAL
 
         public int IdCategorie { get; set; }
         public string NomProduit { get; set; } = null!;        
-        public string MaisonProduit { get; set; } = null!;
         public string AnneeProduit { get; set; } = null!;
         public string DescriptionProduit { get; set; } = null!;
         public int QuantiteProduit { get; set; }

@@ -214,6 +214,9 @@
     <Compile Include="Stock.PL\USR_Commande.Designer.cs">
       <DependentUpon>USR_Commande.cs</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>dbStock.tt</DependentUpon>
+    </Compile>
     <Compile Include="UTILISATEUR.cs">
       <DependentUpon>dbStock.tt</DependentUpon>
     </Compile>

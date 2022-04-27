@@ -10,7 +10,7 @@ namespace GestionStock.Stock.BL
     {
         private dbStockContext db = new dbStockContext();
         private PRODUIT PR;
-        public bool Ajouter_Produit(string NomP, int Quantite, string PrixP, byte[] Image, int idcategorie)
+        public bool Ajouter_Produit(string NomP, int Quantite, decimal PrixP, byte[] Image, int idcategorie)
         {
             PR = new PRODUIT();
             PR.Nom_Produit = NomP;
@@ -31,7 +31,7 @@ namespace GestionStock.Stock.BL
         }
 
         //Modifier un article
-        public void Modify_Produit(int IDP, string NomP, int Quantite, string PrixP, byte[] Image, int idcategorie)
+        public void Modify_Produit(int IDP, string NomP, int Quantite, decimal PrixP, byte[] Image, int idcategorie)
         {
             PR = new PRODUIT();
             PR = db.PRODUIT.SingleOrDefault(p => p.Id_Produit == IDP); //Vérifie si id article existe

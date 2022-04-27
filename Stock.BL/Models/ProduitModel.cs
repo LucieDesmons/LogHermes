@@ -5,7 +5,6 @@
         public int Id { get; set; }
         public string Nom { get; set; } = null!;
         public string Annee { get; set; } = null!;
-        public string Maison { get; set; } = null!;
         public string Description { get; set; } = null!;
 
         public int Quantite { get; set; }
