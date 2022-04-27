@@ -6,3 +6,6 @@
 /GestionStock/obj/Release
 /SiteWeb/obj/Debug/net6.0
 /GestionStock
+/GestionStock.API/obj/Debug/net6.0
+/Stock.BL/obj/Debug/net6.0
+/Stock.DAL/obj/Debug/net6.0
