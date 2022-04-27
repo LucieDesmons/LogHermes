@@ -35,3 +35,7 @@ body {
         border-color: #424242;
         box-shadow: 0 0 0 0.25rem rgb(75 77 78 / 50%);
     }
+
+.border-right {
+    border-right: 1px solid;
+}
