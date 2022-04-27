@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+
+
 
 namespace GestionStock.DAL
 {
-    public partial class DBGestionStockContext : DbContext
+
+    public partial class DBGestionStockContext : IdentityDbContext<IdentityUser>
     {
         public DBGestionStockContext()
         {
@@ -34,6 +36,8 @@ namespace GestionStock.DAL
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Categorie>(entity =>
             {
                 entity.HasKey(e => e.IdCategorie);

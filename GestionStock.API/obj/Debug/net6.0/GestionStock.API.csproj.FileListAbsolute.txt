@@ -264,3 +264,8 @@ C:\Users\Lucie\source\repos\LogHermesNico\GestionStock.API\obj\Debug\net6.0\Gest
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock.API\obj\Debug\net6.0\ref\GestionStock.API.dll
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock.API\obj\Debug\net6.0\GestionStock.API.pdb
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock.API\obj\Debug\net6.0\GestionStock.API.genruntimeconfig.cache
+C:\Users\Lucie\source\repos\LogHermesNico\GestionStock.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Lucie\source\repos\LogHermesNico\GestionStock.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Lucie\source\repos\LogHermesNico\GestionStock.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Lucie\source\repos\LogHermesNico\GestionStock.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Lucie\source\repos\LogHermesNico\GestionStock.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
