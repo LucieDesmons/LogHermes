@@ -42,7 +42,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(77, 208);
+            this.panel2.Location = new System.Drawing.Point(25, 208);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(779, 10);
@@ -57,7 +57,7 @@
             this.btnQuitArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitArt.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitArt.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnQuitArt.Location = new System.Drawing.Point(603, 247);
+            this.btnQuitArt.Location = new System.Drawing.Point(551, 247);
             this.btnQuitArt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuitArt.Name = "btnQuitArt";
             this.btnQuitArt.Size = new System.Drawing.Size(123, 43);
@@ -75,7 +75,7 @@
             this.btnValidCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidCat.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidCat.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnValidCat.Location = new System.Drawing.Point(249, 247);
+            this.btnValidCat.Location = new System.Drawing.Point(197, 247);
             this.btnValidCat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnValidCat.Name = "btnValidCat";
             this.btnValidCat.Size = new System.Drawing.Size(123, 43);
@@ -88,7 +88,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.lblFicheCat);
-            this.panel1.Location = new System.Drawing.Point(83, 37);
+            this.panel1.Location = new System.Drawing.Point(31, 37);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(779, 66);
@@ -112,7 +112,7 @@
             // 
             this.textCat.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCat.ForeColor = System.Drawing.Color.Silver;
-            this.textCat.Location = new System.Drawing.Point(249, 130);
+            this.textCat.Location = new System.Drawing.Point(197, 130);
             this.textCat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textCat.Name = "textCat";
             this.textCat.Size = new System.Drawing.Size(475, 28);
@@ -125,7 +125,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Firebrick;
-            this.label2.Location = new System.Drawing.Point(491, 133);
+            this.label2.Location = new System.Drawing.Point(439, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 21);
             this.label2.TabIndex = 82;
@@ -135,7 +135,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(128, 133);
+            this.label1.Location = new System.Drawing.Point(76, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 21);
             this.label1.TabIndex = 81;
@@ -145,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 346);
+            this.ClientSize = new System.Drawing.Size(843, 320);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnQuitArt);
             this.Controls.Add(this.btnValidCat);

@@ -81,9 +81,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitre.AutoSize = true;
+            this.lblTitre.BackColor = System.Drawing.Color.Transparent;
             this.lblTitre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTitre.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitre.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblTitre.ForeColor = System.Drawing.Color.Transparent;
             this.lblTitre.Location = new System.Drawing.Point(154, 22);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(252, 28);
@@ -94,10 +95,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(21, 24);
+            this.label1.Location = new System.Drawing.Point(18, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 26);
             this.label1.TabIndex = 11;
@@ -133,8 +136,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkAffiche.AutoSize = true;
             this.chkAffiche.BackColor = System.Drawing.Color.Transparent;
-            this.chkAffiche.ForeColor = System.Drawing.Color.Firebrick;
-            this.chkAffiche.Location = new System.Drawing.Point(155, 170);
+            this.chkAffiche.ForeColor = System.Drawing.Color.Transparent;
+            this.chkAffiche.Location = new System.Drawing.Point(96, 175);
             this.chkAffiche.Name = "chkAffiche";
             this.chkAffiche.Size = new System.Drawing.Size(211, 28);
             this.chkAffiche.TabIndex = 24;
@@ -149,8 +152,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMessageErreur.AutoSize = true;
             this.lblMessageErreur.BackColor = System.Drawing.Color.Transparent;
-            this.lblMessageErreur.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblMessageErreur.Location = new System.Drawing.Point(169, 208);
+            this.lblMessageErreur.ForeColor = System.Drawing.Color.Transparent;
+            this.lblMessageErreur.Location = new System.Drawing.Point(196, -5);
             this.lblMessageErreur.Name = "lblMessageErreur";
             this.lblMessageErreur.Size = new System.Drawing.Size(169, 24);
             this.lblMessageErreur.TabIndex = 23;
@@ -164,7 +167,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMotdePasse.AutoSize = true;
             this.lblMotdePasse.BackColor = System.Drawing.Color.Transparent;
-            this.lblMotdePasse.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblMotdePasse.ForeColor = System.Drawing.Color.Transparent;
             this.lblMotdePasse.Location = new System.Drawing.Point(92, 128);
             this.lblMotdePasse.Name = "lblMotdePasse";
             this.lblMotdePasse.Size = new System.Drawing.Size(130, 24);
@@ -178,7 +181,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIdentifiant.AutoSize = true;
             this.lblIdentifiant.BackColor = System.Drawing.Color.Transparent;
-            this.lblIdentifiant.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblIdentifiant.ForeColor = System.Drawing.Color.Transparent;
             this.lblIdentifiant.Location = new System.Drawing.Point(94, 78);
             this.lblIdentifiant.Name = "lblIdentifiant";
             this.lblIdentifiant.Size = new System.Drawing.Size(107, 24);
@@ -235,6 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::GestionStock.Properties.Resources.Cave;
             this.ClientSize = new System.Drawing.Size(538, 367);
             this.Controls.Add(this.textMotPasse);
             this.Controls.Add(this.textIdentifiant);

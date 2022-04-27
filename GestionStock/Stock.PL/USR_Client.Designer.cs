@@ -48,7 +48,6 @@
             this.btnSuppClient = new System.Windows.Forms.Button();
             this.btnModClient = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@
             // 
             // comboRech
             // 
+            this.comboRech.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboRech.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboRech.FormattingEnabled = true;
             this.comboRech.Items.AddRange(new object[] {
@@ -70,7 +70,7 @@
             "Email",
             "Ville",
             "Pays"});
-            this.comboRech.Location = new System.Drawing.Point(422, 117);
+            this.comboRech.Location = new System.Drawing.Point(422, 142);
             this.comboRech.Name = "comboRech";
             this.comboRech.Size = new System.Drawing.Size(216, 32);
             this.comboRech.TabIndex = 4;
@@ -92,7 +92,8 @@
             // 
             // textBoxR
             // 
-            this.textBoxR.Location = new System.Drawing.Point(665, 117);
+            this.textBoxR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxR.Location = new System.Drawing.Point(665, 142);
             this.textBoxR.Name = "textBoxR";
             this.textBoxR.Size = new System.Drawing.Size(246, 32);
             this.textBoxR.TabIndex = 6;
@@ -117,12 +118,12 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvClient.Location = new System.Drawing.Point(21, 169);
+            this.dgvClient.Location = new System.Drawing.Point(21, 191);
             this.dgvClient.Name = "dgvClient";
             this.dgvClient.RowHeadersVisible = false;
             this.dgvClient.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvClient.RowTemplate.Height = 24;
-            this.dgvClient.Size = new System.Drawing.Size(890, 187);
+            this.dgvClient.Size = new System.Drawing.Size(890, 271);
             this.dgvClient.TabIndex = 7;
             // 
             // Column9
@@ -130,6 +131,7 @@
             this.Column9.HeaderText = "Id";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
+            this.Column9.Visible = false;
             // 
             // Column1
             // 
@@ -182,6 +184,7 @@
             // 
             // Column8
             // 
+            this.Column8.FillWeight = 50F;
             this.Column8.HeaderText = "Select";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
@@ -191,12 +194,13 @@
             // btnSuppClient
             // 
             this.btnSuppClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSuppClient.BackColor = System.Drawing.Color.Transparent;
+            this.btnSuppClient.BackColor = System.Drawing.SystemColors.Control;
             this.btnSuppClient.FlatAppearance.BorderSize = 0;
             this.btnSuppClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuppClient.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuppClient.Image = global::GestionStock.Properties.Resources.user_business_close_32;
             this.btnSuppClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSuppClient.Location = new System.Drawing.Point(345, 54);
+            this.btnSuppClient.Location = new System.Drawing.Point(345, 58);
             this.btnSuppClient.Name = "btnSuppClient";
             this.btnSuppClient.Size = new System.Drawing.Size(137, 43);
             this.btnSuppClient.TabIndex = 2;
@@ -208,12 +212,13 @@
             // btnModClient
             // 
             this.btnModClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModClient.BackColor = System.Drawing.Color.Transparent;
+            this.btnModClient.BackColor = System.Drawing.SystemColors.Control;
             this.btnModClient.FlatAppearance.BorderSize = 0;
             this.btnModClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModClient.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModClient.Image = global::GestionStock.Properties.Resources.user_business_info_32;
             this.btnModClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModClient.Location = new System.Drawing.Point(558, 54);
+            this.btnModClient.Location = new System.Drawing.Point(558, 58);
             this.btnModClient.Name = "btnModClient";
             this.btnModClient.Size = new System.Drawing.Size(125, 43);
             this.btnModClient.TabIndex = 1;
@@ -224,12 +229,14 @@
             // 
             // btnAddClient
             // 
-            this.btnAddClient.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddClient.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddClient.FlatAppearance.BorderSize = 0;
             this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClient.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClient.ForeColor = System.Drawing.Color.Black;
             this.btnAddClient.Image = global::GestionStock.Properties.Resources.user_business_add_32;
             this.btnAddClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddClient.Location = new System.Drawing.Point(154, 54);
+            this.btnAddClient.Location = new System.Drawing.Point(154, 58);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(121, 43);
             this.btnAddClient.TabIndex = 0;
@@ -238,22 +245,11 @@
             this.btnAddClient.UseVisualStyleBackColor = false;
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(339, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 35);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "LISTE DES CLIENTS";
-            // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightCoral;
             this.panel1.Location = new System.Drawing.Point(21, 48);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(890, 4);
@@ -261,9 +257,10 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.BackColor = System.Drawing.Color.Firebrick;
-            this.panel2.Location = new System.Drawing.Point(21, 103);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.LightCoral;
+            this.panel2.Location = new System.Drawing.Point(21, 107);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(890, 4);
             this.panel2.TabIndex = 10;
@@ -272,18 +269,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Elephant", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Firebrick;
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(20, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 35);
+            this.label2.Size = new System.Drawing.Size(259, 37);
             this.label2.TabIndex = 11;
-            this.label2.Text = "négosud";
+            this.label2.Text = "Liste des clients";
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.BackColor = System.Drawing.Color.Firebrick;
-            this.panel3.Location = new System.Drawing.Point(21, 389);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.LightCoral;
+            this.panel3.Location = new System.Drawing.Point(21, 486);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(890, 4);
             this.panel3.TabIndex = 12;
@@ -296,7 +294,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvClient);
             this.Controls.Add(this.textBoxR);
             this.Controls.Add(this.comboRech);
@@ -306,7 +303,7 @@
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "USR_Client";
-            this.Size = new System.Drawing.Size(930, 429);
+            this.Size = new System.Drawing.Size(930, 515);
             this.Load += new System.EventHandler(this.USR_Client_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet)).EndInit();
@@ -330,6 +327,10 @@
         private System.Windows.Forms.TextBox textBoxR;
         private System.Data.Entity.Core.EntityClient.EntityConnection entityConnection1;
         private System.Windows.Forms.DataGridView dgvClient;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -339,10 +340,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column8;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
     }
 }

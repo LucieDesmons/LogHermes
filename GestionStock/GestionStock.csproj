@@ -347,6 +347,15 @@
     <None Include="Resources\user_business_info_32.png" />
     <None Include="Resources\vigne.jpg" />
     <None Include="Resources\vigne2.jpg" />
+    <None Include="Resources\web_layout_error_32_add.png" />
+    <None Include="Resources\web_layout_error_32_close.png" />
+    <None Include="Resources\web_layout_info_32.png" />
+    <None Include="Resources\camera_32.png" />
+    <None Include="Resources\Cave.jpg" />
+    <None Include="Resources\OIP %281%29.jpg" />
+    <None Include="Resources\maxresdefault.jpg" />
+    <None Include="Resources\Vin.jpg" />
+    <None Include="Resources\Serv.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

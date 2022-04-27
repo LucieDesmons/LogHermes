@@ -64,6 +64,26 @@ namespace GestionStock.Stock.PL
             PL.FRM_AjoutArt frmArticle = new PL.FRM_AjoutArt(this);
             frmArticle.ShowDialog();
         }
+        public string SelectVerif()
+        {
+            int Nombreligneselect = 0;
+            for (int i = 0; i < dgvProduit.Rows.Count; i++)
+            {
+                if ((bool)dgvProduit.Rows[i].Cells[0].Value == true)
+                {
+                    Nombreligneselect++;
+                }
+            }
+            if (Nombreligneselect == 0)
+            {
+                return "Sélectionner un article";
+            }
+            if (Nombreligneselect > 1)
+            {
+                return "Sélectionner un seul article";
+            }
+            return null;
+        }
 
         private void btnModArt_Click(object sender, System.EventArgs e)
         {
@@ -92,7 +112,10 @@ namespace GestionStock.Stock.PL
                         frmArticle.textQteArt.Text = dgvProduit.Rows[i].Cells[3].Value.ToString();
                         frmArticle.textPrix.Text = dgvProduit.Rows[i].Cells[4].Value.ToString();
                         frmArticle.comboCatArt.Text = dgvProduit.Rows[i].Cells[7].Value.ToString();
-                        //frmArticle.Id_Produit = (int)dgvProduit.Rows[i].Cells[1].Value;
+                        frmArticle.Id_Produit = (int)dgvProduit.Rows[i].Cells[1].Value;
+                        frmArticle.textAn.Text = dgvProduit.Rows[i].Cells[3].Value.ToString();
+                        frmArticle.textPxCarton.Text = dgvProduit.Rows[i].Cells[5].ToString();
+                        frmArticle.textDescription.Text = dgvProduit.Rows[i].Cells[8].ToString();
                         MemoryStream MS = new MemoryStream(PR.Image_Produit);
                         frmArticle.picArt.Image = Image.FromStream(MS);
                     }
@@ -104,27 +127,7 @@ namespace GestionStock.Stock.PL
             }
 
         }
-        //Vérifier le nombre de lignes sélectionnées
-        public string SelectVerif()
-        {
-            int Nombreligneselect = 0;
-            for (int i = 0; i < dgvProduit.Rows.Count; i++)
-            {
-                if ((bool)dgvProduit.Rows[i].Cells[0].Value == true)
-                {
-                    Nombreligneselect++;
-                }
-            }
-            if (Nombreligneselect == 0)
-            {
-                return "Sélectionner un article";
-            }
-            if (Nombreligneselect > 1)
-            {
-                return "Sélectionner un seul article";
-            }
-            return null;
-        }
+
         private void USR_Article_Load(object sender, System.EventArgs e)
         {
             Actualiserdgv();
@@ -145,17 +148,18 @@ namespace GestionStock.Stock.PL
                     {
                         int MYIDSELECT = (int)dgvProduit.Rows[i].Cells[1].Value;//n°ID sélectionné
                         PR = db.PRODUIT.SingleOrDefault(p => p.Id_Produit == MYIDSELECT);// id produit = id sélectionné dans datagridview
-                    }
-                    if (PR != null)//si existe
-                    {
-                        FRM_Image frmPhoto = new FRM_Image();
-                        MemoryStream MS = new MemoryStream(PR.Image_Produit);//Pb
 
-                        frmPhoto.picImageProduit.Image = Image.FromStream(MS);
+                        if (PR != null)//si existe
+                        {
+                            FRM_Image frmPhoto = new FRM_Image();
+                            MemoryStream MS = new MemoryStream(PR.Image_Produit);//Pb
 
-                        frmPhoto.lblImage.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
-                        //afficher le formulaire
-                        frmPhoto.ShowDialog();
+                            frmPhoto.picImageProduit.Image = Image.FromStream(MS);
+
+                            frmPhoto.lblImage.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
+                            //afficher le formulaire
+                            frmPhoto.ShowDialog();
+                        }
                     }
 
                 }
@@ -223,6 +227,7 @@ namespace GestionStock.Stock.PL
                 dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Année, l.Description_Produit, l.Prix_Carton, l.Quantite_Produit, l.Prix_Unitaire, cat.Nom_Categorie) ;
             }
         }
+        //Vérifier le nombre de lignes sélectionnées
 
         private void btnImpr_Click(object sender, EventArgs e)
         {
@@ -327,7 +332,10 @@ namespace GestionStock.Stock.PL
             }
         }
 
+        private void comboRech_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }

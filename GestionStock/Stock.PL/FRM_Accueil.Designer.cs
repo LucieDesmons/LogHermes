@@ -37,6 +37,7 @@
             this.btnCat = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,9 +47,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAfficher.BackColor = System.Drawing.Color.Transparent;
-            this.pnlAfficher.Location = new System.Drawing.Point(181, 109);
+            this.pnlAfficher.Location = new System.Drawing.Point(171, 109);
             this.pnlAfficher.Name = "pnlAfficher";
-            this.pnlAfficher.Size = new System.Drawing.Size(898, 740);
+            this.pnlAfficher.Size = new System.Drawing.Size(1105, 679);
             this.pnlAfficher.TabIndex = 2;
             // 
             // panel1
@@ -61,7 +62,7 @@
             this.panel1.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(12, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1057, 112);
+            this.panel1.Size = new System.Drawing.Size(1264, 101);
             this.panel1.TabIndex = 6;
             // 
             // lblTitre
@@ -86,7 +87,7 @@
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::GestionStock.Properties.Resources.close_32;
-            this.btnExit.Location = new System.Drawing.Point(985, 24);
+            this.btnExit.Location = new System.Drawing.Point(1192, 24);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(46, 51);
             this.btnExit.TabIndex = 0;
@@ -97,10 +98,10 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Firebrick;
+            this.panel2.BackColor = System.Drawing.Color.LightCoral;
             this.panel2.Location = new System.Drawing.Point(13, 106);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1055, 8);
+            this.panel2.Size = new System.Drawing.Size(1257, 8);
             this.panel2.TabIndex = 2;
             // 
             // btnCmde
@@ -111,6 +112,7 @@
             this.btnCmde.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnCmde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCmde.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCmde.ForeColor = System.Drawing.Color.Transparent;
             this.btnCmde.Image = global::GestionStock.Properties.Resources.receipt48;
             this.btnCmde.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCmde.Location = new System.Drawing.Point(20, 546);
@@ -133,7 +135,7 @@
             this.btnCat.ForeColor = System.Drawing.Color.Transparent;
             this.btnCat.Image = global::GestionStock.Properties.Resources.cat48;
             this.btnCat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCat.Location = new System.Drawing.Point(20, 403);
+            this.btnCat.Location = new System.Drawing.Point(20, 400);
             this.btnCat.Name = "btnCat";
             this.btnCat.Size = new System.Drawing.Size(116, 93);
             this.btnCat.TabIndex = 4;
@@ -150,6 +152,7 @@
             this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProduct.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.ForeColor = System.Drawing.Color.Transparent;
             this.btnProduct.Image = global::GestionStock.Properties.Resources.wine48;
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProduct.Location = new System.Drawing.Point(20, 278);
@@ -181,14 +184,24 @@
             this.btnClient.UseVisualStyleBackColor = false;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel3.BackColor = System.Drawing.Color.LightCoral;
+            this.panel3.Location = new System.Drawing.Point(155, 113);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 845);
+            this.panel3.TabIndex = 7;
+            // 
             // FRM_Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::GestionStock.Properties.Resources.vigne2;
+            this.BackgroundImage = global::GestionStock.Properties.Resources.maxresdefault;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1078, 848);
+            this.ClientSize = new System.Drawing.Size(1280, 787);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlAfficher);
@@ -202,7 +215,6 @@
             this.Name = "FRM_Accueil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Accueil";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -220,5 +232,6 @@
         public System.Windows.Forms.Button btnProduct;
         public System.Windows.Forms.Button btnCat;
         public System.Windows.Forms.Button btnCmde;
+        private System.Windows.Forms.Panel panel3;
     }
 }
