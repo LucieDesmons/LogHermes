@@ -45,8 +45,8 @@
             this.label = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.gbArticle = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbDetail = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbArticle.SuspendLayout();
             this.gbDetail.SuspendLayout();
             this.SuspendLayout();
@@ -160,12 +160,16 @@
             // 
             // btnValider
             // 
+            this.btnValider.BackColor = System.Drawing.Color.MistyRose;
+            this.btnValider.BackgroundImage = global::GestionStock.Properties.Resources.checkmark32;
+            this.btnValider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnValider.ForeColor = System.Drawing.Color.Firebrick;
             this.btnValider.Location = new System.Drawing.Point(453, 22);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(159, 44);
             this.btnValider.TabIndex = 12;
             this.btnValider.Text = "Valider";
-            this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.UseVisualStyleBackColor = false;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // lblPour
@@ -213,15 +217,6 @@
             this.gbArticle.TabStop = false;
             this.gbArticle.Text = "Article(s) vendu(s)";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(62, 28);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(32, 10);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
             // gbDetail
             // 
             this.gbDetail.Controls.Add(this.label);
@@ -238,6 +233,15 @@
             this.gbDetail.TabIndex = 1;
             this.gbDetail.TabStop = false;
             this.gbDetail.Text = "Détails";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(62, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(32, 10);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
             // 
             // FRM_Produit_Commande
             // 

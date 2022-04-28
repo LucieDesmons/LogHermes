@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnAddClient = new System.Windows.Forms.Button();
-            this.btnModClient = new System.Windows.Forms.Button();
-            this.btnSuppClient = new System.Windows.Forms.Button();
             this.comboRech = new System.Windows.Forms.ComboBox();
             this.cLIENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gESTION_STOCKDataSet = new GestionStock.GESTION_STOCKDataSet();
-            this.cLIENTTableAdapter = new GestionStock.GESTION_STOCKDataSetTableAdapters.CLIENTTableAdapter();
             this.textBoxR = new System.Windows.Forms.TextBox();
             this.entityConnection1 = new System.Data.Entity.Core.EntityClient.EntityConnection();
             this.dgvClient = new System.Windows.Forms.DataGridView();
@@ -48,45 +43,20 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnSuppClient = new System.Windows.Forms.Button();
+            this.btnModClient = new System.Windows.Forms.Button();
+            this.btnAddClient = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAddClient
-            // 
-            this.btnAddClient.Location = new System.Drawing.Point(145, 54);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(176, 57);
-            this.btnAddClient.TabIndex = 0;
-            this.btnAddClient.Text = "Ajouter";
-            this.btnAddClient.UseVisualStyleBackColor = true;
-            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
-            // 
-            // btnModClient
-            // 
-            this.btnModClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModClient.Location = new System.Drawing.Point(847, 54);
-            this.btnModClient.Name = "btnModClient";
-            this.btnModClient.Size = new System.Drawing.Size(176, 57);
-            this.btnModClient.TabIndex = 1;
-            this.btnModClient.Text = "Modifier";
-            this.btnModClient.UseVisualStyleBackColor = true;
-            this.btnModClient.Click += new System.EventHandler(this.btnModClient_Click);
-            // 
-            // btnSuppClient
-            // 
-            this.btnSuppClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSuppClient.Location = new System.Drawing.Point(494, 54);
-            this.btnSuppClient.Name = "btnSuppClient";
-            this.btnSuppClient.Size = new System.Drawing.Size(176, 57);
-            this.btnSuppClient.TabIndex = 2;
-            this.btnSuppClient.Text = "Supprimer";
-            this.btnSuppClient.UseVisualStyleBackColor = true;
-            this.btnSuppClient.Click += new System.EventHandler(this.btnSuppClient_Click);
-            // 
             // comboRech
             // 
+            this.comboRech.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboRech.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboRech.FormattingEnabled = true;
             this.comboRech.Items.AddRange(new object[] {
@@ -97,32 +67,28 @@
             "Email",
             "Ville",
             "Pays"});
-            this.comboRech.Location = new System.Drawing.Point(439, 143);
+            this.comboRech.Location = new System.Drawing.Point(422, 142);
             this.comboRech.Name = "comboRech";
-            this.comboRech.Size = new System.Drawing.Size(354, 32);
+            this.comboRech.Size = new System.Drawing.Size(216, 32);
             this.comboRech.TabIndex = 4;
             this.comboRech.SelectedIndexChanged += new System.EventHandler(this.comboRech_SelectedIndexChanged);
             // 
             // cLIENTBindingSource
             // 
             this.cLIENTBindingSource.DataMember = "CLIENT";
-            this.cLIENTBindingSource.DataSource = this.gESTION_STOCKDataSet;
             // 
             // gESTION_STOCKDataSet
             // 
-            this.gESTION_STOCKDataSet.DataSetName = "GESTION_STOCKDataSet";
-            this.gESTION_STOCKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cLIENTTableAdapter
             // 
-            this.cLIENTTableAdapter.ClearBeforeFill = true;
             // 
             // textBoxR
             // 
             this.textBoxR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxR.Location = new System.Drawing.Point(847, 143);
+            this.textBoxR.Location = new System.Drawing.Point(665, 142);
             this.textBoxR.Name = "textBoxR";
-            this.textBoxR.Size = new System.Drawing.Size(333, 32);
+            this.textBoxR.Size = new System.Drawing.Size(246, 32);
             this.textBoxR.TabIndex = 6;
             this.textBoxR.Text = "Rechercher...";
             this.textBoxR.TextChanged += new System.EventHandler(this.textBoxR_TextChanged);
@@ -131,7 +97,8 @@
             // dgvClient
             // 
             this.dgvClient.AllowUserToAddRows = false;
-            this.dgvClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -144,12 +111,12 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvClient.Location = new System.Drawing.Point(59, 261);
+            this.dgvClient.Location = new System.Drawing.Point(21, 191);
             this.dgvClient.Name = "dgvClient";
             this.dgvClient.RowHeadersVisible = false;
             this.dgvClient.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvClient.RowTemplate.Height = 24;
-            this.dgvClient.Size = new System.Drawing.Size(1141, 331);
+            this.dgvClient.Size = new System.Drawing.Size(890, 271);
             this.dgvClient.TabIndex = 7;
             // 
             // Column9
@@ -157,6 +124,7 @@
             this.Column9.HeaderText = "Id";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
+            this.Column9.Visible = false;
             // 
             // Column1
             // 
@@ -209,16 +177,116 @@
             // 
             // Column8
             // 
+            this.Column8.FillWeight = 50F;
             this.Column8.HeaderText = "Select";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // btnSuppClient
+            // 
+            this.btnSuppClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSuppClient.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSuppClient.FlatAppearance.BorderSize = 0;
+            this.btnSuppClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuppClient.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuppClient.Image = global::GestionStock.Properties.Resources.user_business_close_32;
+            this.btnSuppClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSuppClient.Location = new System.Drawing.Point(345, 58);
+            this.btnSuppClient.Name = "btnSuppClient";
+            this.btnSuppClient.Size = new System.Drawing.Size(137, 43);
+            this.btnSuppClient.TabIndex = 2;
+            this.btnSuppClient.Text = "Supprimer";
+            this.btnSuppClient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSuppClient.UseVisualStyleBackColor = false;
+            this.btnSuppClient.Click += new System.EventHandler(this.btnSuppClient_Click);
+            // 
+            // btnModClient
+            // 
+            this.btnModClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModClient.BackColor = System.Drawing.SystemColors.Control;
+            this.btnModClient.FlatAppearance.BorderSize = 0;
+            this.btnModClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModClient.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModClient.Image = global::GestionStock.Properties.Resources.user_business_info_32;
+            this.btnModClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModClient.Location = new System.Drawing.Point(558, 58);
+            this.btnModClient.Name = "btnModClient";
+            this.btnModClient.Size = new System.Drawing.Size(125, 43);
+            this.btnModClient.TabIndex = 1;
+            this.btnModClient.Text = "Modifier";
+            this.btnModClient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModClient.UseVisualStyleBackColor = false;
+            this.btnModClient.Click += new System.EventHandler(this.btnModClient_Click);
+            // 
+            // btnAddClient
+            // 
+            this.btnAddClient.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddClient.FlatAppearance.BorderSize = 0;
+            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClient.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClient.ForeColor = System.Drawing.Color.Black;
+            this.btnAddClient.Image = global::GestionStock.Properties.Resources.user_business_add_32;
+            this.btnAddClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddClient.Location = new System.Drawing.Point(154, 58);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(121, 43);
+            this.btnAddClient.TabIndex = 0;
+            this.btnAddClient.Text = "Ajouter";
+            this.btnAddClient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddClient.UseVisualStyleBackColor = false;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightCoral;
+            this.panel1.Location = new System.Drawing.Point(21, 48);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(890, 4);
+            this.panel1.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.LightCoral;
+            this.panel2.Location = new System.Drawing.Point(21, 107);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(890, 4);
+            this.panel2.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Elephant", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(20, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(259, 37);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Liste des clients";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.LightCoral;
+            this.panel3.Location = new System.Drawing.Point(21, 486);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(890, 4);
+            this.panel3.TabIndex = 12;
+            // 
             // USR_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvClient);
             this.Controls.Add(this.textBoxR);
             this.Controls.Add(this.comboRech);
@@ -228,10 +296,9 @@
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "USR_Client";
-            this.Size = new System.Drawing.Size(1228, 612);
+            this.Size = new System.Drawing.Size(930, 515);
             this.Load += new System.EventHandler(this.USR_Client_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -246,12 +313,14 @@
         private System.Windows.Forms.TextBox textBoxRech;
         private System.Windows.Forms.ComboBox comboRech;
         private System.Windows.Forms.BindingSource cLIENTBindingSource;
-        private GESTION_STOCKDataSet gESTION_STOCKDataSet;
-        private GESTION_STOCKDataSetTableAdapters.CLIENTTableAdapter cLIENTTableAdapter;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxR;
         private System.Data.Entity.Core.EntityClient.EntityConnection entityConnection1;
         private System.Windows.Forms.DataGridView dgvClient;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

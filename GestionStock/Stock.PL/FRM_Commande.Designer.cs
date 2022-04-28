@@ -60,9 +60,7 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gESTION_STOCKDataSet1 = new GestionStock.GESTION_STOCKDataSet1();
             this.detailsCommandeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.details_CommandeTableAdapter = new GestionStock.GESTION_STOCKDataSet1TableAdapters.Details_CommandeTableAdapter();
             this.lblTHT = new System.Windows.Forms.Label();
             this.lblTVA = new System.Windows.Forms.Label();
             this.lblTTTC = new System.Windows.Forms.Label();
@@ -81,30 +79,32 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommande)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsCommandeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnAnnuler.BackColor = System.Drawing.Color.MistyRose;
             this.btnAnnuler.FlatAppearance.BorderSize = 0;
             this.btnAnnuler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnnuler.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnuler.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnAnnuler.Image = global::GestionStock.Properties.Resources.refresh1;
+            this.btnAnnuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnnuler.Location = new System.Drawing.Point(375, 574);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(122, 43);
+            this.btnAnnuler.Size = new System.Drawing.Size(138, 32);
             this.btnAnnuler.TabIndex = 68;
             this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAnnuler.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel2.BackColor = System.Drawing.Color.LightCoral;
             this.panel2.Location = new System.Drawing.Point(52, 289);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(778, 10);
@@ -112,41 +112,47 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnQuit.BackColor = System.Drawing.Color.MistyRose;
             this.btnQuit.FlatAppearance.BorderSize = 0;
             this.btnQuit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnQuit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuit.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuit.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnQuit.Image = global::GestionStock.Properties.Resources.close_32;
+            this.btnQuit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuit.Location = new System.Drawing.Point(594, 574);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(122, 43);
+            this.btnQuit.Size = new System.Drawing.Size(138, 32);
             this.btnQuit.TabIndex = 66;
             this.btnQuit.Text = "Quitter";
+            this.btnQuit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuit.UseVisualStyleBackColor = false;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnValidClt
             // 
-            this.btnValidClt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnValidClt.BackColor = System.Drawing.Color.MistyRose;
             this.btnValidClt.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.btnValidClt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnValidClt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnValidClt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidClt.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidClt.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnValidClt.Image = global::GestionStock.Properties.Resources.checkmark32;
+            this.btnValidClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnValidClt.Location = new System.Drawing.Point(155, 574);
             this.btnValidClt.Name = "btnValidClt";
-            this.btnValidClt.Size = new System.Drawing.Size(122, 43);
+            this.btnValidClt.Size = new System.Drawing.Size(122, 32);
             this.btnValidClt.TabIndex = 65;
             this.btnValidClt.Text = "Valider";
+            this.btnValidClt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnValidClt.UseVisualStyleBackColor = false;
             this.btnValidClt.Click += new System.EventHandler(this.btnValidClt_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.LightCoral;
             this.panel1.Controls.Add(this.dateCommande);
             this.panel1.Controls.Add(this.lblFicheCmde);
             this.panel1.Location = new System.Drawing.Point(39, 30);
@@ -163,15 +169,13 @@
             // 
             // lblFicheCmde
             // 
-            this.lblFicheCmde.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFicheCmde.AutoSize = true;
-            this.lblFicheCmde.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFicheCmde.Font = new System.Drawing.Font("Elephant", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFicheCmde.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.lblFicheCmde.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblFicheCmde.Location = new System.Drawing.Point(234, 17);
+            this.lblFicheCmde.Location = new System.Drawing.Point(124, 14);
             this.lblFicheCmde.Name = "lblFicheCmde";
-            this.lblFicheCmde.Size = new System.Drawing.Size(212, 28);
+            this.lblFicheCmde.Size = new System.Drawing.Size(293, 35);
             this.lblFicheCmde.TabIndex = 0;
             this.lblFicheCmde.Text = "Fiche Commande du";
             // 
@@ -179,7 +183,7 @@
             // 
             this.textTel.Enabled = false;
             this.textTel.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTel.ForeColor = System.Drawing.Color.Silver;
+            this.textTel.ForeColor = System.Drawing.Color.Black;
             this.textTel.Location = new System.Drawing.Point(535, 244);
             this.textTel.Name = "textTel";
             this.textTel.Size = new System.Drawing.Size(225, 28);
@@ -190,7 +194,7 @@
             // 
             this.textMail.Enabled = false;
             this.textMail.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMail.ForeColor = System.Drawing.Color.Silver;
+            this.textMail.ForeColor = System.Drawing.Color.Black;
             this.textMail.Location = new System.Drawing.Point(155, 241);
             this.textMail.Name = "textMail";
             this.textMail.Size = new System.Drawing.Size(225, 28);
@@ -201,7 +205,7 @@
             // 
             this.textPays.Enabled = false;
             this.textPays.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPays.ForeColor = System.Drawing.Color.Silver;
+            this.textPays.ForeColor = System.Drawing.Color.Black;
             this.textPays.Location = new System.Drawing.Point(594, 204);
             this.textPays.Name = "textPays";
             this.textPays.Size = new System.Drawing.Size(166, 28);
@@ -212,7 +216,7 @@
             // 
             this.textVille.Enabled = false;
             this.textVille.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textVille.ForeColor = System.Drawing.Color.Silver;
+            this.textVille.ForeColor = System.Drawing.Color.Black;
             this.textVille.Location = new System.Drawing.Point(320, 200);
             this.textVille.Name = "textVille";
             this.textVille.Size = new System.Drawing.Size(197, 28);
@@ -223,7 +227,7 @@
             // 
             this.textAdresse.Enabled = false;
             this.textAdresse.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textAdresse.ForeColor = System.Drawing.Color.Silver;
+            this.textAdresse.ForeColor = System.Drawing.Color.Black;
             this.textAdresse.Location = new System.Drawing.Point(155, 162);
             this.textAdresse.Name = "textAdresse";
             this.textAdresse.Size = new System.Drawing.Size(605, 28);
@@ -234,7 +238,7 @@
             // 
             this.textPrenom.Enabled = false;
             this.textPrenom.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPrenom.ForeColor = System.Drawing.Color.Silver;
+            this.textPrenom.ForeColor = System.Drawing.Color.Black;
             this.textPrenom.Location = new System.Drawing.Point(535, 122);
             this.textPrenom.Name = "textPrenom";
             this.textPrenom.Size = new System.Drawing.Size(225, 28);
@@ -245,7 +249,7 @@
             // 
             this.textNom.Enabled = false;
             this.textNom.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNom.ForeColor = System.Drawing.Color.Silver;
+            this.textNom.ForeColor = System.Drawing.Color.Black;
             this.textNom.Location = new System.Drawing.Point(155, 122);
             this.textNom.Name = "textNom";
             this.textNom.Size = new System.Drawing.Size(225, 28);
@@ -420,19 +424,9 @@
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
-            // gESTION_STOCKDataSet1
-            // 
-            this.gESTION_STOCKDataSet1.DataSetName = "GESTION_STOCKDataSet1";
-            this.gESTION_STOCKDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // detailsCommandeBindingSource
             // 
             this.detailsCommandeBindingSource.DataMember = "Details_Commande";
-            this.detailsCommandeBindingSource.DataSource = this.gESTION_STOCKDataSet1;
-            // 
-            // details_CommandeTableAdapter
-            // 
-            this.details_CommandeTableAdapter.ClearBeforeFill = true;
             // 
             // lblTHT
             // 
@@ -495,7 +489,7 @@
             // txtBoxR
             // 
             this.txtBoxR.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxR.ForeColor = System.Drawing.Color.Silver;
+            this.txtBoxR.ForeColor = System.Drawing.Color.Black;
             this.txtBoxR.Location = new System.Drawing.Point(1076, 122);
             this.txtBoxR.Name = "txtBoxR";
             this.txtBoxR.Size = new System.Drawing.Size(291, 28);
@@ -566,7 +560,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel3.BackColor = System.Drawing.Color.LightCoral;
             this.panel3.Location = new System.Drawing.Point(864, 125);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 494);
@@ -635,7 +629,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommande)).EndInit();
             this.contextMenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsCommandeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).EndInit();
             this.ResumeLayout(false);
@@ -665,9 +658,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private GESTION_STOCKDataSet1 gESTION_STOCKDataSet1;
         private System.Windows.Forms.BindingSource detailsCommandeBindingSource;
-        private GESTION_STOCKDataSet1TableAdapters.Details_CommandeTableAdapter details_CommandeTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

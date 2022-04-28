@@ -42,8 +42,8 @@ namespace GestionStock.Stock.PL
             txtTVA.Text = TVA.ToString();
         }
 
-        //Fonction remplir data produit
-        public void remplirdgvProduit()
+        //Fonction remplir data produit dans frm commande
+       public void remplirdgvProduit()
         {
             db = new dbStockContext();
             foreach(var l in db.PRODUIT)
@@ -92,7 +92,7 @@ namespace GestionStock.Stock.PL
             dgvProduit.Rows.Clear();
             foreach (var l in listerecherche)
             {
-                dgvProduit.Rows.Add(l.Id_Produit, l.Nom_Produit, l.Quantite_Produit, l.Prix_Produit);
+                dgvProduit.Rows.Add(l.Id_Produit, l.Nom_Produit, l.Quantite_Produit, l.Prix_Produit, l.Annee_Produit, l.Description_Produit, l.Prix_Carton_Produit);
             }
         }
 

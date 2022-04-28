@@ -78,5 +78,20 @@ namespace GestionStock.Stock.PL
                 USR_Commande.Instance.BringToFront();
             }
         }
+
+        private void btnMaison_Click(object sender, EventArgs e)
+        {
+            if (!pnlAfficher.Controls.Contains(USR_Maison.Instance))
+            {
+                pnlAfficher.Controls.Add(USR_Maison.Instance);
+                USR_Maison.Instance.Dock = DockStyle.Fill;
+                USR_Maison.Instance.BringToFront();
+            }
+            else
+            {
+                USR_Maison.Instance.BringToFront();
+            }
+
+        }
     }
 }

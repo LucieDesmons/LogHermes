@@ -36,25 +36,28 @@ namespace GestionStock.Stock.PL
             db = new dbStockContext();
             dgvProduit.Rows.Clear();
             CATEGORIE Cat = new CATEGORIE();
+            MAISON Mais = new MAISON();
             foreach (var Prod in db.PRODUIT)
             {
+                Mais = db.MAISON.SingleOrDefault(m => m.ID_MAISON == Prod.ID_MAISON);
                 Cat = db.CATEGORIE.SingleOrDefault(s => s.Id_Categorie == Prod.Id_Categorie);
                 if (Cat != null)
                 {
-                    dgvProduit.Rows.Add(false, Prod.Id_Produit, Prod.Nom_Produit, Prod.Quantite_Produit, Prod.Prix_Produit, Cat.Nom_Categorie);
+                    dgvProduit.Rows.Add(false,Prod.Id_Produit, Prod.Nom_Produit, Prod.Annee_Produit, Prod.Quantite_Produit, Prod.Prix_Produit,Prod.Prix_Carton_Produit, Mais.Nom_Maison, Cat.Nom_Categorie, Prod.Description_Produit);
 
                 }
             }
+
             //Colore le stock à 0
             for (int i = 0;i< dgvProduit.Rows.Count;i++)
             {
-                if((int)dgvProduit.Rows[i].Cells[3].Value == 0)
+                if((int)dgvProduit.Rows[i].Cells[4].Value == 0)
                 {
-                    dgvProduit.Rows[i].Cells[3].Style.BackColor = Color.Red;
+                    dgvProduit.Rows[i].Cells[4].Style.BackColor = Color.Red;
                 }
                 else
                 {
-                    dgvProduit.Rows[i].Cells[3].Style.BackColor = Color.LightGreen;
+                    dgvProduit.Rows[i].Cells[4].Style.BackColor = Color.LightGreen;
                 }
             }
         }
@@ -63,6 +66,26 @@ namespace GestionStock.Stock.PL
         {
             PL.FRM_AjoutArt frmArticle = new PL.FRM_AjoutArt(this);
             frmArticle.ShowDialog();
+        }
+        public string SelectVerif()
+        {
+            int Nombreligneselect = 0;
+            for (int i = 0; i < dgvProduit.Rows.Count; i++)
+            {
+                if ((bool)dgvProduit.Rows[i].Cells[0].Value == true)
+                {
+                    Nombreligneselect++;
+                }
+            }
+            if (Nombreligneselect == 0)
+            {
+                return "Sélectionner un article";
+            }
+            if (Nombreligneselect > 1)
+            {
+                return "Sélectionner un seul article";
+            }
+            return null;
         }
 
         private void btnModArt_Click(object sender, System.EventArgs e)
@@ -84,16 +107,23 @@ namespace GestionStock.Stock.PL
                     {
                         int MYIDSELECT = (int)dgvProduit.Rows[i].Cells[1].Value;//n°ID sélectionné
                         PR = db.PRODUIT.SingleOrDefault(p => p.Id_Produit == MYIDSELECT);// id produit = id sélectionné dans datagridview
-                    }
-                    if (PR != null)//si existe
-                    {
-                        frmArticle.comboCatArt.Text = dgvProduit.Rows[i].Cells[5].Value.ToString();
-                        frmArticle.textDenomination.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
-                        frmArticle.textPrix.Text = dgvProduit.Rows[i].Cells[4].Value.ToString();
-                        frmArticle.textQteArt.Text = dgvProduit.Rows[i].Cells[3].Value.ToString();
-                        frmArticle.Id_Produit = (int)dgvProduit.Rows[i].Cells[1].Value;
-                        MemoryStream MS = new MemoryStream(PR.Image_Produit);
-                        frmArticle.picArt.Image = Image.FromStream(MS);
+
+                        if (PR != null)//si existe
+                        {
+                            frmArticle.Id_Produit = (int)dgvProduit.Rows[i].Cells[1].Value;
+                            frmArticle.textDenomination.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
+                            frmArticle.textAn.Text = dgvProduit.Rows[i].Cells[3].Value.ToString();
+                            frmArticle.textQteArt.Text = dgvProduit.Rows[i].Cells[4].Value.ToString();
+                            frmArticle.textPrix.Text = dgvProduit.Rows[i].Cells[5].Value.ToString();
+                            frmArticle.textPxCarton.Text = dgvProduit.Rows[i].Cells[6].Value.ToString();
+                            frmArticle.comboMaisArt.Text = dgvProduit.Rows[i].Cells[7].ToString();
+                            frmArticle.comboCatArt.Text = dgvProduit.Rows[i].Cells[8].Value.ToString();
+                            frmArticle.textDescription.Text = dgvProduit.Rows[i].Cells[9].Value.ToString();
+                            
+
+                            MemoryStream MS = new MemoryStream(PR.Image_Produit);
+                            frmArticle.picArt.Image = Image.FromStream(MS);
+                        }
                     }
 
                 }
@@ -103,27 +133,7 @@ namespace GestionStock.Stock.PL
             }
 
         }
-        //Vérifier le nombre de lignes sélectionnées
-        public string SelectVerif()
-        {
-            int Nombreligneselect = 0;
-            for (int i = 0; i < dgvProduit.Rows.Count; i++)
-            {
-                if ((bool)dgvProduit.Rows[i].Cells[0].Value == true)
-                {
-                    Nombreligneselect++;
-                }
-            }
-            if (Nombreligneselect == 0)
-            {
-                return "Sélectionner un article";
-            }
-            if (Nombreligneselect > 1)
-            {
-                return "Sélectionner un seul article";
-            }
-            return null;
-        }
+
         private void USR_Article_Load(object sender, System.EventArgs e)
         {
             Actualiserdgv();
@@ -144,17 +154,21 @@ namespace GestionStock.Stock.PL
                     {
                         int MYIDSELECT = (int)dgvProduit.Rows[i].Cells[1].Value;//n°ID sélectionné
                         PR = db.PRODUIT.SingleOrDefault(p => p.Id_Produit == MYIDSELECT);// id produit = id sélectionné dans datagridview
-                    }
-                    if (PR != null)//si existe
-                    {
-                        FRM_Image frmPhoto = new FRM_Image();
-                        MemoryStream MS = new MemoryStream(PR.Image_Produit);//Pb
 
-                        frmPhoto.picImageProduit.Image = Image.FromStream(MS);
+                        if (PR != null)//si existe
+                        {
+                            FRM_Image frmPhoto = new FRM_Image();
+                            MemoryStream MS = new MemoryStream(PR.Image_Produit);//Pb
 
-                        frmPhoto.lblImage.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
-                        //afficher le formulaire
-                        frmPhoto.ShowDialog();
+                            
+
+                            frmPhoto.picImageProduit.Image = Image.FromStream(MS);
+
+                            frmPhoto.lblImage.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
+                            frmPhoto.richTDescription.Text = dgvProduit.Rows[i].Cells[9].Value.ToString();
+                            //afficher le formulaire
+                            frmPhoto.ShowDialog();
+                        }
                     }
 
                 }
@@ -203,25 +217,30 @@ namespace GestionStock.Stock.PL
                 {
                     case "Nom":
                         listerecherche = listerecherche.Where(s => s.Nom_Produit.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
-                        //StringComparison.CurrentCultureIgnoreCase => soi 1ere lettre en majuscule soi minuscule
+                        //StringComparison.CurrentCultureIgnoreCase => soit 1ere lettre en majuscule soit minuscule
                         //!=-1 existe dans la BDD
                         break;
-                    case "Prix":
-                        listerecherche = listerecherche.Where(s => s.Prix_Produit.ToString().IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                    case "Année":
+                        listerecherche = listerecherche.Where(a => a.Annee_Produit.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
                         break;
-
+                    case "Catégorie":
+                        listerecherche = listerecherche.Where(c => c.CATEGORIE.Nom_Categorie.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        break;
 
                 }
             }
             dgvProduit.Rows.Clear();
             CATEGORIE cat = new CATEGORIE();
+            MAISON mais = new MAISON();
 
             foreach (var l in listerecherche)
             {
+                //mais = db.MAISON.SingleOrDefault(m =>m.ID_MAISON == m.ID_MAISON);
                 cat = db.CATEGORIE.SingleOrDefault(s => s.Id_Categorie == l.Id_Categorie);
-                dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Quantite_Produit, l.Prix_Produit, cat.Nom_Categorie);
+                dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Annee_Produit, l.Description_Produit, l.Prix_Carton_Produit, l.Quantite_Produit, l.Prix_Produit, mais.Nom_Maison, cat.Nom_Categorie) ;
             }
         }
+        //Vérifier le nombre de lignes sélectionnées
 
         private void btnImpr_Click(object sender, EventArgs e)
         {
@@ -241,7 +260,7 @@ namespace GestionStock.Stock.PL
                     if ((bool)dgvProduit.Rows[i].Cells[0].Value == true)
                     {
                         idselect = (int)dgvProduit.Rows[i].Cells[1].Value;
-                        Nomcategorie = dgvProduit.Rows[i].Cells[5].Value.ToString();
+                        Nomcategorie = dgvProduit.Rows[i].Cells[8].Value.ToString();
                     }
                 }
                 PR = db.PRODUIT.SingleOrDefault(s => s.Id_Produit == idselect);
@@ -300,7 +319,8 @@ namespace GestionStock.Stock.PL
                     ws.Cells[1, 1] = "Id Produit";
                     ws.Cells[1, 2] = "Nom Produit";
                     ws.Cells[1, 3] = "Quantité";
-                    ws.Cells[1, 4] = "Prix";
+                    ws.Cells[1, 4] = "Prix unitaire";
+
                     var ListeProduit = db.PRODUIT.ToList();
                     int i = 2;
                     foreach (var L in ListeProduit)
@@ -325,7 +345,10 @@ namespace GestionStock.Stock.PL
             }
         }
 
+        private void comboRech_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }
