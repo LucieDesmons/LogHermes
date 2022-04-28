@@ -5,18 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0f20c77121d644e385f62fbe584b8cbf" Name="Diagram1">
-        <EntityTypeShape EntityType="GESTION_STOCKModel.CATEGORIE" Width="1.5" PointX="0.625" PointY="5.875" />
-        <EntityTypeShape EntityType="GESTION_STOCKModel.CLIENT" Width="1.5" PointX="0.625" PointY="8.25" />
-        <EntityTypeShape EntityType="GESTION_STOCKModel.COMMANDE" Width="1.5" PointX="2.875" PointY="8.375" />
-        <EntityTypeShape EntityType="GESTION_STOCKModel.Details_Commande" Width="1.5" PointX="5.125" PointY="1.125" />
-        <EntityTypeShape EntityType="GESTION_STOCKModel.MAISON" Width="1.5" PointX="0.625" PointY="1.875" />
-        <EntityTypeShape EntityType="GESTION_STOCKModel.PRODUIT" Width="1.5" PointX="2.875" PointY="0.875" />
-        <EntityTypeShape EntityType="GESTION_STOCKModel.UTILISATEUR" Width="1.5" PointX="6.625" PointY="5.375" />
-        <AssociationConnector Association="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE" />
-        <AssociationConnector Association="GESTION_STOCKModel.FK_COMMANDE_CLIENT" />
-        <AssociationConnector Association="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" />
-        <AssociationConnector Association="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" />
-        <AssociationConnector Association="GESTION_STOCKModel.FK_PRODUIT_MAISON1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

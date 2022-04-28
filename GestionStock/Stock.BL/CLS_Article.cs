@@ -18,9 +18,9 @@ namespace GestionStock.Stock.BL
             PR.Prix_Unitaire = PrixP;
             PR.Image_Produit = Image;
             PR.Id_Categorie = idcategorie;
-            PR.Année = année;
+            PR.Annee_Produit = année;
             PR.Description_Produit = description;
-            PR.Prix_Carton = PCarton;
+            PR.Prix_Carton_Produit = PCarton;
             PR.ID_MAISON = idmaison;
             if (db.PRODUIT.SingleOrDefault(p => p.Nom_Produit == NomP) == null)
             {
@@ -46,9 +46,9 @@ namespace GestionStock.Stock.BL
                 PR.Prix_Unitaire = PrixP;
                 PR.Image_Produit = Image;
                 PR.Id_Categorie = idcategorie;
-                PR.Année = année;
+                PR.Annee_Produit = année;
                 PR.Description_Produit = description;
-                PR.Prix_Carton = PCarton;
+                PR.Prix_Carton_Produit = PCarton;
                 PR.ID_MAISON = idmaison;
                 db.SaveChanges(); //sauvegerde des nouvelles informations
             }

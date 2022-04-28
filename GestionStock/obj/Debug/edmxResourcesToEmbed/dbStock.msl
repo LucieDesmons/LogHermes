@@ -62,10 +62,10 @@
         <MappingFragment StoreEntitySet="PRODUIT">
           <ScalarProperty Name="ID_MAISON" ColumnName="ID_MAISON" />
           <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
-          <ScalarProperty Name="Année" ColumnName="Année" />
+          <ScalarProperty Name="Annee_Produit" ColumnName="Année" />
           <ScalarProperty Name="Description_Produit" ColumnName="Description_Produit" />
           <ScalarProperty Name="Image_Produit" ColumnName="Image_Produit" />
-          <ScalarProperty Name="Prix_Carton" ColumnName="Prix_Carton" />
+          <ScalarProperty Name="Prix_Carton_Produit" ColumnName="Prix_Carton" />
           <ScalarProperty Name="Prix_Unitaire" ColumnName="Prix_Unitaire" />
           <ScalarProperty Name="Quantite_Produit" ColumnName="Quantite_Produit" />
           <ScalarProperty Name="Nom_Produit" ColumnName="Nom_Produit" />

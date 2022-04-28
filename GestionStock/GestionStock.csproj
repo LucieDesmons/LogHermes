@@ -118,6 +118,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GESTION_STOCKDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GESTION_STOCKDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GESTION_STOCKDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MAISON.cs">
       <DependentUpon>dbStock.tt</DependentUpon>
     </Compile>
@@ -322,6 +327,17 @@
     </None>
     <None Include="GESTION_STOCKDataSet1.xss">
       <DependentUpon>GESTION_STOCKDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GESTION_STOCKDataSet2.xsc">
+      <DependentUpon>GESTION_STOCKDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GESTION_STOCKDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GESTION_STOCKDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GESTION_STOCKDataSet2.xss">
+      <DependentUpon>GESTION_STOCKDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Details_Commande.datasource" />

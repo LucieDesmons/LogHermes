@@ -84,7 +84,7 @@
       <PropertyRef Name="ID_MAISON" />
     </Key>
     <Property Name="ID_MAISON" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nom_Maison" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Nom_Maison" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_PRODUIT_MAISON1" FromRole="MAISON" ToRole="PRODUIT" />
   </EntityType>
   <EntityType Name="PRODUIT">
@@ -95,10 +95,10 @@
     <Property Name="Nom_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Quantite_Produit" Type="Int32" Nullable="false" />
     <Property Name="Prix_Unitaire" Type="Decimal" Precision="10" Scale="2" />
-    <Property Name="Prix_Carton" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Prix_Carton_Produit" Type="Decimal" Precision="10" Scale="2" />
     <Property Name="Image_Produit" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
     <Property Name="Description_Produit" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
-    <Property Name="Année" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="Annee_Produit" Type="Decimal" Precision="4" Scale="0" />
     <Property Name="Id_Categorie" Type="Int32" Nullable="false" />
     <Property Name="ID_MAISON" Type="Int32" />
     <NavigationProperty Name="CATEGORIE" Relationship="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE" FromRole="PRODUIT" ToRole="CATEGORIE" />

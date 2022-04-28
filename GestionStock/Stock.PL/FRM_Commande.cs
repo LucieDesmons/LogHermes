@@ -48,7 +48,7 @@ namespace GestionStock.Stock.PL
             db = new dbStockContext();
             foreach(var l in db.PRODUIT)
             {
-                dgvProduit.Rows.Add(l.Id_Produit,l.Nom_Produit,l.Quantite_Produit,l.Prix_Unitaire, l.Année,l.Description_Produit, l.Prix_Carton);
+                dgvProduit.Rows.Add(l.Id_Produit,l.Nom_Produit,l.Quantite_Produit,l.Prix_Unitaire, l.Annee_Produit,l.Description_Produit, l.Prix_Carton_Produit);
 
             }
             for (int i = 0; i < dgvProduit.Rows.Count; i++)
@@ -92,7 +92,7 @@ namespace GestionStock.Stock.PL
             dgvProduit.Rows.Clear();
             foreach (var l in listerecherche)
             {
-                dgvProduit.Rows.Add(l.Id_Produit, l.Nom_Produit, l.Quantite_Produit, l.Prix_Unitaire, l.Année, l.Description_Produit, l.Prix_Carton);
+                dgvProduit.Rows.Add(l.Id_Produit, l.Nom_Produit, l.Quantite_Produit, l.Prix_Unitaire, l.Annee_Produit, l.Description_Produit, l.Prix_Carton_Produit);
             }
         }
 
