@@ -31,6 +31,7 @@ namespace GestionStock
         public virtual DbSet<Details_Commande> Details_Commande { get; set; }
         public virtual DbSet<MAISON> MAISON { get; set; }
         public virtual DbSet<PRODUIT> PRODUIT { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UTILISATEUR> UTILISATEUR { get; set; }
     }
 }

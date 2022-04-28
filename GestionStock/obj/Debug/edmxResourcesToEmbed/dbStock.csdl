@@ -76,6 +76,16 @@
     <NavigationProperty Name="Details_Commande" Relationship="Self.FK_Details_Commande_PRODUIT" FromRole="PRODUIT" ToRole="Details_Commande" />
     <NavigationProperty Name="MAISON" Relationship="Self.FK_PRODUIT_MAISON" FromRole="PRODUIT" ToRole="MAISON" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="UTILISATEUR">
     <Key>
       <PropertyRef Name="Nom_Utilisateur" />

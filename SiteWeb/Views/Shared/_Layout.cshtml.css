@@ -1,48 +1,113 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+html, body {
+    min-height: 100vh !important;
+}
+
+/* mobiles */
+@media only screen and (min-width: 320px) and (max-width: 767px ) {
+    .accordion-item {
+        border-bottom: 1px solid rgba(0,0,0,.125) !important;
+    }
+
+    .flex-grow-mobile {
+        flex-grow: 0 !important;
+    }
+}
+
+/* tablets */
+@media only screen and (min-width: 768px) {
+}
+
+
+.flex-grow-mobile {
+    flex-grow: 1;
+}
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 a {
-  color: #0077cc;
+    color: #dd3737;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #950808;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #dd3737;
+    background-color: #fff;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(https://icones.pro/wp-content/uploads/2021/02/icone-de-fleche-vers-le-bas-rouge.png);
+}
+
+.accordion-item {
+    border: none;
+    border-right: 1px solid rgba(0,0,0,.125);
+}
+
+.accordion-border-color {
+    border-color: rgba(0,0,0,.125);
+}
+
+.form-check-input:checked {
+    background-color: #dd3737;
+    border-color: #dd3737;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #dd3737;
+    box-shadow: 0 0 0 0.25rem rgb(235 115 115 / 25%);
+}
+
+.accordion-button::after {
+    background-image: url(https://icones.pro/wp-content/uploads/2021/02/icone-de-fleche-vers-le-bas-noire.png);
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    bottom: 0 !important;
 }

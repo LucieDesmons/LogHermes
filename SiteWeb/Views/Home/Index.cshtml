@@ -1,8 +1,186 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@*@{
+    Layout = "_Layout";
+    }*@
+<div class="row m-0 w-100 flex-grow-mobile">
+    <div class="col-12 col-md-3 col-lg-2 d-flex justify-content-center p-0">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <div class="accordion w-100 h-100" id="accordionPanelsStayOpen">
+            <div class="accordion-item flex-grow-1 h-100">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Filtres
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body p-0">
+
+                        @**SIDEBAR FOR FILTERS*@
+                        <div class="d-flex flex-column flex-shrink-0 m-0 px-4">
+
+                            @**RADIOS FOR TYPES OF WINES*@
+                            <label class="p-0 fw-bold"> Types de vins : </label>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Blanc
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Rouge
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Rosé
+                                </label>
+                            </div>
+
+
+                            @**CHECKBOX FOR WINE HOUSE*@
+                            <label class="p-0 fw-bold"> Maisons de vins : </label>
+
+                            @**BORDEAUX*@
+                            <label class="p-0 fw-bold ps-4"> Bordeaux </label>
+
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Bordeaux
+                                </label>
+                            </div>
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Barsac
+                                </label>
+                            </div>
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Blaye
+                                </label>
+                            </div>
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Côtes de Bourg
+                                </label>
+                            </div>
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Saint-Estèphe
+                                </label>
+                            </div>
+
+                            @**LANGUEDOC*@
+                            <label class="p-0 fw-bold ps-4"> Languedoc </label>
+
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Coteaux du Languedoc
+                                </label>
+                            </div>
+
+                            @**LOIRE*@
+                            <label class="p-0 fw-bold ps-4"> Loire </label>
+
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Anjou
+                                </label>
+                            </div>
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Cheverny
+                                </label>
+                            </div>
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Sancerre
+                                </label>
+                            </div>
+
+                            @**PROVENCE*@
+                            <label class="p-0 fw-bold ps-4"> Provence </label>
+
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Bandol
+                                </label>
+                            </div>
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Cassis
+                                </label>
+                            </div>
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Côtes de Provence
+                                </label>
+                            </div>
+
+                            @**RHÔNE*@
+                            <label class="p-0 fw-bold ps-4"> Rhône </label>
+
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Châteauneuf du Pape
+                                </label>
+                            </div>
+                            <div class="form-check ps-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Clairette de Die
+                                </label>
+                            </div>
+
+                            @**MIN AND MAX PRICE*@
+                            <label class="p-0 fw-bold"> Prix : </label>
+
+                            <div class="row d-flex justify-content-center p-0 gap-3">
+                                <div class="col-md-5 mt-3 text-center p-0">
+                                    <div class="form-outline">
+                                        <input type="number" id="typeNumber" class="form-control active" value="0">
+                                        <label class="form-label" for="typeNumber" style="margin-left: 0px;">Minimum</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 61.6px;"></div><div class="form-notch-trailing"></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5 mt-3 text-center p-0">
+                                    <div class="form-outline">
+                                        <input type="number" id="typeNumber2" class="form-control active" value="8000">
+                                        <label class="form-label" for="typeNumber2" style="margin-left: 0px;">Maximum</label>
+                                        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-12 col-md-9 col-lg-10 p-4">
+        <section class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-4">
+            @*    @Component.InvokeAsync("ProduitList")*@
+            @await Component.InvokeAsync("ProduitList")
+        </section>
+    </div>
+
 </div>

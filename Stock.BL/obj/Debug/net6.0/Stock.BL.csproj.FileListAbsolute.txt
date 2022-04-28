@@ -1,0 +1,5 @@
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\Stock.BL.csproj.AssemblyReference.cache
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\Stock.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\Stock.BL.AssemblyInfoInputs.cache
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\Stock.BL.AssemblyInfo.cs
+C:\Users\Lucie\source\repos\LogHermesNico\Stock.BL\obj\Debug\net6.0\Stock.BL.csproj.CoreCompileInputs.cache

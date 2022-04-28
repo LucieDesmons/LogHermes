@@ -71,6 +71,16 @@
           <Property Name="Description_Produit" Type="nvarchar" MaxLength="250" />
           <Property Name="ID_MAISON" Type="int" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="UTILISATEUR">
           <Key>
             <PropertyRef Name="Nom_Utilisateur" />
@@ -151,6 +161,7 @@
           <EntitySet Name="Details_Commande" EntityType="Self.Details_Commande" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MAISON" EntityType="Self.MAISON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRODUIT" EntityType="Self.PRODUIT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_COMMANDE_CLIENT" Association="Self.FK_COMMANDE_CLIENT">
             <End Role="CLIENT" EntitySet="CLIENT" />
@@ -253,6 +264,16 @@
           <NavigationProperty Name="CATEGORIE" Relationship="Self.FK_PRODUIT_CATEGORIE1" FromRole="PRODUIT" ToRole="CATEGORIE" />
           <NavigationProperty Name="Details_Commande" Relationship="Self.FK_Details_Commande_PRODUIT" FromRole="PRODUIT" ToRole="Details_Commande" />
           <NavigationProperty Name="MAISON" Relationship="Self.FK_PRODUIT_MAISON" FromRole="PRODUIT" ToRole="MAISON" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="UTILISATEUR">
           <Key>
@@ -431,6 +452,17 @@
                 <ScalarProperty Name="Annee_Produit" ColumnName="Annee_Produit" />
                 <ScalarProperty Name="Description_Produit" ColumnName="Description_Produit" />
                 <ScalarProperty Name="ID_MAISON" ColumnName="ID_MAISON" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="GESTION_STOCKModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
