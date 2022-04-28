@@ -363,19 +363,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Lucie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive - DIVY\\Bureau\\Cours\\Stock\\SiteWeb\\SiteWeb.csproj",
+      "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\SiteWeb.csproj",
       "projectName": "SiteWeb",
-      "projectPath": "C:\\Users\\User\\OneDrive - DIVY\\Bureau\\Cours\\Stock\\SiteWeb\\SiteWeb.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive - DIVY\\Bureau\\Cours\\Stock\\SiteWeb\\obj\\",
+      "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\SiteWeb.csproj",
+      "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -428,7 +428,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

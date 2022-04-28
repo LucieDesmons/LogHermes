@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\SiteWeb.csproj": {}
+    "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\Stock.DAL\\GestionStock.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\SiteWeb.csproj": {
+    "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\Stock.DAL\\GestionStock.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\SiteWeb.csproj",
-        "projectName": "SiteWeb",
-        "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\SiteWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\Stock.DAL\\GestionStock.DAL.csproj",
+        "projectName": "GestionStock.DAL",
+        "projectPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\Stock.DAL\\GestionStock.DAL.csproj",
         "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\SiteWeb\\obj\\",
+        "outputPath": "C:\\Users\\Lucie\\source\\repos\\LogHermesNico\\Stock.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,13 +40,23 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "FontAwesome": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[4.7.0, )"
+              "version": "[6.0.4, )"
             },
-            "bootstrap": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.1.3, )"
+              "version": "[6.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.4, )"
             }
           },
           "imports": [
@@ -60,9 +70,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
