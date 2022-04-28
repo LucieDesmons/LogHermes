@@ -24,6 +24,7 @@
 
         }
 
-        public CategorieModel Categorie { get; set; }
+        public CategorieModel Categorie { get; set; }   
+        public MaisonModel Maison { get; set; }
     }
 }

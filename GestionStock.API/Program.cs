@@ -16,6 +16,8 @@ builder.Services.AddTransient<ClientService>();
 builder.Services.AddTransient<CategorieService>();
 builder.Services.AddTransient<DetailsCommandeService>();
 builder.Services.AddTransient<ProduitService>();
+builder.Services.AddTransient<MaisonService>();
+builder.Services.AddTransient<PanierService>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new() { Title = "LogHermes", Version = "v1.0" });

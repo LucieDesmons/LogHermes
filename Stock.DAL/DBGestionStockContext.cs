@@ -23,7 +23,9 @@ namespace GestionStock.DAL
         public virtual DbSet<Commande> Commandes { get; set; } = null!;
         public virtual DbSet<DetailsCommande> DetailsCommandes { get; set; } = null!;
         public virtual DbSet<Produit> Produits { get; set; } = null!;
-        public virtual DbSet<Utilisateur> Utilisateurs { get; set; } = null!;
+        public virtual DbSet<Utilisateur> Utilisateurs { get; set; } = null!;   
+        public virtual DbSet<Panier> Paniers { get; set; } = null!;
+        public virtual DbSet<Maison> Maisons { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -88,6 +90,28 @@ namespace GestionStock.DAL
                     .HasColumnName("Ville_Client");
             });
 
+            modelBuilder.Entity<Panier>(entity =>
+            {
+                entity.HasKey(e => e.IdLignePanier);
+
+                entity.ToTable("PANIER");
+
+                entity.Property(e => e.IdLignePanier).HasColumnName("Id_Ligne_Panier");
+
+                entity.Property(e => e.IdProduit).HasColumnName("Id_Produit"); 
+                
+                entity.Property(e => e.IdClient).HasColumnName("Id_Client");
+
+                entity.Property(e => e.Quantite).HasColumnName("Quantite");
+
+
+                entity.HasOne(d => d.IdClientNavigation)
+                    .WithMany()
+                    .HasForeignKey(d => d.IdClient)
+                    .HasConstraintName("FK_PANIER_CLIENT");
+
+            });
+
             modelBuilder.Entity<Commande>(entity =>
             {
                 entity.HasKey(e => e.IdCommande);
@@ -150,6 +174,20 @@ namespace GestionStock.DAL
                     .HasConstraintName("FK_Details_Commande_PRODUIT");
             });
 
+            modelBuilder.Entity<Maison>(entity =>
+            {
+                entity.HasKey(e => e.IDMAISON);
+
+                entity.ToTable("MAISON");
+
+                entity.Property(e => e.IDMAISON).HasColumnName("ID_MAISON");
+
+                entity.Property(e => e.NomMaison)
+                .HasMaxLength(250)
+                .HasColumnName("Nom_Maison"); ;
+
+            });
+
             modelBuilder.Entity<Produit>(entity =>
             {
                 entity.HasKey(e => e.IdProduit);
@@ -184,12 +222,20 @@ namespace GestionStock.DAL
                     .HasColumnType("money")
                     .HasColumnName("Prix_Carton_Produit");
 
+                entity.Property(e => e.IdMaison)
+                    .HasColumnName("ID_MAISON");
+
                 entity.Property(e => e.QuantiteProduit).HasColumnName("Quantite_Produit");
 
                 entity.HasOne(d => d.IdCategorieNavigation)
                     .WithMany()
                     .HasForeignKey(d => d.IdCategorie)
-                    .HasConstraintName("FK_PRODUIT_CATEGORIE");
+                    .HasConstraintName("FK_PRODUIT_CATEGORIE1");          
+                
+                entity.HasOne(d => d.IdMaisonNavigation)
+                    .WithMany()
+                    .HasForeignKey(d => d.IdCategorie)
+                    .HasConstraintName("FK_PRODUIT_MAISON");
             });
 
             modelBuilder.Entity<Utilisateur>(entity =>

@@ -26,7 +26,7 @@
                     strContenuModal += "<div class='row'>"
 
                         strContenuModal += "<div class='col-6 d-flex flex-column border-right'>"
-                            strContenuModal += " <img src=" + prd.srcImage + "class='h-100 w-100'>"
+                            /*strContenuModal += " <img src=" + prd.Image + "class='h-100 w-100'>"*/
                             if (prd.quantite >= 1) {
                                 strContenuModal += "<p style='color:#35B736'> Quantité disponible : " + prd.quantite + "</p>"
                             }

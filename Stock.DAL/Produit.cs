@@ -8,6 +8,7 @@ namespace GestionStock.DAL
         public int IdProduit { get; set; }
 
         public int IdCategorie { get; set; }
+        public int IdMaison { get; set; }
         public string NomProduit { get; set; } = null!;        
         public string AnneeProduit { get; set; } = null!;
         public string DescriptionProduit { get; set; } = null!;
@@ -16,6 +17,7 @@ namespace GestionStock.DAL
         public decimal PrixCartonProduit { get; set; } 
         public byte[] ImageProduit { get; set; } = null!;
 
-        public virtual Categorie IdCategorieNavigation { get; set; } = null!;
+        public virtual Categorie IdCategorieNavigation { get; set; } = null!;     
+        public virtual Maison IdMaisonNavigation { get; set; } = null!;
     }
 }
