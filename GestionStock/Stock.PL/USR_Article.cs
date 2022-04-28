@@ -43,7 +43,7 @@ namespace GestionStock.Stock.PL
                 Cat = db.CATEGORIE.SingleOrDefault(s => s.Id_Categorie == Prod.Id_Categorie);
                 if (Cat != null)
                 {
-                    dgvProduit.Rows.Add(false,Prod.Id_Produit, Prod.Nom_Produit, Prod.Annee_Produit, Prod.Quantite_Produit, Prod.Prix_Unitaire,Prod.Prix_Carton_Produit, Mais.Nom_Maison, Cat.Nom_Categorie, Prod.Description_Produit);
+                    dgvProduit.Rows.Add(false,Prod.Id_Produit, Prod.Nom_Produit, Prod.Annee_Produit, Prod.Quantite_Produit, Prod.Prix_Produit,Prod.Prix_Carton_Produit, Mais.Nom_Maison, Cat.Nom_Categorie, Prod.Description_Produit);
 
                 }
             }
@@ -232,7 +232,7 @@ namespace GestionStock.Stock.PL
             {
                 mais = db.MAISON.SingleOrDefault(m =>m.ID_MAISON == m.ID_MAISON);
                 cat = db.CATEGORIE.SingleOrDefault(s => s.Id_Categorie == l.Id_Categorie);
-                dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Annee_Produit, l.Description_Produit, l.Prix_Carton_Produit, l.Quantite_Produit, l.Prix_Unitaire, mais.Nom_Maison, cat.Nom_Categorie) ;
+                dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Annee_Produit, l.Description_Produit, l.Prix_Carton_Produit, l.Quantite_Produit, l.Prix_Produit, mais.Nom_Maison, cat.Nom_Categorie) ;
             }
         }
         //Vérifier le nombre de lignes sélectionnées
@@ -265,7 +265,7 @@ namespace GestionStock.Stock.PL
                     ReportParameter Pcategorie = new ReportParameter("@RPCategorie", Nomcategorie);
                     ReportParameter Pnom = new ReportParameter("@RPNom", PR.Nom_Produit);
                     ReportParameter Pquantite = new ReportParameter("@RPQuantite", PR.Quantite_Produit.ToString());
-                    ReportParameter Pprix = new ReportParameter("@RPPrix", PR.Prix_Unitaire.ToString());
+                    ReportParameter Pprix = new ReportParameter("@RPPrix", PR.Prix_Produit.ToString());
                     string ImageString = Convert.ToBase64String(PR.Image_Produit);
                     ReportParameter Pimage = new ReportParameter("@RPImage", ImageString);
                     frmpt.rpAfficher.LocalReport.SetParameters(new ReportParameter[] { Pcategorie, Pnom, Pquantite, Pprix, Pimage });
@@ -324,7 +324,7 @@ namespace GestionStock.Stock.PL
                         ws.Cells[i, 1] = L.Id_Produit;
                         ws.Cells[i, 2] = L.Nom_Produit;
                         ws.Cells[i, 3] = L.Quantite_Produit;
-                        ws.Cells[i, 4] = L.Prix_Unitaire;
+                        ws.Cells[i, 4] = L.Prix_Produit;
                         i++;
                     }
 

@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.comboRech = new System.Windows.Forms.ComboBox();
             this.cLIENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gESTION_STOCKDataSet = new GestionStock.GESTION_STOCKDataSet();
-            this.cLIENTTableAdapter = new GestionStock.GESTION_STOCKDataSetTableAdapters.CLIENTTableAdapter();
             this.textBoxR = new System.Windows.Forms.TextBox();
             this.entityConnection1 = new System.Data.Entity.Core.EntityClient.EntityConnection();
             this.dgvClient = new System.Windows.Forms.DataGridView();
@@ -53,7 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,16 +76,12 @@
             // cLIENTBindingSource
             // 
             this.cLIENTBindingSource.DataMember = "CLIENT";
-            this.cLIENTBindingSource.DataSource = this.gESTION_STOCKDataSet;
             // 
             // gESTION_STOCKDataSet
             // 
-            this.gESTION_STOCKDataSet.DataSetName = "GESTION_STOCKDataSet";
-            this.gESTION_STOCKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cLIENTTableAdapter
             // 
-            this.cLIENTTableAdapter.ClearBeforeFill = true;
             // 
             // textBoxR
             // 
@@ -306,7 +299,6 @@
             this.Size = new System.Drawing.Size(930, 515);
             this.Load += new System.EventHandler(this.USR_Client_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -321,8 +313,6 @@
         private System.Windows.Forms.TextBox textBoxRech;
         private System.Windows.Forms.ComboBox comboRech;
         private System.Windows.Forms.BindingSource cLIENTBindingSource;
-        private GESTION_STOCKDataSet gESTION_STOCKDataSet;
-        private GESTION_STOCKDataSetTableAdapters.CLIENTTableAdapter cLIENTTableAdapter;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxR;
         private System.Data.Entity.Core.EntityClient.EntityConnection entityConnection1;

@@ -22,10 +22,10 @@ namespace GestionStock
     
         public int Id_Commande { get; set; }
         public System.DateTime Date_Commande { get; set; }
+        public int Id_Client { get; set; }
         public string Total_HT { get; set; }
         public string TVA { get; set; }
         public string Total_TTC { get; set; }
-        public int Id_Client { get; set; }
     
         public virtual CLIENT CLIENT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

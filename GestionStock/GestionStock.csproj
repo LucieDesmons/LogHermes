@@ -108,21 +108,6 @@
     <Compile Include="Details_Commande.cs">
       <DependentUpon>dbStock.tt</DependentUpon>
     </Compile>
-    <Compile Include="GESTION_STOCKDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GESTION_STOCKDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="GESTION_STOCKDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GESTION_STOCKDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="GESTION_STOCKDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GESTION_STOCKDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MAISON.cs">
       <DependentUpon>dbStock.tt</DependentUpon>
     </Compile>
@@ -306,39 +291,6 @@
     <None Include="dbStock.edmx.diagram">
       <DependentUpon>dbStock.edmx</DependentUpon>
     </None>
-    <None Include="GESTION_STOCKDataSet.xsc">
-      <DependentUpon>GESTION_STOCKDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GESTION_STOCKDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GESTION_STOCKDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GESTION_STOCKDataSet.xss">
-      <DependentUpon>GESTION_STOCKDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GESTION_STOCKDataSet1.xsc">
-      <DependentUpon>GESTION_STOCKDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="GESTION_STOCKDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GESTION_STOCKDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GESTION_STOCKDataSet1.xss">
-      <DependentUpon>GESTION_STOCKDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="GESTION_STOCKDataSet2.xsc">
-      <DependentUpon>GESTION_STOCKDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="GESTION_STOCKDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GESTION_STOCKDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GESTION_STOCKDataSet2.xss">
-      <DependentUpon>GESTION_STOCKDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Details_Commande.datasource" />
     <None Include="Properties\DataSources\PRODUIT.datasource" />
@@ -356,16 +308,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dbStock.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>dbStock.Context.cs</LastGenOutput>
-      <DependentUpon>dbStock.edmx</DependentUpon>
-    </Content>
-    <Content Include="dbStock.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>dbStock.edmx</DependentUpon>
-      <LastGenOutput>dbStock.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\add1.png" />
     <None Include="Resources\refresh1.png" />
     <None Include="Resources\Recycle1.png" />
@@ -396,6 +338,16 @@
     <None Include="Resources\Serv.jpg" />
     <None Include="Resources\palace.png" />
     <None Include="Resources\palac.png" />
+    <Content Include="dbStock.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbStock.edmx</DependentUpon>
+      <LastGenOutput>dbStock.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="dbStock.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbStock.edmx</DependentUpon>
+      <LastGenOutput>dbStock.cs</LastGenOutput>
+    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -26,10 +26,10 @@
     </Key>
     <Property Name="Id_Commande" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Date_Commande" Type="datetime" Nullable="false" />
-    <Property Name="Total_HT" Type="nvarchar" MaxLength="250" />
-    <Property Name="TVA" Type="nvarchar" MaxLength="250" />
-    <Property Name="Total_TTC" Type="nvarchar" MaxLength="250" />
     <Property Name="Id_Client" Type="int" Nullable="false" />
+    <Property Name="Total_HT" Type="nvarchar" MaxLength="250" />
+    <Property Name="TVA" Type="nvarchar" MaxLength="20" />
+    <Property Name="Total_TTC" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="Details_Commande">
     <Key>
@@ -48,8 +48,8 @@
     <Key>
       <PropertyRef Name="ID_MAISON" />
     </Key>
-    <Property Name="ID_MAISON" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nom_Maison" Type="nvarchar" MaxLength="250" />
+    <Property Name="ID_MAISON" Type="int" Nullable="false" />
+    <Property Name="Nom_Maison" Type="nvarchar" MaxLength="250" Nullable="false" />
   </EntityType>
   <EntityType Name="PRODUIT">
     <Key>
@@ -58,19 +58,18 @@
     <Property Name="Id_Produit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nom_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Quantite_Produit" Type="int" Nullable="false" />
-    <Property Name="Prix_Unitaire" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="Prix_Carton" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Prix_Produit" Type="money" />
     <Property Name="Image_Produit" Type="image" Nullable="false" />
-    <Property Name="Description_Produit" Type="nchar" MaxLength="500" />
-    <Property Name="Année" Type="decimal" Precision="4" Scale="0" />
     <Property Name="Id_Categorie" Type="int" Nullable="false" />
+    <Property Name="Prix_Carton_Produit" Type="money" />
+    <Property Name="Annee_Produit" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description_Produit" Type="nvarchar" MaxLength="250" />
     <Property Name="ID_MAISON" Type="int" />
   </EntityType>
   <EntityType Name="UTILISATEUR">
     <Key>
-      <PropertyRef Name="ID_Utilisateur" />
+      <PropertyRef Name="Nom_Utilisateur" />
     </Key>
-    <Property Name="ID_Utilisateur" Type="int" Nullable="false" />
     <Property Name="Nom_Utilisateur" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Mot_de_passe" Type="nvarchar" MaxLength="250" Nullable="false" />
   </EntityType>
@@ -116,10 +115,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PRODUIT_CATEGORIE">
-    <End Role="CATEGORIE" Type="Self.CATEGORIE" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+  <Association Name="FK_PRODUIT_CATEGORIE1">
+    <End Role="CATEGORIE" Type="Self.CATEGORIE" Multiplicity="1" />
     <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CATEGORIE">
@@ -130,10 +127,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PRODUIT_MAISON1">
-    <End Role="MAISON" Type="Self.MAISON" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
+  <Association Name="FK_PRODUIT_MAISON">
+    <End Role="MAISON" Type="Self.MAISON" Multiplicity="0..1" />
     <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="MAISON">
@@ -164,11 +159,11 @@
       <End Role="PRODUIT" EntitySet="PRODUIT" />
       <End Role="Details_Commande" EntitySet="Details_Commande" />
     </AssociationSet>
-    <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="Self.FK_PRODUIT_CATEGORIE">
+    <AssociationSet Name="FK_PRODUIT_CATEGORIE1" Association="Self.FK_PRODUIT_CATEGORIE1">
       <End Role="CATEGORIE" EntitySet="CATEGORIE" />
       <End Role="PRODUIT" EntitySet="PRODUIT" />
     </AssociationSet>
-    <AssociationSet Name="FK_PRODUIT_MAISON1" Association="Self.FK_PRODUIT_MAISON1">
+    <AssociationSet Name="FK_PRODUIT_MAISON" Association="Self.FK_PRODUIT_MAISON">
       <End Role="MAISON" EntitySet="MAISON" />
       <End Role="PRODUIT" EntitySet="PRODUIT" />
     </AssociationSet>

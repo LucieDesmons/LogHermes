@@ -60,9 +60,8 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gESTION_STOCKDataSet1 = new GestionStock.GESTION_STOCKDataSet1();
             this.detailsCommandeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.details_CommandeTableAdapter = new GestionStock.GESTION_STOCKDataSet1TableAdapters.Details_CommandeTableAdapter();
+
             this.lblTHT = new System.Windows.Forms.Label();
             this.lblTVA = new System.Windows.Forms.Label();
             this.lblTTTC = new System.Windows.Forms.Label();
@@ -81,7 +80,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommande)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsCommandeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).BeginInit();
             this.SuspendLayout();
@@ -420,19 +418,14 @@
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
-            // gESTION_STOCKDataSet1
-            // 
-            this.gESTION_STOCKDataSet1.DataSetName = "GESTION_STOCKDataSet1";
-            this.gESTION_STOCKDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // detailsCommandeBindingSource
             // 
             this.detailsCommandeBindingSource.DataMember = "Details_Commande";
-            this.detailsCommandeBindingSource.DataSource = this.gESTION_STOCKDataSet1;
             // 
             // details_CommandeTableAdapter
             // 
-            this.details_CommandeTableAdapter.ClearBeforeFill = true;
             // 
             // lblTHT
             // 
@@ -635,7 +628,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommande)).EndInit();
             this.contextMenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gESTION_STOCKDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsCommandeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).EndInit();
             this.ResumeLayout(false);
@@ -665,9 +657,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private GESTION_STOCKDataSet1 gESTION_STOCKDataSet1;
         private System.Windows.Forms.BindingSource detailsCommandeBindingSource;
-        private GESTION_STOCKDataSet1TableAdapters.Details_CommandeTableAdapter details_CommandeTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="GESTION_STOCKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="GESTION_STOCKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CATEGORIE">
           <Key>
             <PropertyRef Name="Id_Categorie" />
@@ -31,10 +31,10 @@
           </Key>
           <Property Name="Id_Commande" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Date_Commande" Type="datetime" Nullable="false" />
-          <Property Name="Total_HT" Type="nvarchar" MaxLength="250" />
-          <Property Name="TVA" Type="nvarchar" MaxLength="250" />
-          <Property Name="Total_TTC" Type="nvarchar" MaxLength="250" />
           <Property Name="Id_Client" Type="int" Nullable="false" />
+          <Property Name="Total_HT" Type="nvarchar" MaxLength="250" />
+          <Property Name="TVA" Type="nvarchar" MaxLength="20" />
+          <Property Name="Total_TTC" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Details_Commande">
           <Key>
@@ -53,8 +53,8 @@
           <Key>
             <PropertyRef Name="ID_MAISON" />
           </Key>
-          <Property Name="ID_MAISON" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nom_Maison" Type="nvarchar" MaxLength="250" />
+          <Property Name="ID_MAISON" Type="int" Nullable="false" />
+          <Property Name="Nom_Maison" Type="nvarchar" MaxLength="250" Nullable="false" />
         </EntityType>
         <EntityType Name="PRODUIT">
           <Key>
@@ -63,19 +63,18 @@
           <Property Name="Id_Produit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nom_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Quantite_Produit" Type="int" Nullable="false" />
-          <Property Name="Prix_Unitaire" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="Prix_Carton" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Prix_Produit" Type="money" />
           <Property Name="Image_Produit" Type="image" Nullable="false" />
-          <Property Name="Description_Produit" Type="nchar" MaxLength="500" />
-          <Property Name="Année" Type="decimal" Precision="4" Scale="0" />
           <Property Name="Id_Categorie" Type="int" Nullable="false" />
+          <Property Name="Prix_Carton_Produit" Type="money" />
+          <Property Name="Annee_Produit" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description_Produit" Type="nvarchar" MaxLength="250" />
           <Property Name="ID_MAISON" Type="int" />
         </EntityType>
         <EntityType Name="UTILISATEUR">
           <Key>
-            <PropertyRef Name="ID_Utilisateur" />
+            <PropertyRef Name="Nom_Utilisateur" />
           </Key>
-          <Property Name="ID_Utilisateur" Type="int" Nullable="false" />
           <Property Name="Nom_Utilisateur" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Mot_de_passe" Type="nvarchar" MaxLength="250" Nullable="false" />
         </EntityType>
@@ -121,10 +120,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PRODUIT_CATEGORIE">
-          <End Role="CATEGORIE" Type="Self.CATEGORIE" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+        <Association Name="FK_PRODUIT_CATEGORIE1">
+          <End Role="CATEGORIE" Type="Self.CATEGORIE" Multiplicity="1" />
           <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CATEGORIE">
@@ -135,10 +132,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PRODUIT_MAISON1">
-          <End Role="MAISON" Type="Self.MAISON" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+        <Association Name="FK_PRODUIT_MAISON">
+          <End Role="MAISON" Type="Self.MAISON" Multiplicity="0..1" />
           <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MAISON">
@@ -169,69 +164,41 @@
             <End Role="PRODUIT" EntitySet="PRODUIT" />
             <End Role="Details_Commande" EntitySet="Details_Commande" />
           </AssociationSet>
-          <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="Self.FK_PRODUIT_CATEGORIE">
+          <AssociationSet Name="FK_PRODUIT_CATEGORIE1" Association="Self.FK_PRODUIT_CATEGORIE1">
             <End Role="CATEGORIE" EntitySet="CATEGORIE" />
             <End Role="PRODUIT" EntitySet="PRODUIT" />
           </AssociationSet>
-          <AssociationSet Name="FK_PRODUIT_MAISON1" Association="Self.FK_PRODUIT_MAISON1">
+          <AssociationSet Name="FK_PRODUIT_MAISON" Association="Self.FK_PRODUIT_MAISON">
             <End Role="MAISON" EntitySet="MAISON" />
             <End Role="PRODUIT" EntitySet="PRODUIT" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GESTION_STOCKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="dbStockContext" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CATEGORIE" EntityType="GESTION_STOCKModel.CATEGORIE" />
-          <EntitySet Name="CLIENT" EntityType="GESTION_STOCKModel.CLIENT" />
-          <EntitySet Name="COMMANDE" EntityType="GESTION_STOCKModel.COMMANDE" />
-          <EntitySet Name="Details_Commande" EntityType="GESTION_STOCKModel.Details_Commande" />
-          <EntitySet Name="MAISON" EntityType="GESTION_STOCKModel.MAISON" />
-          <EntitySet Name="PRODUIT" EntityType="GESTION_STOCKModel.PRODUIT" />
-          <EntitySet Name="UTILISATEUR" EntityType="GESTION_STOCKModel.UTILISATEUR" />
-          <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE">
-            <End Role="CATEGORIE" EntitySet="CATEGORIE" />
-            <End Role="PRODUIT" EntitySet="PRODUIT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_COMMANDE_CLIENT" Association="GESTION_STOCKModel.FK_COMMANDE_CLIENT">
-            <End Role="CLIENT" EntitySet="CLIENT" />
-            <End Role="COMMANDE" EntitySet="COMMANDE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Details_Commande_COMMANDE" Association="GESTION_STOCKModel.FK_Details_Commande_COMMANDE">
-            <End Role="COMMANDE" EntitySet="COMMANDE" />
-            <End Role="Details_Commande" EntitySet="Details_Commande" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Details_Commande_PRODUIT" Association="GESTION_STOCKModel.FK_Details_Commande_PRODUIT">
-            <End Role="PRODUIT" EntitySet="PRODUIT" />
-            <End Role="Details_Commande" EntitySet="Details_Commande" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PRODUIT_MAISON1" Association="GESTION_STOCKModel.FK_PRODUIT_MAISON1">
-            <End Role="MAISON" EntitySet="MAISON" />
-            <End Role="PRODUIT" EntitySet="PRODUIT" />
-          </AssociationSet>
-        </EntityContainer>
         <EntityType Name="CATEGORIE">
           <Key>
             <PropertyRef Name="Id_Categorie" />
           </Key>
           <Property Name="Id_Categorie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nom_Categorie" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE" FromRole="CATEGORIE" ToRole="PRODUIT" />
+          <Property Name="Nom_Categorie" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PRODUIT" Relationship="Self.FK_PRODUIT_CATEGORIE1" FromRole="CATEGORIE" ToRole="PRODUIT" />
         </EntityType>
         <EntityType Name="CLIENT">
           <Key>
             <PropertyRef Name="Id_Client" />
           </Key>
           <Property Name="Id_Client" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nom_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Prenom_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Adresse_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Telephone_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Pays_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Ville_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Email_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="COMMANDE" Relationship="GESTION_STOCKModel.FK_COMMANDE_CLIENT" FromRole="CLIENT" ToRole="COMMANDE" />
+          <Property Name="Nom_Client" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prenom_Client" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Adresse_Client" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telephone_Client" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pays_Client" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ville_Client" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email_Client" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="COMMANDE" Relationship="Self.FK_COMMANDE_CLIENT" FromRole="CLIENT" ToRole="COMMANDE" />
         </EntityType>
         <EntityType Name="COMMANDE">
           <Key>
@@ -239,12 +206,12 @@
           </Key>
           <Property Name="Id_Commande" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Date_Commande" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Total_HT" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="TVA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Total_TTC" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Id_Client" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CLIENT" Relationship="GESTION_STOCKModel.FK_COMMANDE_CLIENT" FromRole="COMMANDE" ToRole="CLIENT" />
-          <NavigationProperty Name="Details_Commande" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="COMMANDE" ToRole="Details_Commande" />
+          <Property Name="Total_HT" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TVA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Total_TTC" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CLIENT" Relationship="Self.FK_COMMANDE_CLIENT" FromRole="COMMANDE" ToRole="CLIENT" />
+          <NavigationProperty Name="Details_Commande" Relationship="Self.FK_Details_Commande_COMMANDE" FromRole="COMMANDE" ToRole="Details_Commande" />
         </EntityType>
         <EntityType Name="Details_Commande">
           <Key>
@@ -253,53 +220,50 @@
           <Property Name="IdDetail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Id_Commande" Type="Int32" Nullable="false" />
           <Property Name="Id_Produit" Type="Int32" Nullable="false" />
-          <Property Name="NomProduit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NomProduit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Quantite" Type="Int32" Nullable="false" />
-          <Property Name="Prix" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Remise" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Total" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="COMMANDE" Relationship="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" FromRole="Details_Commande" ToRole="COMMANDE" />
-          <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="Details_Commande" ToRole="PRODUIT" />
+          <Property Name="Prix" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Remise" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Total" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="COMMANDE" Relationship="Self.FK_Details_Commande_COMMANDE" FromRole="Details_Commande" ToRole="COMMANDE" />
+          <NavigationProperty Name="PRODUIT" Relationship="Self.FK_Details_Commande_PRODUIT" FromRole="Details_Commande" ToRole="PRODUIT" />
         </EntityType>
         <EntityType Name="MAISON">
           <Key>
             <PropertyRef Name="ID_MAISON" />
           </Key>
-          <Property Name="ID_MAISON" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nom_Maison" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="PRODUIT" Relationship="GESTION_STOCKModel.FK_PRODUIT_MAISON1" FromRole="MAISON" ToRole="PRODUIT" />
+          <Property Name="ID_MAISON" Type="Int32" Nullable="false" />
+          <Property Name="Nom_Maison" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PRODUIT" Relationship="Self.FK_PRODUIT_MAISON" FromRole="MAISON" ToRole="PRODUIT" />
         </EntityType>
         <EntityType Name="PRODUIT">
           <Key>
             <PropertyRef Name="Id_Produit" />
           </Key>
           <Property Name="Id_Produit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nom_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Nom_Produit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Quantite_Produit" Type="Int32" Nullable="false" />
-          <Property Name="Prix_Unitaire" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="Prix_Carton_Produit" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="Image_Produit" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-          <Property Name="Description_Produit" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
-          <Property Name="Annee_Produit" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="Prix_Produit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Image_Produit" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <Property Name="Id_Categorie" Type="Int32" Nullable="false" />
+          <Property Name="Prix_Carton_Produit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Annee_Produit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description_Produit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ID_MAISON" Type="Int32" />
-          <NavigationProperty Name="CATEGORIE" Relationship="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE" FromRole="PRODUIT" ToRole="CATEGORIE" />
-          <NavigationProperty Name="Details_Commande" Relationship="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" FromRole="PRODUIT" ToRole="Details_Commande" />
-          <NavigationProperty Name="MAISON" Relationship="GESTION_STOCKModel.FK_PRODUIT_MAISON1" FromRole="PRODUIT" ToRole="MAISON" />
+          <NavigationProperty Name="CATEGORIE" Relationship="Self.FK_PRODUIT_CATEGORIE1" FromRole="PRODUIT" ToRole="CATEGORIE" />
+          <NavigationProperty Name="Details_Commande" Relationship="Self.FK_Details_Commande_PRODUIT" FromRole="PRODUIT" ToRole="Details_Commande" />
+          <NavigationProperty Name="MAISON" Relationship="Self.FK_PRODUIT_MAISON" FromRole="PRODUIT" ToRole="MAISON" />
         </EntityType>
         <EntityType Name="UTILISATEUR">
           <Key>
-            <PropertyRef Name="ID_Utilisateur" />
+            <PropertyRef Name="Nom_Utilisateur" />
           </Key>
-          <Property Name="ID_Utilisateur" Type="Int32" Nullable="false" />
-          <Property Name="Nom_Utilisateur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Mot_de_passe" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Nom_Utilisateur" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mot_de_passe" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <Association Name="FK_PRODUIT_CATEGORIE">
-          <End Type="GESTION_STOCKModel.CATEGORIE" Role="CATEGORIE" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="GESTION_STOCKModel.PRODUIT" Role="PRODUIT" Multiplicity="*" />
+        <Association Name="FK_PRODUIT_CATEGORIE1">
+          <End Role="CATEGORIE" Type="Self.CATEGORIE" Multiplicity="1" />
+          <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CATEGORIE">
               <PropertyRef Name="Id_Categorie" />
@@ -310,10 +274,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_COMMANDE_CLIENT">
-          <End Type="GESTION_STOCKModel.CLIENT" Role="CLIENT" Multiplicity="1">
+          <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="GESTION_STOCKModel.COMMANDE" Role="COMMANDE" Multiplicity="*" />
+          <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CLIENT">
               <PropertyRef Name="Id_Client" />
@@ -324,10 +288,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Details_Commande_COMMANDE">
-          <End Type="GESTION_STOCKModel.COMMANDE" Role="COMMANDE" Multiplicity="1">
+          <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="GESTION_STOCKModel.Details_Commande" Role="Details_Commande" Multiplicity="*" />
+          <End Role="Details_Commande" Type="Self.Details_Commande" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="COMMANDE">
               <PropertyRef Name="Id_Commande" />
@@ -338,10 +302,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Details_Commande_PRODUIT">
-          <End Type="GESTION_STOCKModel.PRODUIT" Role="PRODUIT" Multiplicity="1">
+          <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="GESTION_STOCKModel.Details_Commande" Role="Details_Commande" Multiplicity="*" />
+          <End Role="Details_Commande" Type="Self.Details_Commande" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PRODUIT">
               <PropertyRef Name="Id_Produit" />
@@ -351,11 +315,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PRODUIT_MAISON1">
-          <End Type="GESTION_STOCKModel.MAISON" Role="MAISON" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="GESTION_STOCKModel.PRODUIT" Role="PRODUIT" Multiplicity="*" />
+        <Association Name="FK_PRODUIT_MAISON">
+          <End Role="MAISON" Type="Self.MAISON" Multiplicity="0..1" />
+          <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MAISON">
               <PropertyRef Name="ID_MAISON" />
@@ -365,7 +327,36 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+        <EntityContainer Name="dbStockContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CATEGORIE" EntityType="Self.CATEGORIE" />
+          <EntitySet Name="CLIENT" EntityType="Self.CLIENT" />
+          <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" />
+          <EntitySet Name="Details_Commande" EntityType="Self.Details_Commande" />
+          <EntitySet Name="MAISON" EntityType="Self.MAISON" />
+          <EntitySet Name="PRODUIT" EntityType="Self.PRODUIT" />
+          <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" />
+          <AssociationSet Name="FK_PRODUIT_CATEGORIE1" Association="Self.FK_PRODUIT_CATEGORIE1">
+            <End Role="CATEGORIE" EntitySet="CATEGORIE" />
+            <End Role="PRODUIT" EntitySet="PRODUIT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COMMANDE_CLIENT" Association="Self.FK_COMMANDE_CLIENT">
+            <End Role="CLIENT" EntitySet="CLIENT" />
+            <End Role="COMMANDE" EntitySet="COMMANDE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Details_Commande_COMMANDE" Association="Self.FK_Details_Commande_COMMANDE">
+            <End Role="COMMANDE" EntitySet="COMMANDE" />
+            <End Role="Details_Commande" EntitySet="Details_Commande" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Details_Commande_PRODUIT" Association="Self.FK_Details_Commande_PRODUIT">
+            <End Role="PRODUIT" EntitySet="PRODUIT" />
+            <End Role="Details_Commande" EntitySet="Details_Commande" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUIT_MAISON" Association="Self.FK_PRODUIT_MAISON">
+            <End Role="MAISON" EntitySet="MAISON" />
+            <End Role="PRODUIT" EntitySet="PRODUIT" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -374,81 +365,80 @@
           <EntitySetMapping Name="CATEGORIE">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.CATEGORIE">
               <MappingFragment StoreEntitySet="CATEGORIE">
-                <ScalarProperty Name="Nom_Categorie" ColumnName="Nom_Categorie" />
                 <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
+                <ScalarProperty Name="Nom_Categorie" ColumnName="Nom_Categorie" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CLIENT">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.CLIENT">
               <MappingFragment StoreEntitySet="CLIENT">
-                <ScalarProperty Name="Email_Client" ColumnName="Email_Client" />
-                <ScalarProperty Name="Ville_Client" ColumnName="Ville_Client" />
-                <ScalarProperty Name="Pays_Client" ColumnName="Pays_Client" />
-                <ScalarProperty Name="Telephone_Client" ColumnName="Telephone_Client" />
-                <ScalarProperty Name="Adresse_Client" ColumnName="Adresse_Client" />
-                <ScalarProperty Name="Prenom_Client" ColumnName="Prenom_Client" />
-                <ScalarProperty Name="Nom_Client" ColumnName="Nom_Client" />
                 <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
+                <ScalarProperty Name="Nom_Client" ColumnName="Nom_Client" />
+                <ScalarProperty Name="Prenom_Client" ColumnName="Prenom_Client" />
+                <ScalarProperty Name="Adresse_Client" ColumnName="Adresse_Client" />
+                <ScalarProperty Name="Telephone_Client" ColumnName="Telephone_Client" />
+                <ScalarProperty Name="Pays_Client" ColumnName="Pays_Client" />
+                <ScalarProperty Name="Ville_Client" ColumnName="Ville_Client" />
+                <ScalarProperty Name="Email_Client" ColumnName="Email_Client" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="COMMANDE">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.COMMANDE">
               <MappingFragment StoreEntitySet="COMMANDE">
-                <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
-                <ScalarProperty Name="Total_TTC" ColumnName="Total_TTC" />
-                <ScalarProperty Name="TVA" ColumnName="TVA" />
-                <ScalarProperty Name="Total_HT" ColumnName="Total_HT" />
-                <ScalarProperty Name="Date_Commande" ColumnName="Date_Commande" />
                 <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
+                <ScalarProperty Name="Date_Commande" ColumnName="Date_Commande" />
+                <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
+                <ScalarProperty Name="Total_HT" ColumnName="Total_HT" />
+                <ScalarProperty Name="TVA" ColumnName="TVA" />
+                <ScalarProperty Name="Total_TTC" ColumnName="Total_TTC" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Details_Commande">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.Details_Commande">
               <MappingFragment StoreEntitySet="Details_Commande">
-                <ScalarProperty Name="Total" ColumnName="Total" />
-                <ScalarProperty Name="Remise" ColumnName="Remise" />
-                <ScalarProperty Name="Prix" ColumnName="Prix" />
-                <ScalarProperty Name="Quantite" ColumnName="Quantite" />
-                <ScalarProperty Name="NomProduit" ColumnName="NomProduit" />
-                <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
-                <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
                 <ScalarProperty Name="IdDetail" ColumnName="IdDetail" />
+                <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
+                <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
+                <ScalarProperty Name="NomProduit" ColumnName="NomProduit" />
+                <ScalarProperty Name="Quantite" ColumnName="Quantite" />
+                <ScalarProperty Name="Prix" ColumnName="Prix" />
+                <ScalarProperty Name="Remise" ColumnName="Remise" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MAISON">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.MAISON">
               <MappingFragment StoreEntitySet="MAISON">
-                <ScalarProperty Name="Nom_Maison" ColumnName="Nom_Maison" />
                 <ScalarProperty Name="ID_MAISON" ColumnName="ID_MAISON" />
+                <ScalarProperty Name="Nom_Maison" ColumnName="Nom_Maison" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PRODUIT">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.PRODUIT">
               <MappingFragment StoreEntitySet="PRODUIT">
-                <ScalarProperty Name="ID_MAISON" ColumnName="ID_MAISON" />
-                <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
-                <ScalarProperty Name="Annee_Produit" ColumnName="Année" />
-                <ScalarProperty Name="Description_Produit" ColumnName="Description_Produit" />
-                <ScalarProperty Name="Image_Produit" ColumnName="Image_Produit" />
-                <ScalarProperty Name="Prix_Carton_Produit" ColumnName="Prix_Carton" />
-                <ScalarProperty Name="Prix_Unitaire" ColumnName="Prix_Unitaire" />
-                <ScalarProperty Name="Quantite_Produit" ColumnName="Quantite_Produit" />
-                <ScalarProperty Name="Nom_Produit" ColumnName="Nom_Produit" />
                 <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
+                <ScalarProperty Name="Nom_Produit" ColumnName="Nom_Produit" />
+                <ScalarProperty Name="Quantite_Produit" ColumnName="Quantite_Produit" />
+                <ScalarProperty Name="Prix_Produit" ColumnName="Prix_Produit" />
+                <ScalarProperty Name="Image_Produit" ColumnName="Image_Produit" />
+                <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
+                <ScalarProperty Name="Prix_Carton_Produit" ColumnName="Prix_Carton_Produit" />
+                <ScalarProperty Name="Annee_Produit" ColumnName="Annee_Produit" />
+                <ScalarProperty Name="Description_Produit" ColumnName="Description_Produit" />
+                <ScalarProperty Name="ID_MAISON" ColumnName="ID_MAISON" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UTILISATEUR">
             <EntityTypeMapping TypeName="GESTION_STOCKModel.UTILISATEUR">
               <MappingFragment StoreEntitySet="UTILISATEUR">
-                <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
                 <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
-                <ScalarProperty Name="ID_Utilisateur" ColumnName="ID_Utilisateur" />
+                <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -10,12 +10,12 @@ namespace GestionStock.Stock.BL
     {
         private dbStockContext db = new dbStockContext();
         private PRODUIT PR;
-        public bool Ajouter_Produit(string NomP, int Quantite, decimal PrixP, byte[] Image, int idcategorie, decimal année, string description, decimal PCarton, int idmaison)
+        public bool Ajouter_Produit(string NomP, int Quantite, decimal PrixP, byte[] Image, int idcategorie, string année, string description, decimal PCarton, int idmaison)
         {
             PR = new PRODUIT();
             PR.Nom_Produit = NomP;
             PR.Quantite_Produit = Quantite;
-            PR.Prix_Unitaire = PrixP;
+            PR.Prix_Produit = PrixP;
             PR.Image_Produit = Image;
             PR.Id_Categorie = idcategorie;
             PR.Annee_Produit = année;
@@ -35,7 +35,7 @@ namespace GestionStock.Stock.BL
         }
 
         //Modifier un article
-        public void Modify_Produit(int IDP, string NomP, int Quantite, decimal PrixP, byte[] Image, int idcategorie, decimal année, string description, decimal PCarton, int idmaison)
+        public void Modify_Produit(int IDP, string NomP, int Quantite, decimal PrixP, byte[] Image, int idcategorie, string année, string description, decimal PCarton, int idmaison)
         {
             PR = new PRODUIT();
             PR = db.PRODUIT.SingleOrDefault(p => p.Id_Produit == IDP); //Vérifie si id article existe
@@ -43,7 +43,7 @@ namespace GestionStock.Stock.BL
             {
                 PR.Nom_Produit = NomP;
                 PR.Quantite_Produit = Quantite;
-                PR.Prix_Unitaire = PrixP;
+                PR.Prix_Produit = PrixP;
                 PR.Image_Produit = Image;
                 PR.Id_Categorie = idcategorie;
                 PR.Annee_Produit = année;

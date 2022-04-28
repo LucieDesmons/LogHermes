@@ -4,7 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0f20c77121d644e385f62fbe584b8cbf" Name="Diagram1">
+      <Diagram DiagramId="8ca814703c4744938b703f3887a0a33e" Name="Diagram1">
+        <EntityTypeShape EntityType="GESTION_STOCKModel.CATEGORIE" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTION_STOCKModel.CLIENT" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTION_STOCKModel.COMMANDE" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTION_STOCKModel.Details_Commande" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTION_STOCKModel.MAISON" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTION_STOCKModel.PRODUIT" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTION_STOCKModel.UTILISATEUR" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="GESTION_STOCKModel.FK_PRODUIT_CATEGORIE1" ManuallyRouted="false" />
+        <AssociationConnector Association="GESTION_STOCKModel.FK_COMMANDE_CLIENT" ManuallyRouted="false" />
+        <AssociationConnector Association="GESTION_STOCKModel.FK_Details_Commande_COMMANDE" ManuallyRouted="false" />
+        <AssociationConnector Association="GESTION_STOCKModel.FK_Details_Commande_PRODUIT" ManuallyRouted="false" />
+        <AssociationConnector Association="GESTION_STOCKModel.FK_PRODUIT_MAISON" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
