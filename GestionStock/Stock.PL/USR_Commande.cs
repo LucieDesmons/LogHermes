@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -86,12 +87,33 @@ namespace GestionStock.Stock.PL
                 //commande selectionnée
                 int IdCommande = (int)dgvCmde.CurrentRow.Cells[0].Value;
                 var Commande=db.COMMANDE.Single(s=> s.Id_Commande == IdCommande);
+                //Client
                 var ClientCommande = db.CLIENT.Single(s=> s.Id_Client == Commande.Id_Client);
-                var listedetail = db.Details_Commande.Where(s=>s.Id_Commande==IdCommande).ToList();
+                //Détail de commande
+                var listedetail = db.Details_Commande.Where(s => s.Id_Commande == IdCommande).ToList();
+                //Ajouter listedetail dans datasource de rapport
+                fRM_Report.rpAfficher.LocalReport.ReportEmbeddedResource = "GestionStock.Report.Rpt_Cmde.rdlc";
+                fRM_Report.rpAfficher.LocalReport.DataSources.Add(new ReportDataSource("dataCommande", listedetail));
+                //Ajouter information de client
+                ReportParameter NomPre = new ReportParameter("NomPrenomClient", ClientCommande.Nom_Client+" "+ClientCommande.Prenom_Client);
+                ReportParameter Adresse = new ReportParameter("AdresseC", ClientCommande.Adresse_Client);
+                ReportParameter Telephone = new ReportParameter("TelephonC", ClientCommande.Telephone_Client);
+                ReportParameter Email = new ReportParameter("EmailC",ClientCommande.Email_Client);
+                //Ajouter information de commande
+                ReportParameter IDCommande = new ReportParameter("IDCommandeC", IdCommande.ToString());
+                ReportParameter Date = new ReportParameter("DateC", Commande.Date_Commande.ToString());
+                //Ajouter totalht, TVA, TotalTTC
+                ReportParameter TotalHT = new ReportParameter("TotalHT", Commande.Total_HT.ToString());
+                ReportParameter TVA = new ReportParameter("TVA", Commande.TVA.ToString());
+                ReportParameter TotalTTC = new ReportParameter("TotalTTC", Commande.Total_TTC.ToString());
 
+                //Enregistre les valeurs
+                fRM_Report.rpAfficher.LocalReport.SetParameters(new ReportParameter[] { NomPre, Adresse, Telephone, Email, IDCommande, Date, TotalHT, TVA, TotalTTC });
+                fRM_Report.rpAfficher.RefreshReport();
+                fRM_Report.ShowDialog();
 
-
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

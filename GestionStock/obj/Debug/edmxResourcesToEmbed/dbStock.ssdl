@@ -44,6 +44,13 @@
     <Property Name="Remise" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Total" Type="nvarchar" MaxLength="250" Nullable="false" />
   </EntityType>
+  <EntityType Name="MAISON">
+    <Key>
+      <PropertyRef Name="ID_MAISON" />
+    </Key>
+    <Property Name="ID_MAISON" Type="int" Nullable="false" />
+    <Property Name="Nom_Maison" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
   <EntityType Name="PRODUIT">
     <Key>
       <PropertyRef Name="Id_Produit" />
@@ -55,9 +62,9 @@
     <Property Name="Image_Produit" Type="image" Nullable="false" />
     <Property Name="Id_Categorie" Type="int" Nullable="false" />
     <Property Name="Prix_Carton_Produit" Type="money" />
-    <Property Name="Maison_Produit" Type="nvarchar" MaxLength="250" />
     <Property Name="Annee_Produit" Type="nvarchar" MaxLength="250" />
     <Property Name="Description_Produit" Type="nvarchar" MaxLength="250" />
+    <Property Name="ID_MAISON" Type="int" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -118,10 +125,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PRODUIT_CATEGORIE">
-    <End Role="CATEGORIE" Type="Self.CATEGORIE" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+  <Association Name="FK_PRODUIT_CATEGORIE1">
+    <End Role="CATEGORIE" Type="Self.CATEGORIE" Multiplicity="1" />
     <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CATEGORIE">
@@ -132,11 +137,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_PRODUIT_MAISON">
+    <End Role="MAISON" Type="Self.MAISON" Multiplicity="0..1" />
+    <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAISON">
+        <PropertyRef Name="ID_MAISON" />
+      </Principal>
+      <Dependent Role="PRODUIT">
+        <PropertyRef Name="ID_MAISON" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="GESTION_STOCKModelStoreContainer">
     <EntitySet Name="CATEGORIE" EntityType="Self.CATEGORIE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Details_Commande" EntityType="Self.Details_Commande" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAISON" EntityType="Self.MAISON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PRODUIT" EntityType="Self.PRODUIT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
@@ -152,8 +170,12 @@
       <End Role="PRODUIT" EntitySet="PRODUIT" />
       <End Role="Details_Commande" EntitySet="Details_Commande" />
     </AssociationSet>
-    <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="Self.FK_PRODUIT_CATEGORIE">
+    <AssociationSet Name="FK_PRODUIT_CATEGORIE1" Association="Self.FK_PRODUIT_CATEGORIE1">
       <End Role="CATEGORIE" EntitySet="CATEGORIE" />
+      <End Role="PRODUIT" EntitySet="PRODUIT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUIT_MAISON" Association="Self.FK_PRODUIT_MAISON">
+      <End Role="MAISON" EntitySet="MAISON" />
       <End Role="PRODUIT" EntitySet="PRODUIT" />
     </AssociationSet>
   </EntityContainer>

@@ -26,7 +26,7 @@ namespace GestionStock.Stock.PL
             return null;
         }
 
-        private void btnQuitter_Click(object sender, EventArgs e)
+        /*private void btnQuitter_Click(object sender, EventArgs e)
         {
 
             Close();
@@ -48,7 +48,7 @@ namespace GestionStock.Stock.PL
             {
                 if (C.ConnexionValide(db, textIdentifiant.Text, textMotPasse.Text) == true)
                 {
-                    MessageBox.Show("Bienvenu", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Bienvenue", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     FRM_Accueil f = new FRM_Accueil();
                     f.Show();
                     Hide();
@@ -60,6 +60,41 @@ namespace GestionStock.Stock.PL
                 }
             }
 
+
+        }*/
+
+        private void btnQuitter_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnValider_Click_1(object sender, EventArgs e)
+        {
+            if (testIdentification() == null)
+            {
+                if (C.ConnexionValide(db, textIdentifiant.Text, textMotPasse.Text) == true)
+                {
+                    MessageBox.Show("Bienvenue", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    FRM_Accueil f = new FRM_Accueil();
+                    f.Show();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Echec de connexion", "connexion", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    lblMessageErreur.Visible = true;
+                }
+            }
+
+        }
+
+        private void chkAffiche_CheckedChanged_1(object sender, EventArgs e)
+        {
+            
+                if (chkAffiche.Checked == true)
+                    textMotPasse.UseSystemPasswordChar = false;
+                else
+                    textMotPasse.UseSystemPasswordChar = true;
 
         }
     }

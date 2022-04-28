@@ -4,64 +4,72 @@
     <EntitySetMapping Name="CATEGORIE">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.CATEGORIE">
         <MappingFragment StoreEntitySet="CATEGORIE">
-          <ScalarProperty Name="Nom_Categorie" ColumnName="Nom_Categorie" />
           <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
+          <ScalarProperty Name="Nom_Categorie" ColumnName="Nom_Categorie" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CLIENT">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.CLIENT">
         <MappingFragment StoreEntitySet="CLIENT">
-          <ScalarProperty Name="Email_Client" ColumnName="Email_Client" />
-          <ScalarProperty Name="Ville_Client" ColumnName="Ville_Client" />
-          <ScalarProperty Name="Pays_Client" ColumnName="Pays_Client" />
-          <ScalarProperty Name="Telephone_Client" ColumnName="Telephone_Client" />
-          <ScalarProperty Name="Adresse_Client" ColumnName="Adresse_Client" />
-          <ScalarProperty Name="Prenom_Client" ColumnName="Prenom_Client" />
-          <ScalarProperty Name="Nom_Client" ColumnName="Nom_Client" />
           <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
+          <ScalarProperty Name="Nom_Client" ColumnName="Nom_Client" />
+          <ScalarProperty Name="Prenom_Client" ColumnName="Prenom_Client" />
+          <ScalarProperty Name="Adresse_Client" ColumnName="Adresse_Client" />
+          <ScalarProperty Name="Telephone_Client" ColumnName="Telephone_Client" />
+          <ScalarProperty Name="Pays_Client" ColumnName="Pays_Client" />
+          <ScalarProperty Name="Ville_Client" ColumnName="Ville_Client" />
+          <ScalarProperty Name="Email_Client" ColumnName="Email_Client" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="COMMANDE">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.COMMANDE">
         <MappingFragment StoreEntitySet="COMMANDE">
-          <ScalarProperty Name="Total_TTC" ColumnName="Total_TTC" />
-          <ScalarProperty Name="TVA" ColumnName="TVA" />
-          <ScalarProperty Name="Total_HT" ColumnName="Total_HT" />
-          <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
-          <ScalarProperty Name="Date_Commande" ColumnName="Date_Commande" />
           <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
+          <ScalarProperty Name="Date_Commande" ColumnName="Date_Commande" />
+          <ScalarProperty Name="Id_Client" ColumnName="Id_Client" />
+          <ScalarProperty Name="Total_HT" ColumnName="Total_HT" />
+          <ScalarProperty Name="TVA" ColumnName="TVA" />
+          <ScalarProperty Name="Total_TTC" ColumnName="Total_TTC" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Details_Commande">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.Details_Commande">
         <MappingFragment StoreEntitySet="Details_Commande">
-          <ScalarProperty Name="Total" ColumnName="Total" />
-          <ScalarProperty Name="Remise" ColumnName="Remise" />
-          <ScalarProperty Name="Prix" ColumnName="Prix" />
-          <ScalarProperty Name="Quantite" ColumnName="Quantite" />
-          <ScalarProperty Name="NomProduit" ColumnName="NomProduit" />
-          <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
-          <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
           <ScalarProperty Name="IdDetail" ColumnName="IdDetail" />
+          <ScalarProperty Name="Id_Commande" ColumnName="Id_Commande" />
+          <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
+          <ScalarProperty Name="NomProduit" ColumnName="NomProduit" />
+          <ScalarProperty Name="Quantite" ColumnName="Quantite" />
+          <ScalarProperty Name="Prix" ColumnName="Prix" />
+          <ScalarProperty Name="Remise" ColumnName="Remise" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAISON">
+      <EntityTypeMapping TypeName="GESTION_STOCKModel.MAISON">
+        <MappingFragment StoreEntitySet="MAISON">
+          <ScalarProperty Name="ID_MAISON" ColumnName="ID_MAISON" />
+          <ScalarProperty Name="Nom_Maison" ColumnName="Nom_Maison" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PRODUIT">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.PRODUIT">
         <MappingFragment StoreEntitySet="PRODUIT">
-          <ScalarProperty Name="Description_Produit" ColumnName="Description_Produit" />
-          <ScalarProperty Name="Annee_Produit" ColumnName="Annee_Produit" />
-          <ScalarProperty Name="Maison_Produit" ColumnName="Maison_Produit" />
-          <ScalarProperty Name="Prix_Carton_Produit" ColumnName="Prix_Carton_Produit" />
-          <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
-          <ScalarProperty Name="Image_Produit" ColumnName="Image_Produit" />
-          <ScalarProperty Name="Prix_Produit" ColumnName="Prix_Produit" />
-          <ScalarProperty Name="Quantite_Produit" ColumnName="Quantite_Produit" />
-          <ScalarProperty Name="Nom_Produit" ColumnName="Nom_Produit" />
           <ScalarProperty Name="Id_Produit" ColumnName="Id_Produit" />
+          <ScalarProperty Name="Nom_Produit" ColumnName="Nom_Produit" />
+          <ScalarProperty Name="Quantite_Produit" ColumnName="Quantite_Produit" />
+          <ScalarProperty Name="Prix_Produit" ColumnName="Prix_Produit" />
+          <ScalarProperty Name="Image_Produit" ColumnName="Image_Produit" />
+          <ScalarProperty Name="Id_Categorie" ColumnName="Id_Categorie" />
+          <ScalarProperty Name="Prix_Carton_Produit" ColumnName="Prix_Carton_Produit" />
+          <ScalarProperty Name="Annee_Produit" ColumnName="Annee_Produit" />
+          <ScalarProperty Name="Description_Produit" ColumnName="Description_Produit" />
+          <ScalarProperty Name="ID_MAISON" ColumnName="ID_MAISON" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -79,8 +87,8 @@
     <EntitySetMapping Name="UTILISATEUR">
       <EntityTypeMapping TypeName="GESTION_STOCKModel.UTILISATEUR">
         <MappingFragment StoreEntitySet="UTILISATEUR">
-          <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
           <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
+          <ScalarProperty Name="Mot_de_passe" ColumnName="Mot_de_passe" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

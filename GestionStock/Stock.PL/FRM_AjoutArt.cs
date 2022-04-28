@@ -16,15 +16,22 @@ namespace GestionStock.Stock.PL
             
             db = new dbStockContext();
             usarticle = userA;
-            comboCatArt.DataSource = db.CATEGORIE.ToList();// Appelle les donnée de la table Catégorie
+            comboCatArt.DataSource = db.CATEGORIE.ToList();// Appelle les données de la table Catégorie
+            comboMaisArt.DataSource = db.MAISON.ToList();// Appelle les données de la table Maison
             comboCatArt.DisplayMember = "Nom_Categorie";
             comboCatArt.ValueMember = "Id_Categorie";
+            comboMaisArt.DisplayMember = "Nom_Maison";
+            comboMaisArt.ValueMember = "ID_MAISON";
         }
         string testobligatoire()
         {
             if (textDenomination.Text == "" || textDenomination.Text == "Dénomination")
             {
                 return "Entrer dénomination article";
+            }
+            if (textPrix.Text == "" || textPrix.Text == "Prix")
+            {
+                return "Entrer un prix";
             }
 
             return null;
@@ -43,7 +50,11 @@ namespace GestionStock.Stock.PL
             textDenomination.Text = "Dénomination"; textDenomination.ForeColor = Color.Silver;
             textPrix.Text = "Prix"; textPrix.ForeColor = Color.Silver;
             textQteArt.Text = "Quantité"; textQteArt.ForeColor = Color.Silver;
+            textAn.Text = "Année"; textAn.ForeColor = Color.Silver;
+            textDescription.Text = "Descriptif du produit..."; textDescription.ForeColor = Color.Silver;
+            textPxCarton.Text = "Prix Carton"; textPxCarton.ForeColor = Color.Silver;
             comboCatArt.Text = "";
+            comboMaisArt.Text = "";
             picArt.Image = null;
 
         }
@@ -62,7 +73,7 @@ namespace GestionStock.Stock.PL
                     MemoryStream MR = new MemoryStream();
                     picArt.Image.Save(MR, picArt.Image.RawFormat);
                     byte[] byteimageP = MR.ToArray();
-                    if (cLS_Article.Ajouter_Produit(textDenomination.Text, int.Parse(textQteArt.Text), Convert.ToDecimal(textPrix.Text), byteimageP, Convert.ToInt32(comboCatArt.SelectedValue)) == true)
+                    if (cLS_Article.Ajouter_Produit(textDenomination.Text, int.Parse(textQteArt.Text), decimal.Parse(textPrix.Text), byteimageP, Convert.ToInt32(comboCatArt.SelectedValue), textAn.Text, textDescription.Text, decimal.Parse(textPxCarton.Text), Convert.ToInt32(comboMaisArt.SelectedValue)) == true)
                     {
                         MessageBox.Show("Produit ajouté", "Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         (usarticle as USR_Article).Actualiserdgv();
@@ -81,7 +92,7 @@ namespace GestionStock.Stock.PL
                     DialogResult dr = MessageBox.Show("Voulez-vous modifier l'article ?", "modification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dr == DialogResult.Yes)
                     {
-                        cLS_Article.Modify_Produit(Id_Produit, textDenomination.Text, int.Parse(textQteArt.Text), Convert.ToDecimal(textPrix.Text), byteimageP, Convert.ToInt32(comboCatArt.SelectedValue));
+                        cLS_Article.Modify_Produit(Id_Produit, textDenomination.Text, int.Parse(textQteArt.Text), decimal.Parse(textPrix.Text), byteimageP, Convert.ToInt32(comboCatArt.SelectedValue), textAn.Text, textDescription.Text, decimal.Parse(textPxCarton.Text), Convert.ToInt32(comboMaisArt.SelectedValue));
                         MessageBox.Show("Article modifié !","Modification",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         //Actualiser datagrid
                         (usarticle as USR_Article).Actualiserdgv();
