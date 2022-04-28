@@ -41,7 +41,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel2.BackColor = System.Drawing.Color.LightCoral;
             this.panel2.Location = new System.Drawing.Point(20, 194);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
@@ -50,7 +50,7 @@
             // 
             // btnQuitArt
             // 
-            this.btnQuitArt.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnQuitArt.BackColor = System.Drawing.Color.MistyRose;
             this.btnQuitArt.FlatAppearance.BorderSize = 0;
             this.btnQuitArt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnQuitArt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -68,7 +68,7 @@
             // 
             // btnValidCat
             // 
-            this.btnValidCat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnValidCat.BackColor = System.Drawing.Color.MistyRose;
             this.btnValidCat.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.btnValidCat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnValidCat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -86,7 +86,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.LightCoral;
             this.panel1.Controls.Add(this.lblFicheCat);
             this.panel1.Location = new System.Drawing.Point(26, 23);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -137,7 +137,7 @@
             this.lblMaison.ForeColor = System.Drawing.Color.Firebrick;
             this.lblMaison.Location = new System.Drawing.Point(73, 119);
             this.lblMaison.Name = "lblMaison";
-            this.lblMaison.Size = new System.Drawing.Size(79, 26);
+            this.lblMaison.Size = new System.Drawing.Size(63, 21);
             this.lblMaison.TabIndex = 88;
             this.lblMaison.Text = "Maison";
             // 
@@ -155,7 +155,7 @@
             this.Controls.Add(this.lblMaison);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_Maison";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Maison";

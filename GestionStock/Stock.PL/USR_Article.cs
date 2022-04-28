@@ -160,9 +160,12 @@ namespace GestionStock.Stock.PL
                             FRM_Image frmPhoto = new FRM_Image();
                             MemoryStream MS = new MemoryStream(PR.Image_Produit);//Pb
 
+                            
+
                             frmPhoto.picImageProduit.Image = Image.FromStream(MS);
 
                             frmPhoto.lblImage.Text = dgvProduit.Rows[i].Cells[2].Value.ToString();
+                            frmPhoto.richTDescription.Text = dgvProduit.Rows[i].Cells[9].Value.ToString();
                             //afficher le formulaire
                             frmPhoto.ShowDialog();
                         }
@@ -217,10 +220,12 @@ namespace GestionStock.Stock.PL
                         //StringComparison.CurrentCultureIgnoreCase => soit 1ere lettre en majuscule soit minuscule
                         //!=-1 existe dans la BDD
                         break;
-                    /*case "Prix":
-                        listerecherche = listerecherche.Where(s => s.Année.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
-                        break;*/
-
+                    case "Année":
+                        listerecherche = listerecherche.Where(a => a.Annee_Produit.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        break;
+                    case "Catégorie":
+                        listerecherche = listerecherche.Where(c => c.CATEGORIE.Nom_Categorie.IndexOf(textBoxR.Text, StringComparison.CurrentCultureIgnoreCase) != -1).ToList();
+                        break;
 
                 }
             }
@@ -230,7 +235,7 @@ namespace GestionStock.Stock.PL
 
             foreach (var l in listerecherche)
             {
-                mais = db.MAISON.SingleOrDefault(m =>m.ID_MAISON == m.ID_MAISON);
+                //mais = db.MAISON.SingleOrDefault(m =>m.ID_MAISON == m.ID_MAISON);
                 cat = db.CATEGORIE.SingleOrDefault(s => s.Id_Categorie == l.Id_Categorie);
                 dgvProduit.Rows.Add(false, l.Id_Produit, l.Nom_Produit, l.Annee_Produit, l.Description_Produit, l.Prix_Carton_Produit, l.Quantite_Produit, l.Prix_Produit, mais.Nom_Maison, cat.Nom_Categorie) ;
             }

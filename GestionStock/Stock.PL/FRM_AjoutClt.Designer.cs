@@ -187,6 +187,7 @@
             this.textNom.Size = new System.Drawing.Size(225, 28);
             this.textNom.TabIndex = 35;
             this.textNom.Text = "Nom de client";
+            this.textNom.Enter += new System.EventHandler(this.textNom_Enter);
             // 
             // label8
             // 

@@ -22,6 +22,8 @@ namespace GestionStock.Stock.PL
             usclient = userC;
         }
 
+
+
         string testobligatoire()
         {
             if (textNom.Text == "" || textNom.Text == "Nom de client")
@@ -111,6 +113,15 @@ namespace GestionStock.Stock.PL
             textVille.Text = "Ville client"; textVille.ForeColor = Color.Silver;
             textMail.Text = "Mail"; textMail.ForeColor = Color.Silver;
             textPays.Text = "Pays"; textPays.ForeColor = Color.Silver;
+        }
+
+        private void textNom_Enter(object sender, EventArgs e)
+        {
+            if(textNom.Text == "Nom de Client")
+            {
+                textNom.Text = "";
+                textNom.ForeColor = Color.Black;
+            }
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.pnlAfficher = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblTitre = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,6 +59,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lblTitre);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,16 +68,36 @@
             this.panel1.Size = new System.Drawing.Size(1264, 101);
             this.panel1.TabIndex = 6;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Image = global::GestionStock.Properties.Resources.gender_neutral_user;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(13, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 86);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Utilisateur";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // lblTitre
             // 
             this.lblTitre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitre.AutoSize = true;
-            this.lblTitre.Font = new System.Drawing.Font("Elephant", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.Font = new System.Drawing.Font("Elephant", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.ForeColor = System.Drawing.Color.Transparent;
-            this.lblTitre.Location = new System.Drawing.Point(3, 24);
+            this.lblTitre.Location = new System.Drawing.Point(285, 24);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(159, 42);
+            this.lblTitre.Size = new System.Drawing.Size(191, 51);
             this.lblTitre.TabIndex = 1;
             this.lblTitre.Text = "négosud";
             this.lblTitre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -116,7 +138,7 @@
             this.btnCmde.ForeColor = System.Drawing.Color.Transparent;
             this.btnCmde.Image = global::GestionStock.Properties.Resources.receipt48;
             this.btnCmde.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCmde.Location = new System.Drawing.Point(13, 658);
+            this.btnCmde.Location = new System.Drawing.Point(20, 658);
             this.btnCmde.Name = "btnCmde";
             this.btnCmde.Size = new System.Drawing.Size(116, 93);
             this.btnCmde.TabIndex = 5;
@@ -203,7 +225,7 @@
             this.btnMaison.ForeColor = System.Drawing.Color.Transparent;
             this.btnMaison.Image = global::GestionStock.Properties.Resources.palac;
             this.btnMaison.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMaison.Location = new System.Drawing.Point(13, 531);
+            this.btnMaison.Location = new System.Drawing.Point(20, 530);
             this.btnMaison.Name = "btnMaison";
             this.btnMaison.Size = new System.Drawing.Size(116, 85);
             this.btnMaison.TabIndex = 8;
@@ -254,5 +276,6 @@
         public System.Windows.Forms.Button btnCmde;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnMaison;
+        public System.Windows.Forms.Button button1;
     }
 }

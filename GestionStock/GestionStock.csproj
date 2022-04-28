@@ -348,6 +348,14 @@
       <DependentUpon>dbStock.edmx</DependentUpon>
       <LastGenOutput>dbStock.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\gender-neutral-user.png" />
+    <None Include="Resources\icons8-redimensionner-32.png" />
+    <None Include="Resources\print32.png" />
+    <None Include="Resources\print-address-label32.png" />
+    <None Include="Resources\xls32.png" />
+    <None Include="Resources\book_add_32.png" />
+    <None Include="Resources\address_book_add_32.png" />
+    <None Include="Resources\address_book_close_32.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

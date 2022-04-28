@@ -73,6 +73,36 @@ namespace GestionStock.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap address_book_add_32 {
+            get {
+                object obj = ResourceManager.GetObject("address_book_add_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap address_book_close_32 {
+            get {
+                object obj = ResourceManager.GetObject("address_book_close_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_add_32 {
+            get {
+                object obj = ResourceManager.GetObject("book_add_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap camera_32 {
             get {
                 object obj = ResourceManager.GetObject("camera_32", resourceCulture);
@@ -133,6 +163,26 @@ namespace GestionStock.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gender_neutral_user {
+            get {
+                object obj = ResourceManager.GetObject("gender-neutral-user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_redimensionner_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-redimensionner-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maxresdefault {
             get {
                 object obj = ResourceManager.GetObject("maxresdefault", resourceCulture);
@@ -186,6 +236,26 @@ namespace GestionStock.Properties {
         internal static System.Drawing.Bitmap palace {
             get {
                 object obj = ResourceManager.GetObject("palace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap print_address_label32 {
+            get {
+                object obj = ResourceManager.GetObject("print-address-label32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap print32 {
+            get {
+                object obj = ResourceManager.GetObject("print32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +393,16 @@ namespace GestionStock.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap web_layout_error_32_add1 {
+            get {
+                object obj = ResourceManager.GetObject("web_layout_error_32_add1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap web_layout_error_32_close {
             get {
                 object obj = ResourceManager.GetObject("web_layout_error_32_close", resourceCulture);
@@ -366,6 +446,16 @@ namespace GestionStock.Properties {
         internal static System.Drawing.Bitmap wine48 {
             get {
                 object obj = ResourceManager.GetObject("wine48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xls32 {
+            get {
+                object obj = ResourceManager.GetObject("xls32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

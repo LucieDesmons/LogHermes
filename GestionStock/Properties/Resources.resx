@@ -127,14 +127,29 @@
   <data name="Serv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Serv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="print32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_add_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_add_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gender-neutral-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gender-neutral-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="web_layout_error_32_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\web_layout_error_32_close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-redimensionner-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-redimensionner-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="OIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OIP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="palace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\palace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maxresdefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maxresdefault.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,14 +187,23 @@
   <data name="vigne" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vigne.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wine48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wine48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="checkmark32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checkmark32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Recycle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Recycle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="print-address-label32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print-address-label32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="web_layout_info_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\web_layout_info_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="address_book_add_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\address_book_add_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wine32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wine32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,16 +223,19 @@
   <data name="Cave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cave.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wine48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wine48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="palac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\palac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="web_layout_error_32_add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\web_layout_error_32_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xls32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xls32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="palace" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\palace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="palac" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\palac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="address_book_close_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\address_book_close_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

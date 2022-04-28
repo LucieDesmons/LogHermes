@@ -153,7 +153,7 @@
             this.lblMessageErreur.AutoSize = true;
             this.lblMessageErreur.BackColor = System.Drawing.Color.Transparent;
             this.lblMessageErreur.ForeColor = System.Drawing.Color.Transparent;
-            this.lblMessageErreur.Location = new System.Drawing.Point(196, -5);
+            this.lblMessageErreur.Location = new System.Drawing.Point(276, 215);
             this.lblMessageErreur.Name = "lblMessageErreur";
             this.lblMessageErreur.Size = new System.Drawing.Size(169, 24);
             this.lblMessageErreur.TabIndex = 23;
@@ -238,7 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::GestionStock.Properties.Resources.Cave;
+            this.BackgroundImage = global::GestionStock.Properties.Resources.maxresdefault;
             this.ClientSize = new System.Drawing.Size(538, 367);
             this.Controls.Add(this.textMotPasse);
             this.Controls.Add(this.textIdentifiant);
