@@ -2,12 +2,12 @@
 
 @foreach (var produit in Model)
 {
-    <div class="col">
+    <div class="col d-flex" style="min-height:700px; max-height700px">
         <div class="card h-100 w-100">
-            <div class="contentImg h-100 w-100">
-                <img src="@produit.srcImage" class="card-img-top h-100 w-100">
+            <div class="contentImg d-flex align-items-center justify-content-center" style="height:55%">
+                <img src="@produit.srcImage" class="card-img-top" style="max-height:300px; object-fit:scale-down">
             </div>
-            <div class="card-body text-center d-flex flex-column justify-content-center justify-content-between">
+            <div class="card-body text-center d-flex flex-column justify-content-between" style="height:45%">
                 <h5 class="card-title">@produit.Nom</h5>
                 @if (@produit.Quantite >= 1)
                 {
@@ -19,8 +19,14 @@
                 }
                 <p class="card-text">@produit.Categorie.Nom</p>
                 <p class="card-text">@String.Format("{0:0.00}",@produit.Prix)€</p>
-                <p class="card-text">@produit.Description</p>
-                <button type="button" class="btn btn-primary" onclick=modal(@produit.Id) data-toggle="modal" data-target="#exampleModalCenter">Détail du produit</button>
+                @*<p class="card-text">@produit.Description</p>*@
+                <button 
+                    type="button" 
+                    class="btn btn-primary" 
+                    onclick=modal(@produit.Id) 
+                    data-toggle="modal" data-target="#exampleModalCenter">
+                    Détail du produit
+                </button>
             </div>
         </div>
     </div>
@@ -30,7 +36,7 @@
 @*Sur mes cards j'ai un btn avec data-toggle modal, j'y réfère la modal ci-dessous*@
 <!-- The Modal -->
 <div class="modal" id="myModal">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
         </div>
     </div>

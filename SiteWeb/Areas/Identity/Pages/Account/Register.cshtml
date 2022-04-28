@@ -1,15 +1,15 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "S'enregistrer";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<div class="row">
+<div class="row h-100 w-100">
     <div class="col-md-4">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
+            <h2>Créer un nouveau compte.</h2>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-floating">
@@ -27,12 +27,12 @@
                 <label asp-for="Input.ConfirmPassword"></label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">S'enregistrer</button>
         </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    @*<div class="col-md-6 col-md-offset-2">
         <section>
-            <h3>Use another service to register.</h3>
+            <h3>Utiliser un autre service pour se connecter.</h3>
             <hr />
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
@@ -59,7 +59,7 @@
                 }
             }
         </section>
-    </div>
+    </div>*@
 </div>
 
 @section Scripts {
