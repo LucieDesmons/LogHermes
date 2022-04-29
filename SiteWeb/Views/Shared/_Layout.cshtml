@@ -43,6 +43,10 @@
                             <div class="d-flex">
                                 <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i> </a>
                             </div>
+                            <div class="d-block" style="color:red;">
+                                <div id="nbPrdPanier"></div>
+                            </div>
+
                         </div>
                     </div>
                 </nav>
@@ -69,3 +73,10 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            // gérer des events et actions au chargement de la page
+            LayoutView.InitPage();
+        });
+</script>

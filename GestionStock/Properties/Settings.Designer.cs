@@ -37,8 +37,8 @@ namespace GestionStock.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-C29N3LRR\\SQL2019;Initial Catalog=GESTION_STOCK;Integrated Secu" +
-            "rity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SJ53C7G\\SQLEXPRESS;Initial Catalog=GESTION_STOCK;Integrated S" +
+            "ecurity=True")]
         public string GESTION_STOCKConnectionString1 {
             get {
                 return ((string)(this["GESTION_STOCKConnectionString1"]));

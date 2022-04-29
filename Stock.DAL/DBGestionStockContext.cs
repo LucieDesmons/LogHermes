@@ -97,19 +97,19 @@ namespace GestionStock.DAL
                 entity.ToTable("PANIER");
 
                 entity.Property(e => e.IdLignePanier).HasColumnName("Id_Ligne_Panier");
-
-                entity.Property(e => e.IdProduit).HasColumnName("Id_Produit"); 
-                
                 entity.Property(e => e.IdClient).HasColumnName("Id_Client");
-
+                entity.Property(e => e.IdProduit).HasColumnName("Id_Produit");
                 entity.Property(e => e.Quantite).HasColumnName("Quantite");
 
+                entity.HasOne(d => d.IdProduitNavigation)
+                    .WithMany()
+                    .HasForeignKey(d => d.IdProduit)
+                    .HasConstraintName("FK_PANIER_PRODUIT");
 
                 entity.HasOne(d => d.IdClientNavigation)
                     .WithMany()
                     .HasForeignKey(d => d.IdClient)
                     .HasConstraintName("FK_PANIER_CLIENT");
-
             });
 
             modelBuilder.Entity<Commande>(entity =>

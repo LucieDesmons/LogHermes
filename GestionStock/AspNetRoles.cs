@@ -12,27 +12,23 @@ namespace GestionStock
     using System;
     using System.Collections.Generic;
     
-    public partial class CLIENT
+    public partial class AspNetRoles
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CLIENT()
+        public AspNetRoles()
         {
-            this.COMMANDE = new HashSet<COMMANDE>();
-            this.PANIER = new HashSet<PANIER>();
+            this.AspNetRoleClaims = new HashSet<AspNetRoleClaims>();
+            this.AspNetUsers = new HashSet<AspNetUsers>();
         }
     
-        public int Id_Client { get; set; }
-        public string Nom_Client { get; set; }
-        public string Prenom_Client { get; set; }
-        public string Adresse_Client { get; set; }
-        public string Telephone_Client { get; set; }
-        public string Pays_Client { get; set; }
-        public string Ville_Client { get; set; }
-        public string Email_Client { get; set; }
+        public string Id { get; set; }
+        public string ConcurrencyStamp { get; set; }
+        public string Name { get; set; }
+        public string NormalizedName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<COMMANDE> COMMANDE { get; set; }
+        public virtual ICollection<AspNetRoleClaims> AspNetRoleClaims { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PANIER> PANIER { get; set; }
+        public virtual ICollection<AspNetUsers> AspNetUsers { get; set; }
     }
 }

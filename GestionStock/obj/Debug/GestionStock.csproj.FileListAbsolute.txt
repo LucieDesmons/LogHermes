@@ -166,3 +166,5 @@ C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\obj\Debug\GestionStock.ex
 C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\obj\Debug\GestionStock.pdb
 C:\Users\User\OneDrive - DIVY\Bureau\Cours\Stock\GestionStock\obj\Debug\GestionStock.Stock.PL.FRM_Maison.resources
 C:\Users\User\OneDrive - DIVY\Bureau\Cours\Stock\GestionStock\obj\Debug\GestionStock.Stock.PL.USR_Maison.resources
+C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\obj\Debug\GestionStock.Stock.PL.FRM_Maison.resources
+C:\Users\Lucie\source\repos\LogHermesNico\GestionStock\obj\Debug\GestionStock.Stock.PL.USR_Maison.resources

@@ -81,6 +81,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspNetRoleClaims.cs">
+      <DependentUpon>dbStock.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetRoles.cs">
+      <DependentUpon>dbStock.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaims.cs">
+      <DependentUpon>dbStock.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogins.cs">
+      <DependentUpon>dbStock.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUsers.cs">
+      <DependentUpon>dbStock.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserTokens.cs">
+      <DependentUpon>dbStock.tt</DependentUpon>
+    </Compile>
     <Compile Include="CATEGORIE.cs">
       <DependentUpon>dbStock.tt</DependentUpon>
     </Compile>
@@ -109,6 +127,9 @@
       <DependentUpon>dbStock.tt</DependentUpon>
     </Compile>
     <Compile Include="MAISON.cs">
+      <DependentUpon>dbStock.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PANIER.cs">
       <DependentUpon>dbStock.tt</DependentUpon>
     </Compile>
     <Compile Include="PRODUIT.cs">
@@ -338,6 +359,14 @@
     <None Include="Resources\Serv.jpg" />
     <None Include="Resources\palace.png" />
     <None Include="Resources\palac.png" />
+    <None Include="Resources\gender-neutral-user.png" />
+    <None Include="Resources\icons8-redimensionner-32.png" />
+    <None Include="Resources\print32.png" />
+    <None Include="Resources\print-address-label32.png" />
+    <None Include="Resources\xls32.png" />
+    <None Include="Resources\book_add_32.png" />
+    <None Include="Resources\address_book_add_32.png" />
+    <None Include="Resources\address_book_close_32.png" />
     <Content Include="dbStock.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>dbStock.edmx</DependentUpon>
@@ -348,14 +377,6 @@
       <DependentUpon>dbStock.edmx</DependentUpon>
       <LastGenOutput>dbStock.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\gender-neutral-user.png" />
-    <None Include="Resources\icons8-redimensionner-32.png" />
-    <None Include="Resources\print32.png" />
-    <None Include="Resources\print-address-label32.png" />
-    <None Include="Resources\xls32.png" />
-    <None Include="Resources\book_add_32.png" />
-    <None Include="Resources\address_book_add_32.png" />
-    <None Include="Resources\address_book_close_32.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -1,10 +1,11 @@
-﻿++Solution 'GestionStock' ‎(2 sur 2 projets)
+﻿++Solution 'GestionStock' ‎(5 sur 5 projets)
+i:{00000000-0000-0000-0000-000000000000}:GestionStock.sln
 ++GestionStock
 i:{00000000-0000-0000-0000-000000000000}:GestionStock
 ++Properties
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\properties\
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\properties\
 i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\properties\
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\properties\
 ++Références
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:
 ++Report
@@ -23,21 +24,37 @@ i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesni
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\dbstock.edmx
 ++dbStock.Context.tt
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\dbstock.context.tt
+++dbStock.Context.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\dbstock.context.cs
 ++dbStock.Designer.cs
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\dbstock.designer.cs
 ++dbStock.edmx.diagram
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\dbstock.edmx.diagram
 ++dbStock.tt
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\dbstock.tt
-++GESTION_STOCKDataSet.xsd
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\gestion_stockdataset.xsd
-++GESTION_STOCKDataSet1.xsd
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\gestion_stockdataset1.xsd
+++CATEGORIE.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\categorie.cs
+++CLIENT.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\client.cs
+++COMMANDE.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\commande.cs
+++dbStock.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\dbstock.cs
+++Details_Commande.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\details_commande.cs
+++MAISON.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\maison.cs
+++PRODUIT.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\produit.cs
+++sysdiagrams.cs
+++UTILISATEUR.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\utilisateur.cs
 ++packages.config
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\packages.config
 ++Program.cs
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\program.cs
 i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\program.cs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\program.cs
 ++DataSources
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\properties\datasources\
 ++AssemblyInfo.cs
@@ -110,14 +127,82 @@ i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesni
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\report\rpt_produit.rdlc
 ++add1.png
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\add1.png
+++address_book_add_32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\address_book_add_32.png
+++address_book_close_32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\address_book_close_32.png
+++book_add_32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\book_add_32.png
+++camera_32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\camera_32.png
+++cat48.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\cat48.png
+++Cave.jpg
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\cave.jpg
+++checkmark32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\checkmark32.png
+++Client48.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\client48.png
 ++close_32.png
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\close_32.png
+++gender-neutral-user.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\gender-neutral-user.png
+++icons8-redimensionner-32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\icons8-redimensionner-32.png
+++maxresdefault.jpg
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\maxresdefault.jpg
+++OIP (1).jpg
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\oip (1).jpg
+++OIP.jpg
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\oip.jpg
+++package.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\package.png
+++palac.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\palac.png
+++palace.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\palace.png
+++print-address-label32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\print-address-label32.png
+++print32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\print32.png
+++receipt48.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\receipt48.png
 ++Recycle1.png
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\recycle1.png
 ++refresh1.png
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\refresh1.png
 ++search_32.png
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\search_32.png
+++Serv.jpg
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\serv.jpg
+++unlock.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\unlock.png
+++user_business_add_32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\user_business_add_32.png
+++user_business_close_32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\user_business_close_32.png
+++user_business_info_32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\user_business_info_32.png
+++vigne.jpg
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\vigne.jpg
+++vigne2.jpg
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\vigne2.jpg
+++Vin.jpg
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\vin.jpg
+++web_layout_error_32_add.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\web_layout_error_32_add.png
+++web_layout_error_32_close.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\web_layout_error_32_close.png
+++web_layout_info_32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\web_layout_info_32.png
+++wine.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\wine.png
+++wine32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\wine32.png
+++wine48.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\wine48.png
+++xls32.png
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\resources\xls32.png
 ++x64
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\sqlservertypes\x64\
 ++x86
@@ -134,6 +219,8 @@ i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesni
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.bl\cls_client.cs
 ++CLS_Commande_DetailCommande.cs
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.bl\cls_commande_detailcommande.cs
+++CLS_Maison.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.bl\cls_maison.cs
 ++Connexion.cs
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.bl\connexion.cs
 ++DetailCmde.cs
@@ -154,6 +241,8 @@ i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesni
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\frm_commande.cs
 ++FRM_Image.cs
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\frm_image.cs
+++FRM_Maison.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\frm_maison.cs
 ++FRM_Produit_Commande.cs
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\frm_produit_commande.cs
 ++USR_Article.cs
@@ -164,34 +253,8 @@ i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesni
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\usr_client.cs
 ++USR_Commande.cs
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\usr_commande.cs
-++dbStock.Context.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\dbstock.context.cs
-++CATEGORIE.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\categorie.cs
-++CLIENT.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\client.cs
-++COMMANDE.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\commande.cs
-++dbStock.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\dbstock.cs
-++Details_Commande.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\details_commande.cs
-++PRODUIT.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\produit.cs
-++UTILISATEUR.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\utilisateur.cs
-++GESTION_STOCKDataSet.Designer.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\gestion_stockdataset.designer.cs
-++GESTION_STOCKDataSet.xsc
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\gestion_stockdataset.xsc
-++GESTION_STOCKDataSet.xss
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\gestion_stockdataset.xss
-++GESTION_STOCKDataSet1.Designer.cs
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\gestion_stockdataset1.designer.cs
-++GESTION_STOCKDataSet1.xsc
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\gestion_stockdataset1.xsc
-++GESTION_STOCKDataSet1.xss
-i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\gestion_stockdataset1.xss
+++USR_Maison.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\usr_maison.cs
 ++Details_Commande.datasource
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\properties\datasources\details_commande.datasource
 ++PRODUIT.datasource
@@ -242,6 +305,10 @@ i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesni
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\frm_image.designer.cs
 ++FRM_Image.resx
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\frm_image.resx
+++FRM_Maison.Designer.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\frm_maison.designer.cs
+++FRM_Maison.resx
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\frm_maison.resx
 ++FRM_Produit_Commande.Designer.cs
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\frm_produit_commande.designer.cs
 ++FRM_Produit_Commande.resx
@@ -262,22 +329,230 @@ i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesni
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\usr_commande.designer.cs
 ++USR_Commande.resx
 i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\usr_commande.resx
+++USR_Maison.Designer.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\usr_maison.designer.cs
+++USR_Maison.resx
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\stock.pl\usr_maison.resx
+++GestionStock.DAL
+i:{00000000-0000-0000-0000-000000000000}:GestionStock.DAL
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.dal\bin\debug\net6.0\gestionstock.dal.dll
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\stock.dal\bin\debug\net6.0\gestionstock.dal.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\stock.dal\bin\debug\net6.0\gestionstock.dal.dll
+++Dépendances
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:>2206
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:>2329
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>3504
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4037
+++Categorie.cs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\categorie.cs
+++Client.cs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\client.cs
+++Commande.cs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\commande.cs
+++DBGestionStockContext.cs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\dbgestionstockcontext.cs
+++DetailsCommande.cs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\detailscommande.cs
+++Maison.cs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\maison.cs
+++Panier.cs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\panier.cs
+++Produit.cs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\produit.cs
+++Utilisateur.cs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\utilisateur.cs
+++Analyseurs
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:analyseurs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:analyseurs
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:analyseurs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:analyseurs
+++Frameworks
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:frameworks
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:frameworks
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:frameworks
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:frameworks
+++Packages
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:packages
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:packages
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:packages
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:packages
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++System.Text.Json.SourceGeneration
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.NETCore.App
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\microsoft.netcore.app
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\microsoft.netcore.app
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\microsoft.netcore.app
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\microsoft.netcore.app
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (6.0.4)
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:>4083
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4113
+++Microsoft.EntityFrameworkCore (6.0.4)
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:>4078
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.4)
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:>4081
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4110
+++Microsoft.EntityFrameworkCore.Tools (6.0.4)
+i:{c1c08525-4983-4cea-b6d3-37300a89f818}:>4086
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4114
+++GestionStock.BL
+i:{00000000-0000-0000-0000-000000000000}:GestionStock.BL
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\stock.bl\bin\debug\net6.0\gestionstock.bl.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\stock.bl\bin\debug\net6.0\gestionstock.bl.dll
+++Models
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\models\
+++CategorieService.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\categorieservice.cs
+++ClientService.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\clientservice.cs
+++CommandeService.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\commandeservice.cs
+++DetailsCommandeService.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\detailscommandeservice.cs
+++MaisonService.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\maisonservice.cs
+++PanierService.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\panierservice.cs
+++ProduitService.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\produitservice.cs
+++UtilisateurService.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\utilisateurservice.cs
+++Projets
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:projets
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:projets
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:projets
+++CatégorieModel.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\catégoriemodel.cs
+++ClientModel.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\clientmodel.cs
+++CommandeModel.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\commandemodel.cs
+++DetailsCommandeModel.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\detailscommandemodel.cs
+++MaisonModel.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\maisonmodel.cs
+++PanierModel.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\paniermodel.cs
+++ProduitModel.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\produitmodel.cs
+++UtilisateurModel.cs
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\utilisateurmodel.cs
+++System.Linq (4.3.0)
+i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:>4071
+++GestionStock.API
+i:{00000000-0000-0000-0000-000000000000}:GestionStock.API
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\bin\debug\net6.0\gestionstock.api.dll
+++Connected Services 
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>3505
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4038
+++Controllers
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\controllers\
+++appsettings.json
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\appsettings.json
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\appsettings.json
+++Aucune dépendance de service découverte
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>3506
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4039
+++launchSettings.json
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\properties\launchsettings.json
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\properties\launchsettings.json
+++CategoriesController.cs
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\categoriescontroller.cs
+++ClientsController.cs
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\clientscontroller.cs
+++CommandesController.cs
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\commandescontroller.cs
+++DetailsCommandesController.cs
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\detailscommandescontroller.cs
+++MaisonController.cs
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\maisoncontroller.cs
+++PanierController.cs
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\paniercontroller.cs
+++ProduitsController.cs
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\produitscontroller.cs
+++UtilisateursController.cs
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\utilisateurscontroller.cs
+++appsettings.Development.json
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\appsettings.development.json
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\appsettings.development.json
+++MessagePackAnalyzer
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\.nuget\packages\messagepackanalyzer\2.1.152\analyzers\dotnet\messagepackanalyzer.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\messagepackanalyzer\2.1.152\analyzers\dotnet\messagepackanalyzer.dll
+++Microsoft.AspNetCore.Analyzers
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++Microsoft.AspNetCore.App
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\microsoft.aspnetcore.app
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\microsoft.aspnetcore.app
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.3)
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>4105
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4115
+++Swashbuckle.AspNetCore (6.2.3)
+i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>4103
 ++SiteWeb
 i:{00000000-0000-0000-0000-000000000000}:SiteWeb
-++Connected Services 
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>355
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>2113
-++Dépendances
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>354
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:>1819
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:>1957
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>2112
 ++wwwroot
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\
+++Areas
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\
+++Resource
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\resource\
+++ViewComponents
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\viewcomponents\
+++Views
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\
+++ScaffoldingReadMe.txt
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\scaffoldingreadme.txt
 ++contents
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\contents\
-++logo-negosud.svg
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\contents\logo-negosud.svg
 ++css
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\css\
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\css\
@@ -286,66 +561,44 @@ i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesni
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\js\
 ++lib
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\
-++bootstrap
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\
-++jquery
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\
-++jquery-validation
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\
-++jquery-validation-unobtrusive
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation-unobtrusive\
 ++favicon.ico
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\favicon.ico
-++Controllers
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\controllers\
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\
-++Models
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\models\
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\
-++Resource
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\resource\
-++Views
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\
+++Identity
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\
+++GestionStockAPIController.cs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\controllers\gestionstockapicontroller.cs
+++HomeController.cs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\controllers\homecontroller.cs
+++ErrorViewModel.cs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\models\errorviewmodel.cs
+++Tools.cs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\models\tools.cs
+++investir-dans-le-vin.jpg
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\resource\investir-dans-le-vin.jpg
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\contents\investir-dans-le-vin.jpg
+++ProduitListViewComponent.cs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\viewcomponents\produitlistviewcomponent.cs
 ++Home
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\home\
 ++Shared
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\
-++_Layout.cshtml
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\_layout.cshtml
-++_Layout.cshtml.css
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\_layout.cshtml.css
-++_ValidationScriptsPartial.cshtml
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\_validationscriptspartial.cshtml
-++Error.cshtml
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\error.cshtml
 ++_ViewImports.cshtml
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\_viewimports.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\_viewimports.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\account\_viewimports.cshtml
 ++_ViewStart.cshtml
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\_viewstart.cshtml
-++appsettings.json
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\appsettings.json
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\appsettings.json
-++Aucune dépendance de service découverte
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>356
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>2114
-++Analyseurs
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:analyseurs
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:analyseurs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:analyseurs
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:analyseurs
-++Frameworks
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:frameworks
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:frameworks
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:frameworks
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:frameworks
-++Packages
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:packages
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:packages
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:packages
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:packages
-++launchSettings.json
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\properties\launchsettings.json
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\properties\launchsettings.json
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\_viewstart.cshtml
+++bootstrap (5.1.3)
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4108
+++FontAwesome (4.7.0)
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4117
+++Microsoft.AspNetCore.Identity.UI (6.0.4)
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4116
+++Swashbuckle.AspNetCore (6.3.0)
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>4112
+++logo-negosud.svg
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\contents\logo-negosud.svg
 ++bootstrap.css
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\bootstrap\5.1.3\contentfiles\any\any\wwwroot\css\bootstrap.css
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\css\bootstrap.css
@@ -365,93 +618,33 @@ i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\bootstra
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\js\bootstrap.js
 ++site.js
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\js\site.js
-++dist
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\dist\
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\
-++LICENSE
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\license
-++LICENSE.txt
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\license.txt
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation-unobtrusive\license.txt
-++LICENSE.md
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\license.md
-++jquery.validate.unobtrusive.js
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
-++HomeController.cs
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\controllers\homecontroller.cs
-++ErrorViewModel.cs
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\models\errorviewmodel.cs
+++bootstrap
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\
+++jquery
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\
+++jquery-validation
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation-unobtrusive\
+++Pages
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\
 ++Products
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\home\products\
 ++Index.cshtml
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\home\index.cshtml
 ++Privacy.cshtml
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\home\privacy.cshtml
-++appsettings.Development.json
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\appsettings.development.json
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\appsettings.development.json
-++Microsoft.AspNetCore.Analyzers
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
-++Microsoft.AspNetCore.App.Analyzers
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
-++Microsoft.AspNetCore.App.CodeFixes
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
-++Microsoft.AspNetCore.Components.Analyzers
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
-++Microsoft.AspNetCore.Mvc.Analyzers
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
-++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
-++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-++Microsoft.CodeAnalysis.NetAnalyzers
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-++Microsoft.EntityFrameworkCore.Analyzers
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.4\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-++Microsoft.Extensions.Logging.Generators
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-++Microsoft.NET.Sdk.Razor.SourceGenerators
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
-++System.Text.Json.SourceGeneration
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-++Microsoft.AspNetCore.App
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\microsoft.aspnetcore.app
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\microsoft.aspnetcore.app
-++Microsoft.NETCore.App
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\microsoft.netcore.app
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\microsoft.netcore.app
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\microsoft.netcore.app
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\microsoft.netcore.app
-++bootstrap (5.1.3)
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>367
-++FontAwesome (4.7.0)
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>368
-++Microsoft.EntityFrameworkCore.Tools (6.0.4)
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>380
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:>1828
+++Components
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\components\
+++_Layout.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\_layout.cshtml
+++_LoginPartial.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\_loginpartial.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\_validationscriptspartial.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\_validationscriptspartial.cshtml
+++Error.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\error.cshtml
 ++bootstrap.css.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\bootstrap\5.1.3\contentfiles\any\any\wwwroot\css\bootstrap.css.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -500,16 +693,27 @@ i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesni
 ++bootstrap.min.js
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\bootstrap\5.1.3\contentfiles\any\any\wwwroot\js\bootstrap.min.js
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
-++jquery.js
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\dist\jquery.js
-++additional-methods.js
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\additional-methods.js
-++jquery.validate.js
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-++jquery.validate.unobtrusive.min.js
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++dist
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\dist\
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\license
+++LICENSE.txt
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\license.txt
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++Account
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\account\
 ++_Products.cshtml
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\home\products\_products.cshtml
+++ProduitList
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\components\produitlist\
+++_Layout.cshtml.css
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\_layout.cshtml.css
 ++bootstrap.min.css.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\bootstrap\5.1.3\contentfiles\any\any\wwwroot\css\bootstrap.min.css.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
@@ -561,12 +765,22 @@ i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesni
 ++bootstrap.min.js.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\bootstrap\5.1.3\contentfiles\any\any\wwwroot\js\bootstrap.min.js.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-++jquery.min.js
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\dist\jquery.min.js
-++additional-methods.min.js
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-++jquery.validate.min.js
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++jquery.js
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++Login.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\account\login.cshtml
+++Logout.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\account\logout.cshtml
+++Register.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\account\register.cshtml
+++ProduitListCard.cshtml
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\views\shared\components\produitlist\produitlistcard.cshtml
 ++bootstrap.rtl.min.css.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\bootstrap\5.1.3\contentfiles\any\any\wwwroot\css\bootstrap.rtl.min.css.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
@@ -585,117 +799,31 @@ i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesni
 ++bootstrap.esm.min.js.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\.nuget\packages\bootstrap\5.1.3\contentfiles\any\any\wwwroot\js\bootstrap.esm.min.js.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+++jquery.min.js
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++Login.cshtml.cs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\account\login.cshtml.cs
+++Logout.cshtml.cs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\account\logout.cshtml.cs
+++Register.cshtml.cs
+i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\areas\identity\pages\account\register.cshtml.cs
 ++jquery.min.map
 i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:c:\users\lucie\source\repos\loghermesnico\siteweb\wwwroot\lib\jquery\dist\jquery.min.map
-++Microsoft.EntityFrameworkCore.SqlServer (6.0.4)
-i:{c37e91de-e185-4b13-a26c-ca1fd5307d4e}:>396
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:>1827
-++Categorie.cs
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\categorie.cs
-++Client.cs
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\client.cs
-++Commande.cs
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\commande.cs
-++DetailsCommande.cs
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\detailscommande.cs
-++Utilisateur.cs
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\utilisateur.cs
-++GESTION_STOCKContext.cs
-++Produit.cs
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\produit.cs
-++NewFolder
-++Stock.DAL
-++Solution 'GestionStock' ‎(3 sur 3 projets)
-++LogHermes.API
-++WeatherForecast.cs
-++CategoriesController.cs
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\categoriescontroller.cs
-++ClientsController.cs
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\clientscontroller.cs
-++CommandesController.cs
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\commandescontroller.cs
-++DetailsCommandesController.cs
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\detailscommandescontroller.cs
-++ProduitsController.cs
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\produitscontroller.cs
-++UtilisateursController.cs
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\gestionstock.api\controllers\utilisateurscontroller.cs
-++WeatherForecastController.cs
-++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Analyzers.dll
-++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Components.Analyzers.dll
-++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Mvc.Analyzers.dll
-++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll
-++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.NetAnalyzers.dll
-++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.1)
-++Swashbuckle.AspNetCore (6.2.3)
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>2161
-++Projets
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:projets
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:projets
-++MessagePackAnalyzer
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\.nuget\packages\messagepackanalyzer\2.1.152\analyzers\dotnet\messagepackanalyzer.dll
-++Microsoft.CodeAnalysis.Analyzers
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
-++Microsoft.CodeAnalysis.CSharp.Analyzers
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
-++Solution 'GestionStock' ‎(4 sur 4 projets)
-++CategorieService.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\categorieservice.cs
-++ClientService.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\clientservice.cs
-++CommandeService.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\commandeservice.cs
-++DetailsCommandeService.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\detailscommandeservice.cs
-++ProduitService.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\produitservice.cs
-++UtilisateurService.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\utilisateurservice.cs
-++Stock.Models
-++Solution 'GestionStock' ‎(5 sur 5 projets)
-i:{00000000-0000-0000-0000-000000000000}:GestionStock.sln
-++Catégorie.cs
-++Stock.DAL (déchargé)
-++Solution 'GestionStock' ‎(5 sur 4 projets)
-++Solution 'GestionStock' ‎(6 sur 6 projets)
-++DAL
-++Solution 'GestionStock' ‎(7 sur 7 projets)
-++Stck.DAL
-++Class1.cs
-++Microsoft.EntityFrameworkCore (6.0.4)
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:>1826
-++Stock.BL_old
-++Stock.BL_old (déchargé)
-++Solution 'GestionStock' ‎(4 sur 5 projets)
-++LogHermes.API_old
-++GestionStock.API
-i:{00000000-0000-0000-0000-000000000000}:GestionStock.API
-++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.3)
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:>2186
-++CategorieService_old.cs
-++CategorieServicecs.cs
-++ClassLibrary1
-++GestionStock.DAL
-i:{00000000-0000-0000-0000-000000000000}:GestionStock.DAL
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.dal\bin\debug\net6.0\gestionstock.dal.dll
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\stock.dal\gestionstock.dal.csproj
-++GestionStock.BL
-i:{00000000-0000-0000-0000-000000000000}:GestionStock.BL
-i:{1aa184b2-ef6a-4607-a19a-36158bf12829}:c:\users\lucie\source\repos\loghermesnico\stock.bl\gestionstock.bl.csproj
-++DBGestionStockContext.cs
-i:{c1c08525-4983-4cea-b6d3-37300a89f818}:c:\users\lucie\source\repos\loghermesnico\stock.dal\dbgestionstockcontext.cs
-++CatégorieModel.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\catégoriemodel.cs
-++CatégorieToto.cs
-++ClientModel.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\clientmodel.cs
-++CommandeModel.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\commandemodel.cs
-++DetailsCommandeModel.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\detailscommandemodel.cs
-++ProduitModel.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\produitmodel.cs
-++UtilisateurModel.cs
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:c:\users\lucie\source\repos\loghermesnico\stock.bl\models\utilisateurmodel.cs
-++System.Linq (4.3.0)
-i:{a3691ae6-d1e6-4d73-9db5-1d7b31cc5992}:>2705
+++AspNetRoleClaims.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\aspnetroleclaims.cs
+++AspNetRoles.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\aspnetroles.cs
+++AspNetUserClaims.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\aspnetuserclaims.cs
+++AspNetUserLogins.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\aspnetuserlogins.cs
+++AspNetUsers.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\aspnetusers.cs
+++AspNetUserTokens.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\aspnetusertokens.cs
+++PANIER.cs
+i:{5609118d-ce29-4ee8-8bdc-9434857380a4}:c:\users\lucie\source\repos\loghermesnico\gestionstock\panier.cs

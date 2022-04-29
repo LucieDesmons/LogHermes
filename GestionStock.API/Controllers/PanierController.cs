@@ -1,55 +1,33 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using GestionStock.BL;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using GestionStock.BL;
+using GestionStock.BL.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GestionStock.API.Controllers
 {
-    [Route("api/paniers")]
     [ApiController]
     public class PanierController : ControllerBase
     {
         private PanierService _cs;
         public PanierController(PanierService cs)
         {
-            _cs = cs;
+            _cs = cs; //ClientService
         }
 
-        // GET: api/<PanierController>
-        [HttpGet]
-        public List<BL.Models.PanierModel> Get()
-        {
-            return _cs.GetPaniers();
-        }
-
-        // POST api/<CategoriesController>
+        // POST api/<ClientsController>
         [HttpPost("{post}")]
-        public string Post(BL.Models.PanierModel panier)
+        public string CreateLignePanier(int id, int quantite, ClientModel connectedClient)
         {
             try
             {
-                _cs.CreatePanier(panier);
-                return "Votre panier a bien été créée.";
+                var message = _cs.CreateLignePanier(id, quantite, connectedClient);
+                return message;
             }
             catch (Exception ex)
             {
-                return "La création a échoué.";
+                return ex.Message;
             }
-
-
-        }
-
-
-        // PUT api/<CategoriesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CategoriesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
+
 }

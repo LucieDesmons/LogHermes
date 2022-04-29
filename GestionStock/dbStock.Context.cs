@@ -25,13 +25,19 @@ namespace GestionStock
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<AspNetRoleClaims> AspNetRoleClaims { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
         public virtual DbSet<CATEGORIE> CATEGORIE { get; set; }
         public virtual DbSet<CLIENT> CLIENT { get; set; }
         public virtual DbSet<COMMANDE> COMMANDE { get; set; }
         public virtual DbSet<Details_Commande> Details_Commande { get; set; }
         public virtual DbSet<MAISON> MAISON { get; set; }
+        public virtual DbSet<PANIER> PANIER { get; set; }
         public virtual DbSet<PRODUIT> PRODUIT { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UTILISATEUR> UTILISATEUR { get; set; }
     }
 }

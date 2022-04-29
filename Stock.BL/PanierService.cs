@@ -1,6 +1,5 @@
 ﻿using GestionStock.DAL;
 using GestionStock.BL.Models;
-using System.Linq;
 
 namespace GestionStock.BL
 {
@@ -13,62 +12,55 @@ namespace GestionStock.BL
             _context = context;
         }
 
-        public List<PanierModel> GetPaniers()
+        public string CreateLignePanier(int idProduit, int quantite, ClientModel connectedClient)
         {
-            return _context
-                .Paniers
-                .Select(c => new PanierModel
-                {
-                    IdLignePanier = c.IdLignePanier,
-                    IdProduit = c.IdProduit,
-                    IdClient = c.IdClient,
-                    Quantite = c.Quantite,
-                    IdClientNavigation = new ClientModel
-                    {
+            var retourMessage = "Produit déjà présent dans le panier. Quantité modifiée !";
 
-                        Id = c.IdClientNavigation.IdClient,
-                        Nom = c.IdClientNavigation.NomClient,
-                        Prenom = c.IdClientNavigation.PrenomClient,
-                        Adresse = c.IdClientNavigation.AdresseClient,
-                        Ville = c.IdClientNavigation.VilleClient,
-                        Pays = c.IdClientNavigation.PaysClient,
-                        Telephone = c.IdClientNavigation.TelephoneClient,
-                        Email = c.IdClientNavigation.EmailClient
+            var panierContext = _context.Paniers;
+            var clientContext = _context.Clients;
 
-                    }
+            var idClient = connectedClient?.Id;
+
+            //récupération de la ligne de panier existante pour le client/produit
+            var panierClientContext =
+                panierContext
+                .FirstOrDefault(w => w.IdClient == idClient
+                                && w.IdProduit == idProduit);
 
 
-                })
-                .ToList();
+            //Si la ligne de panier n'existe pas pour le produit/client on ajoute sinon on modifie juste la quantité
+            if (panierClientContext == null)
+            {
+                panierClientContext = new Panier();
+                panierClientContext.IdProduit = idProduit;
+                panierClientContext.IdClient = idClient;
+                panierContext.Add(panierClientContext);
+
+                retourMessage = "Produit ajouté dans le panier !";
+            }
+            panierClientContext.Quantite = quantite;
+
+            _context.SaveChanges();
+
+            return retourMessage;
         }
 
-        public void CreatePanier(PanierModel panier)
+        public int GetNbProduitPanier(int? idClient)
         {
+            var nbProduit = 0;
+            var panierContext = _context.Paniers;
 
-            _context
-                .Paniers
-                .Add(new Panier
-                {
-                    IdLignePanier = panier.IdLignePanier,
-                    IdProduit = panier.IdProduit,
-                    IdClient = panier.IdClient,
-                    Quantite = panier.Quantite,
-                    IdClientNavigation = new Client
-                    {
-                        IdClient = panier.IdClientNavigation.Id,
-                        NomClient = panier.IdClientNavigation.Nom,
-                        PrenomClient = panier.IdClientNavigation.Prenom,
-                        AdresseClient = panier.IdClientNavigation.Adresse,
-                        VilleClient = panier.IdClientNavigation.Ville,
-                        PaysClient = panier.IdClientNavigation.Pays,
-                        TelephoneClient = panier.IdClientNavigation.Telephone,
-                        EmailClient = panier.IdClientNavigation.Email
-                    }
-                })
-                .Context
-                .SaveChanges();
+            //Panier en mode connecté (idClient) ou déconnecté (idClient == null)
+            /*if (idClient != null)
+            {*/
+                nbProduit = panierContext
+                        .Where(w => w.IdClient == idClient)
+                        .Count();
+          /*  }*/
+
+            return nbProduit;
         }
+
 
     }
 }
-
