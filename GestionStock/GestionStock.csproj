@@ -149,6 +149,7 @@
     <Compile Include="Stock.BL\CLS_Client.cs" />
     <Compile Include="Stock.BL\CLS_Commande_DetailCommande.cs" />
     <Compile Include="Stock.BL\CLS_Maison.cs" />
+    <Compile Include="Stock.BL\CLS_User.cs" />
     <Compile Include="Stock.BL\Connexion.cs" />
     <Compile Include="Stock.BL\DetailCmde.cs" />
     <Compile Include="Stock.PL\FRM_Accueil.cs">
@@ -211,6 +212,12 @@
     <Compile Include="Stock.PL\FRM_Produit_Commande.Designer.cs">
       <DependentUpon>FRM_Produit_Commande.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock.PL\FRM_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.PL\FRM_User.Designer.cs">
+      <DependentUpon>FRM_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stock.PL\USR_Article.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,6 +247,12 @@
     </Compile>
     <Compile Include="Stock.PL\USR_Maison.Designer.cs">
       <DependentUpon>USR_Maison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.PL\USR_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stock.PL\USR_User.Designer.cs">
+      <DependentUpon>USR_User.cs</DependentUpon>
     </Compile>
     <Compile Include="UTILISATEUR.cs">
       <DependentUpon>dbStock.tt</DependentUpon>

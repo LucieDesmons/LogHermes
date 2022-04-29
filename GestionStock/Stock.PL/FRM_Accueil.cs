@@ -53,7 +53,7 @@ namespace GestionStock.Stock.PL
 
         private void btnCat_Click(object sender, EventArgs e)
         {
-            if(!pnlAfficher.Controls.Contains(USR_Categorie.Instance))
+            if (!pnlAfficher.Controls.Contains(USR_Categorie.Instance))
             {
                 pnlAfficher.Controls.Add(USR_Categorie.Instance);
                 USR_Categorie.Instance.Dock = DockStyle.Fill;
@@ -91,6 +91,24 @@ namespace GestionStock.Stock.PL
             {
                 USR_Maison.Instance.BringToFront();
             }
+
+        }
+
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (!pnlAfficher.Controls.Contains(USR_User.Instance))
+            {
+                pnlAfficher.Controls.Add(USR_User.Instance);
+                USR_User.Instance.Dock = DockStyle.Fill;
+                USR_User.Instance.BringToFront();
+            }
+            else
+            {
+                USR_User.Instance.BringToFront();
+            }
+
 
         }
     }

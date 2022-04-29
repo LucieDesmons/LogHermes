@@ -87,6 +87,7 @@
             this.button1.Text = "Utilisateur";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lblTitre
             // 
@@ -97,7 +98,7 @@
             this.lblTitre.ForeColor = System.Drawing.Color.Transparent;
             this.lblTitre.Location = new System.Drawing.Point(285, 24);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(191, 51);
+            this.lblTitre.Size = new System.Drawing.Size(154, 41);
             this.lblTitre.TabIndex = 1;
             this.lblTitre.Text = "négosud";
             this.lblTitre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -236,7 +237,7 @@
             // 
             // FRM_Accueil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::GestionStock.Properties.Resources.maxresdefault;
