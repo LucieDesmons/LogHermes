@@ -12,3 +12,5 @@ contact@loghermes.com .
 1 BD MARIUS VIVIER MERLE à LYON 3EME (69003)
 
 ©LogHermes
+
+Projet d'école - CESI DI20 - Créer une application de gestion de stock - Entreprise fictive
